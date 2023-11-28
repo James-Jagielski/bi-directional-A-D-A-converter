@@ -9,6 +9,10 @@ T {Dummy} -1770 730 0 0 0.7 0.7 {}
 T {Dummy} 1450 720 0 0 0.7 0.7 {}
 T {Dummy} -610 720 0 0 0.7 0.7 {}
 T {Dummy} 290 740 0 0 0.7 0.7 {}
+T {C-} -320 780 0 0 0.7 0.7 {}
+T {C+} 110 780 0 0 0.7 0.7 {}
+T {C-'} -1890 770 0 0 0.7 0.7 {}
+T {C+'} 1680 800 0 0 0.7 0.7 {}
 N -240 -740 100 -740 {
 lab=VDD}
 N -210 -710 -170 -710 {
@@ -445,24 +449,12 @@ N 1590 520 1590 580 {
 lab=PREb}
 N 1790 520 1790 580 {
 lab=PRE}
-N -1050 990 -1050 1090 {
-lab=D}
-N -1050 1090 -1040 1090 {
-lab=D}
 N -1040 1090 -1040 1100 {
 lab=D}
-N -1190 990 -1190 1090 {
-lab=Db}
 N -1190 1090 -1190 1100 {
 lab=Db}
-N 1010 990 1010 1090 {
-lab=D}
-N 1010 1090 1020 1090 {
-lab=D}
 N 1020 1090 1020 1100 {
 lab=D}
-N 870 990 870 1090 {
-lab=Db}
 N 870 1090 870 1100 {
 lab=Db}
 N -1700 650 -1700 710 {
@@ -717,6 +709,12 @@ N -440 -380 -80 -380 {
 lab=ENADb}
 N -80 -380 -80 -370 {
 lab=ENADb}
+N -630 -410 -240 -410 {}
+N -570 -410 -570 -260 {}
+N -780 -260 -570 -260 {}
+N -780 -260 -780 -180 {}
+N -840 -260 -840 -180 {}
+N -880 -260 -840 -260 {}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=0.15
 W=1
@@ -2090,3 +2088,41 @@ C {devices/lab_pin.sym} -180 970 0 0 {name=p83 sig_type=std_logic lab=SH}
 C {devices/lab_pin.sym} -440 -380 0 0 {name=p84 sig_type=std_logic lab=ENADb}
 C {devices/lab_pin.sym} -1150 710 0 0 {name=p85 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} 970 710 2 0 {name=p86 sig_type=std_logic lab=Vb}
+C {devices/lab_pin.sym} -630 -410 0 0 {name=p87 sig_type=std_logic lab=CompOutb}
+C {madvlsi/nmos3.sym} -810 -260 1 0 {name=M25
+L=0.15
+W=1
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} -810 -180 3 0 {name=M26
+L=0.15
+W=1
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} -880 -260 0 0 {name=p88 sig_type=std_logic lab=AOut}
+C {devices/lab_pin.sym} -810 -150 0 0 {name=p89 sig_type=std_logic lab=ENADb}
+C {devices/lab_pin.sym} -810 -290 0 0 {name=p90 sig_type=std_logic lab=ENAD}
+C {devices/lab_pin.sym} -1190 1090 0 0 {name=p91 sig_type=std_logic lab=Db}
+C {devices/lab_pin.sym} -1040 1090 0 0 {name=p92 sig_type=std_logic lab=D}
+C {devices/lab_pin.sym} 870 1090 0 0 {name=p93 sig_type=std_logic lab=Db}
+C {devices/lab_pin.sym} 1020 1090 0 0 {name=p94 sig_type=std_logic lab=D}
