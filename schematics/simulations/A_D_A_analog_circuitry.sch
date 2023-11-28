@@ -485,18 +485,10 @@ N -1460 720 -1220 720 {
 lab=#net13}
 N -1220 720 -1220 760 {
 lab=#net13}
-N -1210 10 -1040 10 {
-lab=VDD}
-N -1210 160 -1040 160 {
-lab=GND}
 N -1290 60 -1290 90 {
 lab=RCL-}
 N -1140 60 -1140 90 {
 lab=RCL-b}
-N -1040 10 -960 10 {
-lab=VDD}
-N -1040 160 -960 160 {
-lab=GND}
 N -1040 60 -1040 90 {
 lab=STO-}
 N -890 60 -890 90 {
@@ -505,10 +497,6 @@ N -1590 40 -1590 90 {
 lab=PREb}
 N -1440 40 -1440 90 {
 lab=PRE}
-N -1520 10 -1210 10 {
-lab=VDD}
-N -1520 160 -1210 160 {
-lab=GND}
 N 1520 650 1520 710 {
 lab=#net28}
 N 1450 710 1520 710 {
@@ -533,18 +521,10 @@ N 1540 620 1620 620 {
 lab=RCL+b}
 N 1540 560 1540 620 {
 lab=RCL+b}
-N 840 10 1010 10 {
-lab=VDD}
-N 840 160 1010 160 {
-lab=GND}
 N 1090 60 1090 90 {
 lab=RCL+}
 N 940 60 940 90 {
 lab=RCL+b}
-N 760 10 840 10 {
-lab=VDD}
-N 760 160 840 160 {
-lab=GND}
 N 840 60 840 90 {
 lab=STO+}
 N 690 60 690 90 {
@@ -553,10 +533,6 @@ N 1390 40 1390 90 {
 lab=PREb}
 N 1240 40 1240 90 {
 lab=PRE}
-N 1010 10 1310 10 {
-lab=VDD}
-N 1010 160 1310 160 {
-lab=GND}
 N 1290 710 1290 740 {
 lab=#net29}
 N 1040 740 1290 740 {
@@ -715,6 +691,10 @@ N -780 -260 -570 -260 {}
 N -780 -260 -780 -180 {}
 N -840 -260 -840 -180 {}
 N -880 -260 -840 -260 {}
+N 770 160 1320 160 {}
+N 770 10 1320 10 {}
+N -1510 10 -960 10 {}
+N -1510 160 -960 160 {}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=0.15
 W=1
@@ -1956,23 +1936,18 @@ C {devices/lab_pin.sym} -440 -70 0 0 {name=p20 sig_type=std_logic lab=RST}
 C {devices/lab_pin.sym} -1870 520 0 0 {name=p21 sig_type=std_logic lab=Vref-}
 C {devices/lab_pin.sym} -1970 490 0 0 {name=p22 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} -1770 490 0 0 {name=p23 sig_type=std_logic lab=PRE}
-C {./inverter.sym} -1550 90 0 1 {name=x1}
 C {devices/lab_pin.sym} 1690 530 0 0 {name=p26 sig_type=std_logic lab=Vref+}
 C {devices/lab_pin.sym} 1590 520 0 0 {name=p27 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} 1790 520 0 0 {name=p28 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} -1190 990 3 0 {name=p31 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} -1050 990 3 0 {name=p32 sig_type=std_logic lab=D}
-C {./inverter.sym} -1150 1100 0 1 {name=x3}
-C {devices/lab_pin.sym} -1120 1170 3 0 {name=p33 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} -1120 1020 0 0 {name=p34 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} -1110 1170 3 0 {name=p33 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} -1110 1020 0 0 {name=p34 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 870 990 3 0 {name=p35 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} 1010 990 3 0 {name=p36 sig_type=std_logic lab=D}
-C {./inverter.sym} 910 1100 0 1 {name=x4}
-C {devices/lab_pin.sym} 940 1170 3 0 {name=p37 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 940 1020 0 0 {name=p38 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 950 1170 3 0 {name=p37 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 950 1020 0 0 {name=p38 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -1140 60 0 0 {name=p40 sig_type=std_logic lab=RCL-b}
-C {./inverter.sym} -1180 90 0 0 {name=x5}
-C {./inverter.sym} -930 90 0 0 {name=x6}
 C {devices/lab_pin.sym} -1130 10 1 0 {name=p41 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -1130 160 3 0 {name=p42 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} -1290 60 0 0 {name=p43 sig_type=std_logic lab=RCL-}
@@ -1988,9 +1963,6 @@ C {devices/lab_pin.sym} 1420 560 2 0 {name=p24 sig_type=std_logic lab=RCL+}
 C {devices/lab_pin.sym} 1540 560 0 0 {name=p25 sig_type=std_logic lab=RCL+b}
 C {devices/lab_pin.sym} 1240 560 2 0 {name=p51 sig_type=std_logic lab=STO+b}
 C {devices/lab_pin.sym} 1380 560 0 0 {name=p52 sig_type=std_logic lab=STO+}
-C {./inverter.sym} 1280 90 0 1 {name=x7}
-C {./inverter.sym} 980 90 0 1 {name=x8}
-C {./inverter.sym} 730 90 0 1 {name=x9}
 C {devices/lab_pin.sym} 930 10 3 1 {name=p54 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 930 160 1 1 {name=p55 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 1390 40 0 1 {name=p59 sig_type=std_logic lab=PREb}
@@ -2080,7 +2052,6 @@ C {devices/lab_pin.sym} 460 560 0 0 {name=p76 sig_type=std_logic lab=STO+b}
 C {devices/lab_pin.sym} -420 190 0 0 {name=p77 sig_type=std_logic lab=Vf}
 C {devices/lab_pin.sym} -1120 330 1 0 {name=p78 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} 930 340 1 0 {name=p79 sig_type=std_logic lab=Vcp}
-C {./inverter.sym} -70 970 0 0 {name=x2}
 C {devices/lab_pin.sym} -100 1040 3 0 {name=p80 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} -100 890 0 0 {name=p81 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -30 970 2 0 {name=p82 sig_type=std_logic lab=SHb}
@@ -2126,3 +2097,64 @@ C {devices/lab_pin.sym} -1190 1090 0 0 {name=p91 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} -1040 1090 0 0 {name=p92 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 870 1090 0 0 {name=p93 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} 1020 1090 0 0 {name=p94 sig_type=std_logic lab=D}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -1480 90 0 0 {name=x10}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -1180 90 0 0 {name=x1}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -930 90 0 0 {name=x5}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -1080 1100 0 0 {name=x3}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -70 970 0 0 {name=x2}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 980 1100 0 0 {name=x4}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 800 90 0 0 {name=x6}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 1050 90 0 0 {name=x8}
+C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 1350 90 0 0 {name=x7}
+C {madvlsi/vsource.sym} 2010 600 0 0 {name=VDD
+value=1.8}
+C {madvlsi/vdd.sym} 2010 570 0 0 {name=l1 lab=VDD}
+C {madvlsi/gnd.sym} 2010 630 0 0 {name=l2 lab=GND}
+C {madvlsi/vdd.sym} 1950 700 0 0 {name=l3 lab=VDD}
+C {madvlsi/gnd.sym} 2010 720 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} 2010 720 1 0 {name=p95 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 1950 700 3 0 {name=p96 sig_type=std_logic lab=VDD}
+C {madvlsi/vsource.sym} 2090 600 0 0 {name=Vf
+value=1.8}
+C {madvlsi/gnd.sym} 2090 630 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 2090 570 1 0 {name=p97 sig_type=std_logic lab=Vf}
+C {madvlsi/vsource.sym} 2160 600 0 0 {name=Vb
+value=1.8}
+C {madvlsi/gnd.sym} 2160 630 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} 2160 570 1 0 {name=p98 sig_type=std_logic lab=Vb}
+C {madvlsi/vsource.sym} 2230 600 0 0 {name=Vcp
+value=1.8}
+C {madvlsi/gnd.sym} 2230 630 0 0 {name=l7 lab=GND}
+C {devices/lab_pin.sym} 2230 570 1 0 {name=p99 sig_type=std_logic lab=Vcp}
+C {madvlsi/vsource.sym} 2300 600 0 0 {name=SRn
+value=1.8}
+C {madvlsi/gnd.sym} 2300 630 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} 2300 570 1 0 {name=p100 sig_type=std_logic lab=SRn}
+C {madvlsi/vsource.sym} 2370 600 0 0 {name=SRp
+value=1.8}
+C {madvlsi/gnd.sym} 2370 630 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} 2370 570 1 0 {name=p101 sig_type=std_logic lab=SRp}
+C {madvlsi/vsource.sym} 2090 750 0 0 {name=Vrefp
+value=1.8}
+C {madvlsi/gnd.sym} 2090 780 0 0 {name=l10 lab=GND}
+C {devices/lab_pin.sym} 2090 720 1 0 {name=p102 sig_type=std_logic lab=Vrefp}
+C {madvlsi/vsource.sym} 2160 750 0 0 {name=Vrefn
+value=0}
+C {madvlsi/gnd.sym} 2160 780 0 0 {name=l11 lab=GND}
+C {devices/lab_pin.sym} 2160 720 1 0 {name=p103 sig_type=std_logic lab=Vrefn}
+C {madvlsi/vsource.sym} 2010 390 0 0 {name=PRE
+value=1.8}
+C {madvlsi/gnd.sym} 2010 420 0 0 {name=l12 lab=GND}
+C {devices/lab_pin.sym} 2010 360 1 0 {name=p104 sig_type=std_logic lab=PRE}
+C {madvlsi/vsource.sym} 2010 250 0 0 {name=SH
+value=1.8}
+C {madvlsi/gnd.sym} 2010 280 0 0 {name=l13 lab=GND}
+C {devices/lab_pin.sym} 2010 220 1 0 {name=p105 sig_type=std_logic lab=SH}
+C {madvlsi/vsource.sym} 2010 110 0 0 {name=RST
+value=1.8}
+C {madvlsi/gnd.sym} 2010 140 0 0 {name=l14 lab=GND}
+C {devices/lab_pin.sym} 2010 80 1 0 {name=p106 sig_type=std_logic lab=RST}
+C {madvlsi/vsource.sym} 2010 -30 0 0 {name=SEN
+value=1.8}
+C {madvlsi/gnd.sym} 2010 0 0 0 {name=l15 lab=GND}
+C {devices/lab_pin.sym} 2010 -60 1 0 {name=p107 sig_type=std_logic lab=SEN}
