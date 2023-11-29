@@ -457,21 +457,21 @@ lab=#net11}
 N -1770 710 -1700 710 {
 lab=#net11}
 N -1800 640 -1800 680 {
-lab=RCL-}
+lab=STO+_RCL-}
 N -1800 640 -1730 640 {
-lab=RCL-}
+lab=STO+_RCL-}
 N -1730 490 -1730 640 {
-lab=RCL-}
+lab=STO+_RCL-}
 N -1600 490 -1600 680 {
-lab=RCL-b}
+lab=STO+b_RCL-b}
 N -1560 490 -1560 680 {
-lab=STO-}
+lab=STO-_RCL+}
 N -1360 580 -1360 680 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -1450 580 -1360 580 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -1450 490 -1450 580 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -1460 710 -1460 720 {
 lab=#net12}
 N -1460 720 -1220 720 {
@@ -479,13 +479,13 @@ lab=#net12}
 N -1220 720 -1220 760 {
 lab=#net12}
 N -1290 60 -1290 90 {
-lab=RCL-}
+lab=STO+_RCL-}
 N -1140 60 -1140 90 {
-lab=RCL-b}
+lab=STO-b_RCL+b}
 N -1040 60 -1040 90 {
-lab=STO-}
+lab=STO-_RCL+}
 N -890 60 -890 90 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -1590 40 -1590 90 {
 lab=PREb}
 N -1440 40 -1440 90 {
@@ -497,31 +497,23 @@ lab=#net27}
 N 1520 710 1590 710 {
 lab=#net27}
 N 1180 610 1180 680 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 1180 610 1210 610 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 1380 560 1380 680 {
-lab=STO+}
+lab=STO+_RCL-}
 N 1210 610 1240 610 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 1240 560 1240 610 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 1420 560 1420 680 {
-lab=RCL+}
+lab=STO-_RCL+}
 N 1620 620 1620 680 {
-lab=RCL+b}
+lab=STO-b_RCL+b}
 N 1540 620 1620 620 {
-lab=RCL+b}
+lab=STO-b_RCL+b}
 N 1540 560 1540 620 {
-lab=RCL+b}
-N 1090 60 1090 90 {
-lab=RCL+}
-N 940 60 940 90 {
-lab=RCL+b}
-N 840 60 840 90 {
-lab=STO+}
-N 690 60 690 90 {
-lab=STO+b}
+lab=STO-b_RCL+b}
 N 1390 40 1390 90 {
 lab=PREb}
 N 1240 40 1240 90 {
@@ -591,23 +583,23 @@ lab=#net24}
 N -540 710 -470 710 {
 lab=#net24}
 N -580 530 -580 610 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -640 610 -580 610 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -640 610 -640 680 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -510 530 -510 610 {
-lab=STO-}
+lab=STO-_RCL+}
 N -510 610 -440 610 {
-lab=STO-}
+lab=STO-_RCL+}
 N -440 610 -440 680 {
-lab=STO-}
+lab=STO-_RCL+}
 N -820 530 -820 600 {
-lab=RCL-b}
+lab=STO+b_RCL-b}
 N -880 600 -820 600 {
-lab=RCL-b}
+lab=STO+b_RCL-b}
 N -880 600 -880 680 {
-lab=RCL-b}
+lab=STO+b_RCL-b}
 N -1020 730 -1020 760 {
 lab=#net25}
 N -1020 730 -780 730 {
@@ -623,23 +615,23 @@ lab=#net26}
 N 360 710 430 710 {
 lab=#net26}
 N 290 610 320 610 {
-lab=STO+}
+lab=STO+_RCL-}
 N 320 560 320 610 {
-lab=STO+}
+lab=STO+_RCL-}
 N 460 560 460 680 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 260 610 290 610 {
-lab=STO+}
+lab=STO+_RCL-}
 N 260 610 260 680 {
-lab=STO+}
+lab=STO+_RCL-}
 N 500 560 500 680 {
-lab=RCL+}
+lab=STO-_RCL+}
 N 670 560 670 640 {
-lab=RCL+b}
+lab=STO-b_RCL+b}
 N 670 640 700 640 {
-lab=RCL+b}
+lab=STO-b_RCL+b}
 N 700 640 700 680 {
-lab=RCL+b}
+lab=STO-b_RCL+b}
 N 600 710 600 740 {
 lab=#net40}
 N 600 740 840 740 {
@@ -653,11 +645,11 @@ lab=Vref+}
 N 1690 530 1690 550 {
 lab=Vref+}
 N -730 530 -730 600 {
-lab=RCL-}
+lab=STO+_RCL-}
 N -730 600 -680 600 {
-lab=RCL-}
+lab=STO+_RCL-}
 N -680 600 -680 680 {
-lab=RCL-}
+lab=STO+_RCL-}
 N -920 330 -920 550 {
 lab=Vcp}
 N -1320 330 -1320 550 {
@@ -690,10 +682,6 @@ N -840 -260 -840 -180 {
 lab=AOut}
 N -880 -260 -840 -260 {
 lab=AOut}
-N 770 160 1320 160 {
-lab=GND}
-N 770 10 1320 10 {
-lab=VDD}
 N -1510 10 -960 10 {
 lab=VDD}
 N -1510 160 -960 160 {
@@ -703,7 +691,7 @@ lab=#net43}
 N -1100 1460 -870 1460 {
 lab=#net43}
 N -960 1420 -960 1470 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -960 1530 -960 1550 {
 lab=#net44}
 N -1170 1460 -1170 1470 {
@@ -721,19 +709,19 @@ lab=D}
 N -1270 1580 -1270 1610 {
 lab=D}
 N -840 1490 -840 1610 {
-lab=STO-}
+lab=STO-_RCL+}
 N -960 1390 -960 1420 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -960 1400 -710 1400 {
-lab=STO-b}
+lab=STO-b_RCL+b}
 N -840 1580 -710 1580 {
-lab=STO-}
+lab=STO-_RCL+}
 N 600 1460 740 1460 {
 lab=#net46}
 N 740 1460 970 1460 {
 lab=#net46}
 N 880 1420 880 1470 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 880 1530 880 1550 {
 lab=#net47}
 N 670 1460 670 1470 {
@@ -751,13 +739,13 @@ lab=D}
 N 570 1580 570 1610 {
 lab=D}
 N 1000 1490 1000 1610 {
-lab=STO+}
+lab=STO+_RCL-}
 N 880 1390 880 1420 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 880 1400 1140 1400 {
-lab=STO+b}
+lab=STO+b_RCL-b}
 N 1000 1580 1140 1580 {
-lab=STO+}
+lab=STO+_RCL-}
 N -270 1370 -270 1380 {
 lab=#net49}
 N 50 1370 50 1380 {
@@ -2052,30 +2040,14 @@ C {devices/lab_pin.sym} 870 990 3 0 {name=p35 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} 1010 990 3 0 {name=p36 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 950 1170 3 0 {name=p37 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 950 1020 0 0 {name=p38 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} -1140 60 0 0 {name=p40 sig_type=std_logic lab=RCL-b}
 C {devices/lab_pin.sym} -1130 10 1 0 {name=p41 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -1130 160 3 0 {name=p42 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} -1290 60 0 0 {name=p43 sig_type=std_logic lab=RCL-}
-C {devices/lab_pin.sym} -1040 60 0 0 {name=p39 sig_type=std_logic lab=STO-}
-C {devices/lab_pin.sym} -890 60 0 0 {name=p44 sig_type=std_logic lab=STO-b}
-C {devices/lab_pin.sym} -1730 490 2 0 {name=p45 sig_type=std_logic lab=RCL-}
-C {devices/lab_pin.sym} -1600 490 0 0 {name=p46 sig_type=std_logic lab=RCL-b}
-C {devices/lab_pin.sym} -1560 490 2 0 {name=p47 sig_type=std_logic lab=STO-}
-C {devices/lab_pin.sym} -1450 490 0 0 {name=p48 sig_type=std_logic lab=STO-b}
 C {devices/lab_pin.sym} -1590 40 0 0 {name=p49 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} -1440 40 2 0 {name=p50 sig_type=std_logic lab=PRE}
-C {devices/lab_pin.sym} 1420 560 2 0 {name=p24 sig_type=std_logic lab=RCL+}
-C {devices/lab_pin.sym} 1540 560 0 0 {name=p25 sig_type=std_logic lab=RCL+b}
-C {devices/lab_pin.sym} 1240 560 2 0 {name=p51 sig_type=std_logic lab=STO+b}
-C {devices/lab_pin.sym} 1380 560 0 0 {name=p52 sig_type=std_logic lab=STO+}
-C {devices/lab_pin.sym} 930 10 3 1 {name=p54 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 930 160 1 1 {name=p55 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 1320 10 3 1 {name=p54 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 1320 160 1 1 {name=p55 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 1390 40 0 1 {name=p59 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} 1240 40 2 1 {name=p60 sig_type=std_logic lab=PRE}
-C {devices/lab_pin.sym} 690 60 2 0 {name=p29 sig_type=std_logic lab=STO+b}
-C {devices/lab_pin.sym} 840 60 2 0 {name=p30 sig_type=std_logic lab=STO+}
-C {devices/lab_pin.sym} 1090 60 2 0 {name=p53 sig_type=std_logic lab=RCL+}
-C {devices/lab_pin.sym} 940 60 2 0 {name=p56 sig_type=std_logic lab=RCL+b}
 C {devices/lab_pin.sym} -90 410 0 0 {name=p57 sig_type=std_logic lab=SH}
 C {devices/lab_pin.sym} -90 820 0 0 {name=p58 sig_type=std_logic lab=SHb}
 C {devices/lab_pin.sym} -300 510 0 0 {name=p61 sig_type=std_logic lab=Vref-}
@@ -2146,14 +2118,6 @@ C {devices/lab_pin.sym} 20 480 0 0 {name=p65 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} 220 480 0 0 {name=p66 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} -90 310 3 0 {name=p67 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} -80 160 1 0 {name=p68 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} -730 530 2 0 {name=p69 sig_type=std_logic lab=RCL-}
-C {devices/lab_pin.sym} -820 530 0 0 {name=p70 sig_type=std_logic lab=RCL-b}
-C {devices/lab_pin.sym} -580 530 0 0 {name=p72 sig_type=std_logic lab=STO-b}
-C {devices/lab_pin.sym} -510 530 2 0 {name=p71 sig_type=std_logic lab=STO-}
-C {devices/lab_pin.sym} 500 560 2 0 {name=p73 sig_type=std_logic lab=RCL+}
-C {devices/lab_pin.sym} 670 560 0 0 {name=p74 sig_type=std_logic lab=RCL+b}
-C {devices/lab_pin.sym} 320 560 2 0 {name=p75 sig_type=std_logic lab=STO+}
-C {devices/lab_pin.sym} 460 560 0 0 {name=p76 sig_type=std_logic lab=STO+b}
 C {devices/lab_pin.sym} -420 190 0 0 {name=p77 sig_type=std_logic lab=Vf}
 C {devices/lab_pin.sym} -1120 330 1 0 {name=p78 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} 930 340 1 0 {name=p79 sig_type=std_logic lab=Vcp}
@@ -2204,8 +2168,6 @@ C {./inverter.sym} -1480 90 0 0 {name=x10}
 C {./inverter.sym} -1180 90 0 0 {name=x1}
 C {./inverter.sym} -930 90 0 0 {name=x5}
 C {./inverter.sym} 1350 90 0 0 {name=x2}
-C {./inverter.sym} 980 90 0 1 {name=x3}
-C {./inverter.sym} 730 90 0 1 {name=x6}
 C {./inverter.sym} 920 1100 0 1 {name=x4}
 C {./inverter.sym} -70 970 0 0 {name=x8}
 C {devices/code_shown.sym} 2490 710 0 0 {name=SPICE only_toplevel=false value=".param W = 12
@@ -2374,8 +2336,7 @@ m=1}
 C {devices/lab_pin.sym} -750 1460 3 0 {name=p119 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} -750 1640 3 0 {name=p120 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} -870 1640 0 0 {name=p121 sig_type=std_logic lab=SRn}
-C {devices/lab_pin.sym} -720 1400 1 0 {name=p122 sig_type=std_logic lab=STO-b}
-C {devices/lab_pin.sym} -710 1400 2 0 {name=p123 sig_type=std_logic lab=RCL+b}
+C {devices/lab_pin.sym} -710 1400 2 0 {name=p123 sig_type=std_logic lab=STO-b_RCL+b}
 C {madvlsi/pmos3.sym} 880 1360 0 0 {name=M36
 L=0.15
 W=1
@@ -2531,12 +2492,9 @@ m=1}
 C {devices/lab_pin.sym} 1090 1460 3 0 {name=p135 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 1090 1640 3 0 {name=p136 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 970 1640 0 0 {name=p137 sig_type=std_logic lab=SRn}
-C {devices/lab_pin.sym} 1130 1400 1 0 {name=p138 sig_type=std_logic lab=STO+b}
-C {devices/lab_pin.sym} 1140 1400 2 0 {name=p139 sig_type=std_logic lab=RCL-b}
-C {devices/lab_pin.sym} 1130 1580 1 0 {name=p140 sig_type=std_logic lab=STO+}
-C {devices/lab_pin.sym} 1140 1580 2 0 {name=p141 sig_type=std_logic lab=RCL-}
-C {devices/lab_pin.sym} -720 1580 1 0 {name=p142 sig_type=std_logic lab=STO-}
-C {devices/lab_pin.sym} -710 1580 2 0 {name=p143 sig_type=std_logic lab=RCL+}
+C {devices/lab_pin.sym} 1140 1400 2 0 {name=p139 sig_type=std_logic lab=STO+b_RCL-b}
+C {devices/lab_pin.sym} 1140 1580 2 0 {name=p141 sig_type=std_logic lab=STO+_RCL-}
+C {devices/lab_pin.sym} -710 1580 2 0 {name=p143 sig_type=std_logic lab=STO-_RCL+}
 C {madvlsi/pmos3.sym} -270 1340 0 0 {name=M45
 L=0.15
 W=1
@@ -2730,3 +2688,23 @@ value=1}
 C {madvlsi/gnd.sym} 2280 790 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} -100 1390 1 0 {name=p33 sig_type=std_logic lab=ENADb}
 C {devices/lab_pin.sym} -100 1670 3 0 {name=p34 sig_type=std_logic lab=ENAD}
+C {devices/lab_pin.sym} -580 530 1 0 {name=p91 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} -1450 490 1 0 {name=p48 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} -890 60 2 0 {name=p44 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} 460 560 1 0 {name=p72 sig_type=std_logic lab=STO+b_RCL-b}
+C {devices/lab_pin.sym} 1240 560 1 0 {name=p51 sig_type=std_logic lab=STO+b_RCL-b}
+C {devices/lab_pin.sym} -820 530 1 0 {name=p70 sig_type=std_logic lab=STO+b_RCL-b}
+C {devices/lab_pin.sym} -1600 490 1 0 {name=p46 sig_type=std_logic lab=STO+b_RCL-b}
+C {devices/lab_pin.sym} 670 560 1 0 {name=p74 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} 1540 560 1 0 {name=p25 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} -1140 60 1 0 {name=p40 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} -1560 490 1 0 {name=p29 sig_type=std_logic lab=STO-_RCL+}
+C {devices/lab_pin.sym} -510 530 1 0 {name=p30 sig_type=std_logic lab=STO-_RCL+}
+C {devices/lab_pin.sym} -1040 60 1 0 {name=p39 sig_type=std_logic lab=STO-_RCL+}
+C {devices/lab_pin.sym} 1420 560 1 0 {name=p24 sig_type=std_logic lab=STO-_RCL+}
+C {devices/lab_pin.sym} 500 560 1 0 {name=p47 sig_type=std_logic lab=STO-_RCL+}
+C {devices/lab_pin.sym} -1730 490 1 0 {name=p45 sig_type=std_logic lab=STO+_RCL-}
+C {devices/lab_pin.sym} -730 530 1 0 {name=p53 sig_type=std_logic lab=STO+_RCL-}
+C {devices/lab_pin.sym} 320 560 1 0 {name=p56 sig_type=std_logic lab=STO+_RCL-}
+C {devices/lab_pin.sym} 1380 560 1 0 {name=p52 sig_type=std_logic lab=STO+_RCL-}
+C {devices/lab_pin.sym} -1290 60 1 0 {name=p43 sig_type=std_logic lab=STO+_RCL-}
