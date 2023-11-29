@@ -449,14 +449,6 @@ N 1590 520 1590 580 {
 lab=PREb}
 N 1790 520 1790 580 {
 lab=PRE}
-N -1040 1090 -1040 1100 {
-lab=D}
-N -1190 1090 -1190 1100 {
-lab=Db}
-N 1020 1090 1020 1100 {
-lab=D}
-N 870 1090 870 1100 {
-lab=Db}
 N -1700 650 -1700 710 {
 lab=#net12}
 N -1700 710 -1630 710 {
@@ -2093,19 +2085,13 @@ spiceprefix=X
 C {devices/lab_pin.sym} -880 -260 0 0 {name=p88 sig_type=std_logic lab=AOut}
 C {devices/lab_pin.sym} -810 -150 0 0 {name=p89 sig_type=std_logic lab=ENADb}
 C {devices/lab_pin.sym} -810 -290 0 0 {name=p90 sig_type=std_logic lab=ENAD}
-C {devices/lab_pin.sym} -1190 1090 0 0 {name=p91 sig_type=std_logic lab=Db}
-C {devices/lab_pin.sym} -1040 1090 0 0 {name=p92 sig_type=std_logic lab=D}
-C {devices/lab_pin.sym} 870 1090 0 0 {name=p93 sig_type=std_logic lab=Db}
-C {devices/lab_pin.sym} 1020 1090 0 0 {name=p94 sig_type=std_logic lab=D}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -1480 90 0 0 {name=x10}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -1180 90 0 0 {name=x1}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -930 90 0 0 {name=x5}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -1080 1100 0 0 {name=x3}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} -70 970 0 0 {name=x2}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 980 1100 0 0 {name=x4}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 800 90 0 0 {name=x6}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 1050 90 0 0 {name=x8}
-C {/home/madvlsi/bi-directional-A-D-A-converter/schematics/Inverter/inverter.sym} 1350 90 0 0 {name=x7}
+C {devices/lab_pin.sym} -1180 1100 0 0 {name=p91 sig_type=std_logic lab=Db}
+C {devices/lab_pin.sym} -1030 1100 2 0 {name=p92 sig_type=std_logic lab=D}
+C {devices/lab_pin.sym} 880 1100 0 0 {name=p93 sig_type=std_logic lab=Db}
+C {devices/lab_pin.sym} 1030 1100 2 0 {name=p94 sig_type=std_logic lab=D}
+C {./inverter.sym} -1480 90 0 0 {name=x10}
+C {./inverter.sym} -1180 90 0 0 {name=x1}
+C {./inverter.sym} -930 90 0 0 {name=x5}
 C {madvlsi/vsource.sym} 2010 600 0 0 {name=VDD
 value=1.8}
 C {madvlsi/vdd.sym} 2010 570 0 0 {name=l1 lab=VDD}
@@ -2158,3 +2144,9 @@ C {madvlsi/vsource.sym} 2010 -30 0 0 {name=SEN
 value=1.8}
 C {madvlsi/gnd.sym} 2010 0 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 2010 -60 1 0 {name=p107 sig_type=std_logic lab=SEN}
+C {./inverter.sym} 1350 90 0 0 {name=x2}
+C {./inverter.sym} 980 90 0 1 {name=x3}
+C {./inverter.sym} 730 90 0 1 {name=x6}
+C {./inverter.sym} -1140 1100 0 1 {name=x7}
+C {./inverter.sym} 920 1100 0 1 {name=x4}
+C {./inverter.sym} -70 970 0 0 {name=x8}
