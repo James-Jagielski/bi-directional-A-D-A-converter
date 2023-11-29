@@ -2172,7 +2172,8 @@ C {./inverter.sym} 920 1100 0 1 {name=x4}
 C {./inverter.sym} -70 970 0 0 {name=x8}
 C {devices/code_shown.sym} 2490 710 0 0 {name=SPICE only_toplevel=false value=".param W = 12
 .param L = .5
-.tran .01n 1u"
+.tran .01n 1u
+.save all"
 }
 C {madvlsi/tt_models.sym} 2470 550 0 0 {
 name=TT_MODELS
@@ -2646,11 +2647,11 @@ C {madvlsi/vsource.sym} 2210 610 0 0 {name=Vcp
 value=1.5}
 C {madvlsi/gnd.sym} 2210 640 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} 2210 580 1 0 {name=p99 sig_type=std_logic lab=Vcp}
-C {madvlsi/vsource.sym} 2280 610 0 0 {name=SRn
+C {madvlsi/vsource.sym} 2280 610 0 0 {name=VSRn
 value=1}
 C {madvlsi/gnd.sym} 2280 640 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 2280 580 1 0 {name=p100 sig_type=std_logic lab=SRn}
-C {madvlsi/vsource.sym} 2350 610 0 0 {name=SRp
+C {madvlsi/vsource.sym} 2350 610 0 0 {name=VSRp
 value=1}
 C {madvlsi/gnd.sym} 2350 640 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 2350 580 1 0 {name=p101 sig_type=std_logic lab=SRp}
@@ -2670,20 +2671,20 @@ C {madvlsi/gnd.sym} 1990 150 0 0 {name=l14 lab=GND}
 C {devices/lab_pin.sym} 1990 90 1 0 {name=p106 sig_type=std_logic lab=RST}
 C {madvlsi/gnd.sym} 1990 10 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 1990 -50 1 0 {name=p107 sig_type=std_logic lab=SEN}
-C {madvlsi/vsource.sym} 1990 260 0 0 {name=SH
+C {madvlsi/vsource.sym} 1990 260 0 0 {name=VSH
 value="pulse(0 1.8 5n 1n 1n 4n 16n)"}
-C {madvlsi/vsource.sym} 1990 120 0 0 {name=RST
+C {madvlsi/vsource.sym} 1990 120 0 0 {name=VRST
 value="pulse(0 1.8 10n 1n 1n 4n 16n)"}
-C {madvlsi/vsource.sym} 1990 -20 0 0 {name=SEN
+C {madvlsi/vsource.sym} 1990 -20 0 0 {name=VSEN
 value="pulse(0 1.8 15n 1n 1n 4n 16n)"}
-C {madvlsi/vsource.sym} 1990 400 0 0 {name=PRE
+C {madvlsi/vsource.sym} 1990 400 0 0 {name=VPRE
 value="pwl(0 0 1n 1.8 4n 1.8 5n 0)"}
-C {madvlsi/vsource.sym} 2210 760 0 0 {name=ENAD
+C {madvlsi/vsource.sym} 2210 760 0 0 {name=VENAD
 value=1.8}
 C {madvlsi/gnd.sym} 2210 790 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 2210 730 1 0 {name=p157 sig_type=std_logic lab=ENAD}
 C {devices/lab_pin.sym} 2280 730 1 0 {name=p159 sig_type=std_logic lab=AIn}
-C {madvlsi/vsource.sym} 2280 760 0 0 {name=AIn
+C {madvlsi/vsource.sym} 2280 760 0 0 {name=VAIn
 value=1}
 C {madvlsi/gnd.sym} 2280 790 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} -100 1390 1 0 {name=p33 sig_type=std_logic lab=ENADb}
