@@ -2092,58 +2092,6 @@ C {devices/lab_pin.sym} 1030 1100 2 0 {name=p94 sig_type=std_logic lab=D}
 C {./inverter.sym} -1480 90 0 0 {name=x10}
 C {./inverter.sym} -1180 90 0 0 {name=x1}
 C {./inverter.sym} -930 90 0 0 {name=x5}
-C {madvlsi/vsource.sym} 2010 600 0 0 {name=VDD
-value=1.8}
-C {madvlsi/vdd.sym} 2010 570 0 0 {name=l1 lab=VDD}
-C {madvlsi/gnd.sym} 2010 630 0 0 {name=l2 lab=GND}
-C {madvlsi/vdd.sym} 1950 700 0 0 {name=l3 lab=VDD}
-C {madvlsi/gnd.sym} 2010 720 0 0 {name=l4 lab=GND}
-C {devices/lab_pin.sym} 2010 720 1 0 {name=p95 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 1950 700 3 0 {name=p96 sig_type=std_logic lab=VDD}
-C {madvlsi/vsource.sym} 2090 600 0 0 {name=Vf
-value=1.8}
-C {madvlsi/gnd.sym} 2090 630 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 2090 570 1 0 {name=p97 sig_type=std_logic lab=Vf}
-C {madvlsi/vsource.sym} 2160 600 0 0 {name=Vb
-value=1.8}
-C {madvlsi/gnd.sym} 2160 630 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} 2160 570 1 0 {name=p98 sig_type=std_logic lab=Vb}
-C {madvlsi/vsource.sym} 2230 600 0 0 {name=Vcp
-value=1.8}
-C {madvlsi/gnd.sym} 2230 630 0 0 {name=l7 lab=GND}
-C {devices/lab_pin.sym} 2230 570 1 0 {name=p99 sig_type=std_logic lab=Vcp}
-C {madvlsi/vsource.sym} 2300 600 0 0 {name=SRn
-value=1.8}
-C {madvlsi/gnd.sym} 2300 630 0 0 {name=l8 lab=GND}
-C {devices/lab_pin.sym} 2300 570 1 0 {name=p100 sig_type=std_logic lab=SRn}
-C {madvlsi/vsource.sym} 2370 600 0 0 {name=SRp
-value=1.8}
-C {madvlsi/gnd.sym} 2370 630 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} 2370 570 1 0 {name=p101 sig_type=std_logic lab=SRp}
-C {madvlsi/vsource.sym} 2090 750 0 0 {name=Vrefp
-value=1.8}
-C {madvlsi/gnd.sym} 2090 780 0 0 {name=l10 lab=GND}
-C {devices/lab_pin.sym} 2090 720 1 0 {name=p102 sig_type=std_logic lab=Vrefp}
-C {madvlsi/vsource.sym} 2160 750 0 0 {name=Vrefn
-value=0}
-C {madvlsi/gnd.sym} 2160 780 0 0 {name=l11 lab=GND}
-C {devices/lab_pin.sym} 2160 720 1 0 {name=p103 sig_type=std_logic lab=Vrefn}
-C {madvlsi/vsource.sym} 2010 390 0 0 {name=PRE
-value=1.8}
-C {madvlsi/gnd.sym} 2010 420 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} 2010 360 1 0 {name=p104 sig_type=std_logic lab=PRE}
-C {madvlsi/vsource.sym} 2010 250 0 0 {name=SH
-value=1.8}
-C {madvlsi/gnd.sym} 2010 280 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} 2010 220 1 0 {name=p105 sig_type=std_logic lab=SH}
-C {madvlsi/vsource.sym} 2010 110 0 0 {name=RST
-value=1.8}
-C {madvlsi/gnd.sym} 2010 140 0 0 {name=l14 lab=GND}
-C {devices/lab_pin.sym} 2010 80 1 0 {name=p106 sig_type=std_logic lab=RST}
-C {madvlsi/vsource.sym} 2010 -30 0 0 {name=SEN
-value=1.8}
-C {madvlsi/gnd.sym} 2010 0 0 0 {name=l15 lab=GND}
-C {devices/lab_pin.sym} 2010 -60 1 0 {name=p107 sig_type=std_logic lab=SEN}
 C {./inverter.sym} 1350 90 0 0 {name=x2}
 C {./inverter.sym} 980 90 0 1 {name=x3}
 C {./inverter.sym} 730 90 0 1 {name=x6}
@@ -2160,3 +2108,55 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
+C {madvlsi/vsource.sym} 1990 560 0 0 {name=VDD
+value=1.8}
+C {madvlsi/vdd.sym} 1990 530 0 0 {name=l1 lab=VDD}
+C {madvlsi/gnd.sym} 1990 590 0 0 {name=l2 lab=GND}
+C {madvlsi/vdd.sym} 1930 660 0 0 {name=l3 lab=VDD}
+C {madvlsi/gnd.sym} 1990 680 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} 1990 680 1 0 {name=p95 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 1930 660 3 0 {name=p96 sig_type=std_logic lab=VDD}
+C {madvlsi/vsource.sym} 2070 560 0 0 {name=Vf
+value=1}
+C {madvlsi/gnd.sym} 2070 590 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 2070 530 1 0 {name=p97 sig_type=std_logic lab=Vf}
+C {madvlsi/vsource.sym} 2140 560 0 0 {name=Vb
+value=1}
+C {madvlsi/gnd.sym} 2140 590 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} 2140 530 1 0 {name=p98 sig_type=std_logic lab=Vb}
+C {madvlsi/vsource.sym} 2210 560 0 0 {name=Vcp
+value=1.5}
+C {madvlsi/gnd.sym} 2210 590 0 0 {name=l7 lab=GND}
+C {devices/lab_pin.sym} 2210 530 1 0 {name=p99 sig_type=std_logic lab=Vcp}
+C {madvlsi/vsource.sym} 2280 560 0 0 {name=SRn
+value=1.8}
+C {madvlsi/gnd.sym} 2280 590 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} 2280 530 1 0 {name=p100 sig_type=std_logic lab=SRn}
+C {madvlsi/vsource.sym} 2350 560 0 0 {name=SRp
+value=1.8}
+C {madvlsi/gnd.sym} 2350 590 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} 2350 530 1 0 {name=p101 sig_type=std_logic lab=SRp}
+C {madvlsi/vsource.sym} 2070 710 0 0 {name=Vrefp
+value=1.8}
+C {madvlsi/gnd.sym} 2070 740 0 0 {name=l10 lab=GND}
+C {devices/lab_pin.sym} 2070 680 1 0 {name=p102 sig_type=std_logic lab=Vrefp}
+C {madvlsi/vsource.sym} 2140 710 0 0 {name=Vrefn
+value=0}
+C {madvlsi/gnd.sym} 2140 740 0 0 {name=l11 lab=GND}
+C {devices/lab_pin.sym} 2140 680 1 0 {name=p103 sig_type=std_logic lab=Vrefn}
+C {madvlsi/gnd.sym} 1990 380 0 0 {name=l12 lab=GND}
+C {devices/lab_pin.sym} 1990 320 1 0 {name=p104 sig_type=std_logic lab=PRE}
+C {madvlsi/gnd.sym} 1990 240 0 0 {name=l13 lab=GND}
+C {devices/lab_pin.sym} 1990 180 1 0 {name=p105 sig_type=std_logic lab=SH}
+C {madvlsi/gnd.sym} 1990 100 0 0 {name=l14 lab=GND}
+C {devices/lab_pin.sym} 1990 40 1 0 {name=p106 sig_type=std_logic lab=RST}
+C {madvlsi/gnd.sym} 1990 -40 0 0 {name=l15 lab=GND}
+C {devices/lab_pin.sym} 1990 -100 1 0 {name=p107 sig_type=std_logic lab=SEN}
+C {madvlsi/vsource.sym} 1990 210 0 0 {name=SH
+value="pulse(0 1.8 5n 1n 1n 4n 10n)"}
+C {madvlsi/vsource.sym} 1990 70 0 0 {name=RST
+value="pulse(0 1.8 10n 1n 1n 4n 10n)"}
+C {madvlsi/vsource.sym} 1990 -70 0 0 {name=SEN
+value="pulse(0 1.8 15n 1n 1n 4n 10n)"}
+C {madvlsi/vsource.sym} 1990 350 0 0 {namePRE
+value="pwl(0 0 1n 1.8 4n 1.8 5n 0)"}
