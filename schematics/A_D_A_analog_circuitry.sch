@@ -771,13 +771,13 @@ lab=#net51}
 N -270 1680 -270 1690 {
 lab=#net52}
 N -240 1410 20 1410 {
-lab=#net53}
+lab=ENADb}
 N -240 1650 20 1650 {
-lab=#net54}
+lab=ENAD}
 N -100 1610 -100 1650 {
-lab=#net54}
+lab=ENAD}
 N -100 1410 -100 1460 {
-lab=#net53}
+lab=ENADb}
 N -310 1720 -300 1720 {
 lab=CompOutb}
 N -310 1340 -310 1720 {
@@ -798,6 +798,10 @@ N 30 1470 50 1470 {
 lab=Db}
 N 90 1470 110 1470 {
 lab=CompOut}
+N -100 1650 -100 1670 {
+lab=ENAD}
+N -100 1390 -100 1410 {
+lab=ENADb}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=\{L\}
 W=\{W\}
@@ -2044,8 +2048,6 @@ C {devices/lab_pin.sym} 1590 520 0 0 {name=p27 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} 1790 520 0 0 {name=p28 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} -1190 990 3 0 {name=p31 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} -1050 990 3 0 {name=p32 sig_type=std_logic lab=D}
-C {devices/lab_pin.sym} -1110 1170 3 0 {name=p33 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} -1110 1020 0 0 {name=p34 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 870 990 3 0 {name=p35 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} 1010 990 3 0 {name=p36 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 950 1170 3 0 {name=p37 sig_type=std_logic lab=GND}
@@ -2196,8 +2198,6 @@ spiceprefix=X
 C {devices/lab_pin.sym} -880 -260 0 0 {name=p88 sig_type=std_logic lab=AOut}
 C {devices/lab_pin.sym} -810 -150 0 0 {name=p89 sig_type=std_logic lab=ENADb}
 C {devices/lab_pin.sym} -810 -290 0 0 {name=p90 sig_type=std_logic lab=ENAD}
-C {devices/lab_pin.sym} -1180 1100 0 0 {name=p91 sig_type=std_logic lab=Db}
-C {devices/lab_pin.sym} -1030 1100 2 0 {name=p92 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 880 1100 0 0 {name=p93 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} 1030 1100 2 0 {name=p94 sig_type=std_logic lab=D}
 C {./inverter.sym} -1480 90 0 0 {name=x10}
@@ -2206,7 +2206,6 @@ C {./inverter.sym} -930 90 0 0 {name=x5}
 C {./inverter.sym} 1350 90 0 0 {name=x2}
 C {./inverter.sym} 980 90 0 1 {name=x3}
 C {./inverter.sym} 730 90 0 1 {name=x6}
-C {./inverter.sym} -1140 1100 0 1 {name=x7}
 C {./inverter.sym} 920 1100 0 1 {name=x4}
 C {./inverter.sym} -70 970 0 0 {name=x8}
 C {devices/code_shown.sym} 2490 710 0 0 {name=SPICE only_toplevel=false value=".param W = 12
@@ -2725,12 +2724,9 @@ C {madvlsi/vsource.sym} 2210 760 0 0 {name=ENAD
 value=1.8}
 C {madvlsi/gnd.sym} 2210 790 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 2210 730 1 0 {name=p157 sig_type=std_logic lab=ENAD}
-C {./inverter.sym} 490 -220 0 0 {name=x11}
-C {devices/lab_pin.sym} 380 -220 0 0 {name=p154 sig_type=std_logic lab=ENAD}
-C {devices/lab_pin.sym} 460 -150 3 0 {name=p155 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 460 -300 3 1 {name=p156 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 530 -220 0 1 {name=p158 sig_type=std_logic lab=ENADb}
 C {devices/lab_pin.sym} 2280 730 1 0 {name=p159 sig_type=std_logic lab=AIn}
 C {madvlsi/vsource.sym} 2280 760 0 0 {name=AIn
 value=1}
 C {madvlsi/gnd.sym} 2280 790 0 0 {name=l16 lab=GND}
+C {devices/lab_pin.sym} -100 1390 1 0 {name=p33 sig_type=std_logic lab=ENADb}
+C {devices/lab_pin.sym} -100 1670 3 0 {name=p34 sig_type=std_logic lab=ENAD}
