@@ -13,7 +13,9 @@ T {C-} -320 780 0 0 0.7 0.7 {}
 T {C+} 110 780 0 0 0.7 0.7 {}
 T {C-'} -1890 770 0 0 0.7 0.7 {}
 T {C+'} 1680 800 0 0 0.7 0.7 {}
-T {D/A} 1960 -10 0 0 1 1 {}
+T {D/A} 2020 320 0 0 1 1 {}
+T {ENAD = 1: A/D
+ENAD = 0: D/A} 2010 130 0 0 0.7 0.7 {}
 N -240 -740 100 -740 {
 lab=VDD}
 N -210 -710 -170 -710 {
@@ -445,9 +447,9 @@ lab=PREb}
 N -1770 490 -1770 580 {
 lab=PRE}
 N 1590 520 1590 580 {
-lab=PREb}
-N 1790 520 1790 580 {
 lab=PRE}
+N 1790 520 1790 580 {
+lab=PREb}
 N -1700 650 -1700 710 {
 lab=#net10}
 N -1700 710 -1630 710 {
@@ -479,15 +481,15 @@ lab=#net11}
 N -1290 60 -1290 90 {
 lab=STO+_RCL-}
 N -1140 60 -1140 90 {
-lab=STO-b_RCL+b}
+lab=STO+b_RCL-b}
 N -1040 60 -1040 90 {
 lab=STO-_RCL+}
 N -890 60 -890 90 {
 lab=STO-b_RCL+b}
 N -1590 40 -1590 90 {
-lab=PREb}
-N -1440 40 -1440 90 {
 lab=PRE}
+N -1440 40 -1440 90 {
+lab=PREb}
 N 1520 650 1520 710 {
 lab=#net26}
 N 1450 710 1520 710 {
@@ -505,17 +507,13 @@ lab=STO+b_RCL-b}
 N 1240 560 1240 610 {
 lab=STO+b_RCL-b}
 N 1420 560 1420 680 {
-lab=STO-_RCL+}
+lab=STO-b_RCL+b}
 N 1620 620 1620 680 {
-lab=STO-b_RCL+b}
+lab=STO-_RCL+}
 N 1540 620 1620 620 {
-lab=STO-b_RCL+b}
+lab=STO-_RCL+}
 N 1540 560 1540 620 {
-lab=STO-b_RCL+b}
-N 1390 40 1390 90 {
-lab=PREb}
-N 1240 40 1240 90 {
-lab=PRE}
+lab=STO-_RCL+}
 N 1290 710 1290 740 {
 lab=#net27}
 N 1040 740 1290 740 {
@@ -559,9 +557,9 @@ lab=Vref+}
 N 120 510 120 530 {
 lab=Vref+}
 N 20 480 20 560 {
-lab=PREb}
-N 220 480 220 560 {
 lab=PRE}
+N 220 480 220 560 {
+lab=PREb}
 N -0 220 0 250 {
 lab=#net40}
 N -180 160 0 160 {
@@ -792,9 +790,9 @@ N -10 -400 100 -400 {
 lab=CompOut}
 N 100 -400 260 -400 {
 lab=CompOut}
-N -380 -550 -380 -280 {
+N -430 -550 -430 -290 {
 lab=AIn}
-N -570 -280 -380 -280 {
+N -570 -290 -430 -290 {
 lab=AIn}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=\{L\}
@@ -2038,22 +2036,18 @@ C {devices/lab_pin.sym} -1870 520 0 0 {name=p21 sig_type=std_logic lab=Vref-}
 C {devices/lab_pin.sym} -1970 490 0 0 {name=p22 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} -1770 490 0 0 {name=p23 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} 1690 530 0 0 {name=p26 sig_type=std_logic lab=Vref+}
-C {devices/lab_pin.sym} 1590 520 0 0 {name=p27 sig_type=std_logic lab=PREb}
-C {devices/lab_pin.sym} 1790 520 0 0 {name=p28 sig_type=std_logic lab=PRE}
+C {devices/lab_pin.sym} 1790 520 2 0 {name=p27 sig_type=std_logic lab=PREb}
+C {devices/lab_pin.sym} 1590 520 2 0 {name=p28 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} -1190 990 3 0 {name=p31 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} -1050 990 3 0 {name=p32 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 870 990 3 0 {name=p35 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} 1010 990 3 0 {name=p36 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 950 1170 3 0 {name=p37 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 950 1020 0 0 {name=p38 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} -1130 10 1 0 {name=p41 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} -1100 10 1 0 {name=p41 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -1130 160 3 0 {name=p42 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} -1590 40 0 0 {name=p49 sig_type=std_logic lab=PREb}
-C {devices/lab_pin.sym} -1440 40 2 0 {name=p50 sig_type=std_logic lab=PRE}
-C {devices/lab_pin.sym} 1320 10 3 1 {name=p54 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 1320 160 1 1 {name=p55 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 1390 40 0 1 {name=p59 sig_type=std_logic lab=PREb}
-C {devices/lab_pin.sym} 1240 40 2 1 {name=p60 sig_type=std_logic lab=PRE}
+C {devices/lab_pin.sym} -1440 40 2 0 {name=p49 sig_type=std_logic lab=PREb}
+C {devices/lab_pin.sym} -1590 40 0 0 {name=p50 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} -90 410 0 0 {name=p57 sig_type=std_logic lab=SH}
 C {devices/lab_pin.sym} -90 820 0 0 {name=p58 sig_type=std_logic lab=SHb}
 C {devices/lab_pin.sym} -300 510 0 0 {name=p61 sig_type=std_logic lab=Vref-}
@@ -2120,8 +2114,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 120 510 0 0 {name=p64 sig_type=std_logic lab=Vref+}
-C {devices/lab_pin.sym} 20 480 0 0 {name=p65 sig_type=std_logic lab=PREb}
-C {devices/lab_pin.sym} 220 480 0 0 {name=p66 sig_type=std_logic lab=PRE}
+C {devices/lab_pin.sym} 220 480 0 0 {name=p65 sig_type=std_logic lab=PREb}
+C {devices/lab_pin.sym} 20 480 0 0 {name=p66 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} -90 310 3 0 {name=p67 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} -80 160 1 0 {name=p68 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -420 190 0 0 {name=p77 sig_type=std_logic lab=Vf}
@@ -2173,15 +2167,14 @@ C {devices/lab_pin.sym} 1030 1100 2 0 {name=p94 sig_type=std_logic lab=D}
 C {./inverter.sym} -1480 90 0 0 {name=x10}
 C {./inverter.sym} -1180 90 0 0 {name=x1}
 C {./inverter.sym} -930 90 0 0 {name=x5}
-C {./inverter.sym} 1350 90 0 0 {name=x2}
 C {./inverter.sym} 920 1100 0 1 {name=x4}
 C {./inverter.sym} -70 970 0 0 {name=x8}
-C {devices/code_shown.sym} 2490 710 0 0 {name=SPICE only_toplevel=false value=".param W = 1
+C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W = 1
 .param L = .15
 .tran 10n 20u
 .save v(sh) v(db) v(pre) v(preb) v(shb) v(rst) V(sen) V(d) v(CompOut) v(AOut) i(VCompOut)"
 }
-C {madvlsi/tt_models.sym} 2470 550 0 0 {
+C {madvlsi/tt_models.sym} 1980 1420 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
@@ -2633,62 +2626,62 @@ C {devices/lab_pin.sym} -250 1470 2 0 {name=p150 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 30 1470 0 0 {name=p151 sig_type=std_logic lab=Db}
 C {devices/lab_pin.sym} -330 1470 0 0 {name=p152 sig_type=std_logic lab=CompOutb}
 C {devices/lab_pin.sym} 110 1470 2 0 {name=p153 sig_type=std_logic lab=CompOut}
-C {madvlsi/vsource.sym} 1990 610 0 0 {name=VDD
+C {madvlsi/vsource.sym} 2040 1080 0 0 {name=VDD
 value=1.8}
-C {madvlsi/vdd.sym} 1990 580 0 0 {name=l1 lab=VDD}
-C {madvlsi/gnd.sym} 1990 640 0 0 {name=l2 lab=GND}
-C {madvlsi/vdd.sym} 1930 710 0 0 {name=l3 lab=VDD}
-C {madvlsi/gnd.sym} 1990 730 0 0 {name=l4 lab=GND}
-C {devices/lab_pin.sym} 1990 730 1 0 {name=p95 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 1930 710 3 0 {name=p96 sig_type=std_logic lab=VDD}
-C {madvlsi/vsource.sym} 2070 610 0 0 {name=Vf
+C {madvlsi/vdd.sym} 2040 1050 0 0 {name=l1 lab=VDD}
+C {madvlsi/gnd.sym} 2040 1110 0 0 {name=l2 lab=GND}
+C {madvlsi/vdd.sym} 2040 1210 0 0 {name=l3 lab=VDD}
+C {madvlsi/gnd.sym} 2100 1230 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} 2100 1230 1 0 {name=p95 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 2040 1210 3 0 {name=p96 sig_type=std_logic lab=VDD}
+C {madvlsi/vsource.sym} 2120 1080 0 0 {name=Vf
 value=1}
-C {madvlsi/gnd.sym} 2070 640 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 2070 580 1 0 {name=p97 sig_type=std_logic lab=Vf}
-C {madvlsi/vsource.sym} 2140 610 0 0 {name=Vb
+C {madvlsi/gnd.sym} 2120 1110 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 2120 1050 1 0 {name=p97 sig_type=std_logic lab=Vf}
+C {madvlsi/vsource.sym} 2190 1080 0 0 {name=Vb
 value=1}
-C {madvlsi/gnd.sym} 2140 640 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} 2140 580 1 0 {name=p98 sig_type=std_logic lab=Vb}
-C {madvlsi/vsource.sym} 2210 610 0 0 {name=Vcp
-value=1.5}
-C {madvlsi/gnd.sym} 2210 640 0 0 {name=l7 lab=GND}
-C {devices/lab_pin.sym} 2210 580 1 0 {name=p99 sig_type=std_logic lab=Vcp}
-C {madvlsi/vsource.sym} 2280 610 0 0 {name=VSRn
+C {madvlsi/gnd.sym} 2190 1110 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} 2190 1050 1 0 {name=p98 sig_type=std_logic lab=Vb}
+C {madvlsi/vsource.sym} 2260 1080 0 0 {name=Vcp
+value=0.8}
+C {madvlsi/gnd.sym} 2260 1110 0 0 {name=l7 lab=GND}
+C {devices/lab_pin.sym} 2260 1050 1 0 {name=p99 sig_type=std_logic lab=Vcp}
+C {madvlsi/vsource.sym} 2330 1080 0 0 {name=VSRn
 value=1}
-C {madvlsi/gnd.sym} 2280 640 0 0 {name=l8 lab=GND}
-C {devices/lab_pin.sym} 2280 580 1 0 {name=p100 sig_type=std_logic lab=SRn}
-C {madvlsi/vsource.sym} 2350 610 0 0 {name=VSRp
+C {madvlsi/gnd.sym} 2330 1110 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} 2330 1050 1 0 {name=p100 sig_type=std_logic lab=SRn}
+C {madvlsi/vsource.sym} 2400 1080 0 0 {name=VSRp
 value=1}
-C {madvlsi/gnd.sym} 2350 640 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} 2350 580 1 0 {name=p101 sig_type=std_logic lab=SRp}
-C {madvlsi/vsource.sym} 2070 760 0 0 {name=Vrefp
+C {madvlsi/gnd.sym} 2400 1110 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} 2400 1050 1 0 {name=p101 sig_type=std_logic lab=SRp}
+C {madvlsi/vsource.sym} 2180 1260 0 0 {name=Vrefp
 value=1.8}
-C {madvlsi/gnd.sym} 2070 790 0 0 {name=l10 lab=GND}
-C {devices/lab_pin.sym} 2070 730 1 0 {name=p102 sig_type=std_logic lab=Vref+}
-C {madvlsi/vsource.sym} 2140 760 0 0 {name=Vrefn
+C {madvlsi/gnd.sym} 2180 1290 0 0 {name=l10 lab=GND}
+C {devices/lab_pin.sym} 2180 1230 1 0 {name=p102 sig_type=std_logic lab=Vref+}
+C {madvlsi/vsource.sym} 2250 1260 0 0 {name=Vrefn
 value=0}
-C {madvlsi/gnd.sym} 2140 790 0 0 {name=l11 lab=GND}
-C {devices/lab_pin.sym} 2140 730 1 0 {name=p103 sig_type=std_logic lab=Vref-}
-C {madvlsi/vsource.sym} 2210 760 0 0 {name=VENAD
+C {madvlsi/gnd.sym} 2250 1290 0 0 {name=l11 lab=GND}
+C {devices/lab_pin.sym} 2250 1230 1 0 {name=p103 sig_type=std_logic lab=Vref-}
+C {madvlsi/vsource.sym} 2410 180 0 0 {name=VENAD
 value=0}
-C {madvlsi/gnd.sym} 2210 790 0 0 {name=l18 lab=GND}
-C {devices/lab_pin.sym} 2210 730 1 0 {name=p157 sig_type=std_logic lab=ENAD}
+C {madvlsi/gnd.sym} 2410 210 0 0 {name=l18 lab=GND}
+C {devices/lab_pin.sym} 2410 150 1 0 {name=p157 sig_type=std_logic lab=ENAD}
 C {devices/lab_pin.sym} -100 1390 1 0 {name=p33 sig_type=std_logic lab=ENADb}
 C {devices/lab_pin.sym} -100 1670 3 0 {name=p34 sig_type=std_logic lab=ENAD}
 C {devices/lab_pin.sym} -580 530 1 0 {name=p91 sig_type=std_logic lab=STO-b_RCL+b}
 C {devices/lab_pin.sym} -1450 490 1 0 {name=p48 sig_type=std_logic lab=STO-b_RCL+b}
-C {devices/lab_pin.sym} -890 60 2 0 {name=p44 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} -890 60 1 0 {name=p44 sig_type=std_logic lab=STO-b_RCL+b}
 C {devices/lab_pin.sym} 460 560 1 0 {name=p72 sig_type=std_logic lab=STO+b_RCL-b}
 C {devices/lab_pin.sym} 1240 560 1 0 {name=p51 sig_type=std_logic lab=STO+b_RCL-b}
 C {devices/lab_pin.sym} -820 530 1 0 {name=p70 sig_type=std_logic lab=STO+b_RCL-b}
 C {devices/lab_pin.sym} -1600 490 1 0 {name=p46 sig_type=std_logic lab=STO+b_RCL-b}
 C {devices/lab_pin.sym} 670 560 1 0 {name=p74 sig_type=std_logic lab=STO-b_RCL+b}
-C {devices/lab_pin.sym} 1540 560 1 0 {name=p25 sig_type=std_logic lab=STO-b_RCL+b}
-C {devices/lab_pin.sym} -1140 60 1 0 {name=p40 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} 1420 560 1 0 {name=p25 sig_type=std_logic lab=STO-b_RCL+b}
+C {devices/lab_pin.sym} -1140 60 1 0 {name=p40 sig_type=std_logic lab=STO+b_RCL-b}
 C {devices/lab_pin.sym} -1560 490 1 0 {name=p29 sig_type=std_logic lab=STO-_RCL+}
 C {devices/lab_pin.sym} -510 530 1 0 {name=p30 sig_type=std_logic lab=STO-_RCL+}
 C {devices/lab_pin.sym} -1040 60 1 0 {name=p39 sig_type=std_logic lab=STO-_RCL+}
-C {devices/lab_pin.sym} 1420 560 1 0 {name=p24 sig_type=std_logic lab=STO-_RCL+}
+C {devices/lab_pin.sym} 1540 560 1 0 {name=p24 sig_type=std_logic lab=STO-_RCL+}
 C {devices/lab_pin.sym} 500 560 1 0 {name=p47 sig_type=std_logic lab=STO-_RCL+}
 C {devices/lab_pin.sym} -1730 490 1 0 {name=p45 sig_type=std_logic lab=STO+_RCL-}
 C {devices/lab_pin.sym} -730 530 1 0 {name=p53 sig_type=std_logic lab=STO+_RCL-}
@@ -2696,23 +2689,23 @@ C {devices/lab_pin.sym} 320 560 1 0 {name=p56 sig_type=std_logic lab=STO+_RCL-}
 C {devices/lab_pin.sym} 1380 560 1 0 {name=p52 sig_type=std_logic lab=STO+_RCL-}
 C {devices/lab_pin.sym} -1290 60 1 0 {name=p43 sig_type=std_logic lab=STO+_RCL-}
 C {madvlsi/ammeter1.sym} -630 -410 1 0 {name=VCompOut}
-C {madvlsi/gnd.sym} 1990 470 0 0 {name=l17 lab=GND}
-C {devices/lab_pin.sym} 1990 410 1 0 {name=p69 sig_type=std_logic lab=PRE}
-C {madvlsi/gnd.sym} 1990 330 0 0 {name=l19 lab=GND}
-C {devices/lab_pin.sym} 1990 270 1 0 {name=p71 sig_type=std_logic lab=SH}
-C {madvlsi/gnd.sym} 1990 180 0 0 {name=l20 lab=GND}
-C {devices/lab_pin.sym} 1990 120 1 0 {name=p73 sig_type=std_logic lab=SEN}
-C {madvlsi/vsource.sym} 1990 300 0 0 {name=VSH
+C {madvlsi/gnd.sym} 2050 880 0 0 {name=l12 lab=GND}
+C {devices/lab_pin.sym} 2050 820 1 0 {name=p104 sig_type=std_logic lab=PRE}
+C {madvlsi/gnd.sym} 2050 740 0 0 {name=l13 lab=GND}
+C {devices/lab_pin.sym} 2050 680 1 0 {name=p105 sig_type=std_logic lab=SH}
+C {madvlsi/gnd.sym} 2050 590 0 0 {name=l14 lab=GND}
+C {devices/lab_pin.sym} 2050 530 1 0 {name=p106 sig_type=std_logic lab=SEN}
+C {madvlsi/vsource.sym} 2050 710 0 0 {name=VSH
 value="pulse(0 1.8 500n 100n 100n 300n 1500n 8)"}
-C {madvlsi/vsource.sym} 1990 150 0 0 {name=VSEN
+C {madvlsi/vsource.sym} 2050 560 0 0 {name=VSEN
 value="pulse(0 1.8 1100n 100n 100n 300n 1500n 8)"}
-C {madvlsi/vsource.sym} 1990 440 0 0 {name=VPRE
+C {madvlsi/vsource.sym} 2050 850 0 0 {name=VPRE
 value="pwl(0 0 100n 1.8 400n 1.8 500n 0)"}
-C {madvlsi/vsource.sym} 2300 410 0 0 {name=VRST
+C {madvlsi/vsource.sym} 2360 820 0 0 {name=VRST
 value=1}
-C {madvlsi/gnd.sym} 2300 440 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} 2300 380 1 0 {name=p75 sig_type=std_logic lab=RST}
-C {madvlsi/vsource.sym} 2300 230 0 0 {name=Vd
-value=1}
-C {madvlsi/gnd.sym} 2300 260 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} 2300 200 1 0 {name=p76 sig_type=std_logic lab=D}
+C {madvlsi/gnd.sym} 2360 850 0 0 {name=l15 lab=GND}
+C {devices/lab_pin.sym} 2360 790 1 0 {name=p107 sig_type=std_logic lab=RST}
+C {madvlsi/vsource.sym} 2360 640 0 0 {name=Vd
+value="pulse(0 1.8 1000n 200n 200n 400n 1500n)"}
+C {madvlsi/gnd.sym} 2360 670 0 0 {name=l23 lab=GND}
+C {devices/lab_pin.sym} 2360 610 1 0 {name=p69 sig_type=std_logic lab=D}
