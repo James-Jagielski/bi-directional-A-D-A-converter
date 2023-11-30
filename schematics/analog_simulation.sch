@@ -13,8 +13,8 @@ T {C-} -320 780 0 0 0.7 0.7 {}
 T {C+} 110 780 0 0 0.7 0.7 {}
 T {C-'} -1890 770 0 0 0.7 0.7 {}
 T {C+'} 1680 800 0 0 0.7 0.7 {}
-T {A/D} 1990 -260 0 0 1 1 {}
 T {D/A} 2730 -270 0 0 1 1 {}
+T {A/D} 2310 -290 0 0 1 1 {}
 N -240 -740 100 -740 {
 lab=VDD}
 N -210 -710 -170 -710 {
@@ -2140,37 +2140,37 @@ C {madvlsi/vsource.sym} 2160 750 0 0 {name=Vrefn
 value=0}
 C {madvlsi/gnd.sym} 2160 780 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 2160 720 1 0 {name=p103 sig_type=std_logic lab=Vrefn}
-C {madvlsi/gnd.sym} 2010 420 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} 2010 360 1 0 {name=p104 sig_type=std_logic lab=PRE}
-C {madvlsi/gnd.sym} 2010 280 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} 2010 220 1 0 {name=p105 sig_type=std_logic lab=SH}
-C {madvlsi/gnd.sym} 2010 140 0 0 {name=l14 lab=GND}
-C {devices/lab_pin.sym} 2010 80 1 0 {name=p106 sig_type=std_logic lab=RST}
-C {madvlsi/gnd.sym} 2010 0 0 0 {name=l15 lab=GND}
-C {devices/lab_pin.sym} 2010 -60 1 0 {name=p107 sig_type=std_logic lab=SEN}
 C {./inverter.sym} 1350 90 0 0 {name=x2}
 C {./inverter.sym} 980 90 0 1 {name=x3}
 C {./inverter.sym} 730 90 0 1 {name=x6}
 C {./inverter.sym} -1140 1100 0 1 {name=x7}
 C {./inverter.sym} 920 1100 0 1 {name=x4}
 C {./inverter.sym} -70 970 0 0 {name=x8}
-C {madvlsi/vsource.sym} 2010 250 0 0 {name=SH
-value="pulse(0 1.8 5n 1n 1n 4n 16n)"}
-C {madvlsi/vsource.sym} 2010 110 0 0 {name=RST
-value="pulse(0 1.8 10n 1n 1n 4n 16n)"}
-C {madvlsi/vsource.sym} 2010 -30 0 0 {name=SEN
-value="pulse(0 1.8 15n 1n 1n 4n 16n)"}
-C {madvlsi/vsource.sym} 2010 390 0 0 {name=PRE
-value="pwl(0 0 1n 1.8 4n 1.8 5n 0)"}
-C {madvlsi/gnd.sym} 2770 420 0 0 {name=l16 lab=GND}
-C {devices/lab_pin.sym} 2770 360 1 0 {name=p108 sig_type=std_logic lab=PRE}
-C {madvlsi/gnd.sym} 2770 280 0 0 {name=l17 lab=GND}
-C {devices/lab_pin.sym} 2770 220 1 0 {name=p109 sig_type=std_logic lab=SH}
-C {madvlsi/gnd.sym} 2770 0 0 0 {name=l19 lab=GND}
-C {devices/lab_pin.sym} 2770 -60 1 0 {name=p111 sig_type=std_logic lab=SEN}
-C {madvlsi/vsource.sym} 2770 250 0 0 {name=SH1
-value="pulse(0 1.8 5n 1n 1n 4n 15n)"}
-C {madvlsi/vsource.sym} 2770 -30 0 0 {name=SEN1
-value="pulse(0 1.8 11n 1n 1n 4n 15n)"}
-C {madvlsi/vsource.sym} 2770 390 0 0 {name=PRE1
-value="pwl(0 0 1n 1.8 4n 1.8 5n 0)"}
+C {madvlsi/gnd.sym} 2760 340 0 0 {name=l17 lab=GND}
+C {devices/lab_pin.sym} 2760 280 1 0 {name=p108 sig_type=std_logic lab=PRE}
+C {madvlsi/gnd.sym} 2760 200 0 0 {name=l19 lab=GND}
+C {devices/lab_pin.sym} 2760 140 1 0 {name=p109 sig_type=std_logic lab=SH}
+C {madvlsi/gnd.sym} 2760 50 0 0 {name=l20 lab=GND}
+C {devices/lab_pin.sym} 2760 -10 1 0 {name=p110 sig_type=std_logic lab=SEN}
+C {madvlsi/vsource.sym} 2760 170 0 0 {name=VSH1
+value="pulse(0 1.8 50n 10n 10n 30n 150n 8)"}
+C {madvlsi/vsource.sym} 2760 20 0 0 {name=VSEN2
+value="pulse(0 1.8 110n 10n 10n 30n 150n 8)"}
+C {madvlsi/vsource.sym} 2760 310 0 0 {name=VPRE3
+value="pwl(0 0 10n 1.8 40n 1.8 50n 0)"}
+C {madvlsi/gnd.sym} 2330 390 0 0 {name=l16 lab=GND}
+C {devices/lab_pin.sym} 2330 330 1 0 {name=p111 sig_type=std_logic lab=PRE}
+C {madvlsi/gnd.sym} 2330 250 0 0 {name=l18 lab=GND}
+C {devices/lab_pin.sym} 2330 190 1 0 {name=p112 sig_type=std_logic lab=SH}
+C {madvlsi/gnd.sym} 2330 110 0 0 {name=l21 lab=GND}
+C {devices/lab_pin.sym} 2330 50 1 0 {name=p113 sig_type=std_logic lab=RST}
+C {madvlsi/gnd.sym} 2330 -30 0 0 {name=l22 lab=GND}
+C {devices/lab_pin.sym} 2330 -90 1 0 {name=p114 sig_type=std_logic lab=SEN}
+C {madvlsi/vsource.sym} 2330 220 0 0 {name=VSH2
+value="pulse(0 1.8 50n 10n 10n 30n 160n 8)"}
+C {madvlsi/vsource.sym} 2330 80 0 0 {name=VRST3
+value="pulse(0 1.8 100n 10n 10n 30n 160n 8)"}
+C {madvlsi/vsource.sym} 2330 -60 0 0 {name=VSEN4
+value="pulse(0 1.8 150n 10n 10n 30n 160n 8)"}
+C {madvlsi/vsource.sym} 2330 360 0 0 {name=VPRE5
+value="pwl(0 0 10n 1.8 40n 1.8 50n 0)"}
