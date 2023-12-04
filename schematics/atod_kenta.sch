@@ -13,7 +13,7 @@ T {C-} -320 780 0 0 0.7 0.7 {}
 T {C+} 110 780 0 0 0.7 0.7 {}
 T {C-'} -1890 770 0 0 0.7 0.7 {}
 T {C+'} 1680 800 0 0 0.7 0.7 {}
-T {D/A} 2020 320 0 0 1 1 {}
+T {A/D} 2020 320 0 0 1 1 {}
 T {ENAD = 1: A/D
 ENAD = 0: D/A} 2010 130 0 0 0.7 0.7 {}
 N -210 -710 -170 -710 {
@@ -51,31 +51,31 @@ lab=#net1}
 N 50 -680 50 -490 {
 lab=#net2}
 N -240 -600 -240 -370 {
-lab=AIn}
+lab=#net6}
 N -100 -370 -40 -370 {
 lab=ENADb}
 N 100 -600 100 -370 {
 lab=CompOut}
 N -210 -340 70 -340 {
-lab=#net6}
+lab=#net7}
 N -210 -210 -110 -210 {
-lab=#net7}
+lab=#net8}
 N -50 -210 70 -210 {
-lab=#net8}
-N -240 -310 -240 -240 {
 lab=#net9}
+N -240 -310 -240 -240 {
+lab=#net10}
 N 100 -310 100 -240 {
-lab=#net7}
+lab=#net8}
 N -130 -270 -130 -210 {
-lab=#net7}
+lab=#net8}
 N -130 -210 -130 -100 {
-lab=#net7}
+lab=#net8}
 N -130 -100 -100 -100 {
-lab=#net7}
+lab=#net8}
 N -40 -100 -10 -100 {
-lab=#net8}
+lab=#net9}
 N -10 -210 -10 -100 {
-lab=#net8}
+lab=#net9}
 N -1940 610 -1800 610 {
 lab=C-prime}
 N -1940 550 -1800 550 {
@@ -97,37 +97,37 @@ lab=C-prime}
 N -1530 710 -1390 710 {
 lab=C-primedrive}
 N -1260 470 -1220 470 {
-lab=#net10}
+lab=#net11}
 N -1240 470 -1240 500 {
-lab=#net10}
+lab=#net11}
 N -1240 500 -1190 500 {
-lab=#net10}
+lab=#net11}
 N -1020 470 -980 470 {
-lab=#net11}
-N -1000 470 -1000 500 {
-lab=#net11}
-N -1050 500 -1000 500 {
-lab=#net11}
-N -1190 500 -1190 520 {
-lab=#net10}
-N -1050 580 -1050 600 {
-lab=#net10}
-N -1050 500 -1050 520 {
-lab=#net11}
-N -1190 580 -1190 600 {
-lab=#net11}
-N -1190 580 -1050 520 {
-lab=#net11}
-N -1190 520 -1050 580 {
-lab=#net10}
-N -950 500 -950 520 {
 lab=#net12}
-N -1290 500 -1290 520 {
+N -1000 470 -1000 500 {
+lab=#net12}
+N -1050 500 -1000 500 {
+lab=#net12}
+N -1190 500 -1190 520 {
+lab=#net11}
+N -1050 580 -1050 600 {
+lab=#net11}
+N -1050 500 -1050 520 {
+lab=#net12}
+N -1190 580 -1190 600 {
+lab=#net12}
+N -1190 580 -1050 520 {
+lab=#net12}
+N -1190 520 -1050 580 {
+lab=#net11}
+N -950 500 -950 520 {
 lab=#net13}
+N -1290 500 -1290 520 {
+lab=#net14}
 N -1190 660 -1050 660 {
-lab=#net14}
+lab=#net15}
 N -1120 660 -1120 680 {
-lab=#net14}
+lab=#net15}
 N -1460 630 -1220 630 {
 lab=C-prime}
 N -1290 580 -1290 790 {
@@ -189,37 +189,37 @@ lab=C-prime}
 N -1530 710 -1390 710 {
 lab=C-primedrive}
 N -1260 470 -1220 470 {
-lab=#net10}
+lab=#net11}
 N -1240 470 -1240 500 {
-lab=#net10}
+lab=#net11}
 N -1240 500 -1190 500 {
-lab=#net10}
+lab=#net11}
 N -1020 470 -980 470 {
-lab=#net11}
-N -1000 470 -1000 500 {
-lab=#net11}
-N -1050 500 -1000 500 {
-lab=#net11}
-N -1190 500 -1190 520 {
-lab=#net10}
-N -1050 580 -1050 600 {
-lab=#net10}
-N -1050 500 -1050 520 {
-lab=#net11}
-N -1190 580 -1190 600 {
-lab=#net11}
-N -1190 580 -1050 520 {
-lab=#net11}
-N -1190 520 -1050 580 {
-lab=#net10}
-N -950 500 -950 520 {
 lab=#net12}
-N -1290 500 -1290 520 {
+N -1000 470 -1000 500 {
+lab=#net12}
+N -1050 500 -1000 500 {
+lab=#net12}
+N -1190 500 -1190 520 {
+lab=#net11}
+N -1050 580 -1050 600 {
+lab=#net11}
+N -1050 500 -1050 520 {
+lab=#net12}
+N -1190 580 -1190 600 {
+lab=#net12}
+N -1190 580 -1050 520 {
+lab=#net12}
+N -1190 520 -1050 580 {
+lab=#net11}
+N -950 500 -950 520 {
 lab=#net13}
+N -1290 500 -1290 520 {
+lab=#net14}
 N -1190 660 -1050 660 {
-lab=#net14}
+lab=#net15}
 N -1120 660 -1120 680 {
-lab=#net14}
+lab=#net15}
 N -1460 630 -1220 630 {
 lab=C-prime}
 N -1290 580 -1290 790 {
@@ -271,37 +271,37 @@ lab=C+prime}
 N 1210 710 1350 710 {
 lab=C+primedrive}
 N 1040 470 1080 470 {
-lab=#net15}
+lab=#net16}
 N 1060 470 1060 500 {
-lab=#net15}
+lab=#net16}
 N 1010 500 1060 500 {
-lab=#net15}
+lab=#net16}
 N 800 470 840 470 {
-lab=#net16}
-N 820 470 820 500 {
-lab=#net16}
-N 820 500 870 500 {
-lab=#net16}
-N 1010 500 1010 520 {
-lab=#net15}
-N 870 580 870 600 {
-lab=#net15}
-N 870 500 870 520 {
-lab=#net16}
-N 1010 580 1010 600 {
-lab=#net16}
-N 870 520 1010 580 {
-lab=#net16}
-N 870 580 1010 520 {
-lab=#net15}
-N 770 500 770 520 {
 lab=#net17}
-N 1110 500 1110 520 {
+N 820 470 820 500 {
+lab=#net17}
+N 820 500 870 500 {
+lab=#net17}
+N 1010 500 1010 520 {
+lab=#net16}
+N 870 580 870 600 {
+lab=#net16}
+N 870 500 870 520 {
+lab=#net17}
+N 1010 580 1010 600 {
+lab=#net17}
+N 870 520 1010 580 {
+lab=#net17}
+N 870 580 1010 520 {
+lab=#net16}
+N 770 500 770 520 {
 lab=#net18}
+N 1110 500 1110 520 {
+lab=#net19}
 N 870 660 1010 660 {
-lab=#net19}
+lab=#net20}
 N 940 660 940 680 {
-lab=#net19}
+lab=#net20}
 N 1040 630 1280 630 {
 lab=C+prime}
 N 1110 580 1110 790 {
@@ -309,21 +309,21 @@ lab=C+primedrive}
 N 770 580 770 790 {
 lab=C+drive}
 N 800 820 1080 820 {
-lab=#net20}
+lab=#net21}
 N 1110 850 1110 890 {
-lab=#net21}
+lab=#net22}
 N 1040 860 1110 860 {
-lab=#net21}
+lab=#net22}
 N 770 850 770 890 {
-lab=#net22}
+lab=#net23}
 N 770 860 840 860 {
-lab=#net22}
+lab=#net23}
 N 870 790 870 990 {
 lab=Db}
 N 1010 790 1010 990 {
 lab=D}
 N 800 920 1080 920 {
-lab=#net23}
+lab=#net24}
 N 290 650 430 650 {
 lab=C+}
 N 360 630 360 650 {
@@ -437,23 +437,13 @@ lab=PREb}
 N -200 480 -200 560 {
 lab=PRE}
 N 210 -540 210 -210 {
-lab=#net24}
+lab=C+}
 N 210 -550 210 -540 {
-lab=#net24}
+lab=C+}
 N 30 -550 210 -550 {
-lab=#net24}
-N -150 280 -140 280 {
-lab=C-}
-N -140 280 -140 490 {
-lab=C-}
-N -140 490 -140 590 {
-lab=C-}
+lab=C+}
 N -300 630 -140 590 {
 lab=C-}
-N -150 190 -30 190 {
-lab=Vf}
-N -30 280 -30 590 {
-lab=C+}
 N -30 590 120 630 {
 lab=C+}
 N 50 530 190 530 {
@@ -468,14 +458,10 @@ N 20 480 20 560 {
 lab=PRE}
 N 220 480 220 560 {
 lab=PREb}
-N -0 220 0 250 {
-lab=#net24}
-N -180 220 -180 250 {
-lab=#net25}
 N 210 -210 210 230 {
-lab=#net24}
+lab=C+}
 N 0 230 210 230 {
-lab=#net24}
+lab=C+}
 N -540 650 -540 710 {
 lab=C-}
 N -610 710 -540 710 {
@@ -545,29 +531,29 @@ lab=STO+_RCL-}
 N -680 600 -680 680 {
 lab=STO+_RCL-}
 N -630 -410 -240 -410 {
-lab=AIn}
+lab=#net6}
 N -570 -410 -570 -260 {
-lab=AIn}
+lab=#net6}
 N -780 -260 -570 -260 {
-lab=AIn}
+lab=#net6}
 N -780 -260 -780 -180 {
-lab=AIn}
+lab=#net6}
 N -840 -260 -840 -180 {
 lab=AOut}
 N -880 -260 -840 -260 {
 lab=AOut}
 N -1240 1460 -1100 1460 {
-lab=#net26}
+lab=#net25}
 N -1100 1460 -870 1460 {
-lab=#net26}
+lab=#net25}
 N -960 1420 -960 1470 {
 lab=STO-b_RCL+b}
 N -960 1530 -960 1550 {
-lab=#net27}
-N -1170 1460 -1170 1470 {
 lab=#net26}
+N -1170 1460 -1170 1470 {
+lab=#net25}
 N -1170 1530 -1170 1550 {
-lab=#net28}
+lab=#net27}
 N -1200 1500 -990 1500 {
 lab=SEN}
 N -1200 1580 -990 1580 {
@@ -587,17 +573,17 @@ lab=STO-b_RCL+b}
 N -840 1580 -710 1580 {
 lab=STO-_RCL+}
 N 600 1460 740 1460 {
-lab=#net29}
+lab=#net28}
 N 740 1460 970 1460 {
-lab=#net29}
+lab=#net28}
 N 880 1420 880 1470 {
 lab=STO+b_RCL-b}
 N 880 1530 880 1550 {
-lab=#net30}
-N 670 1460 670 1470 {
 lab=#net29}
+N 670 1460 670 1470 {
+lab=#net28}
 N 670 1530 670 1550 {
-lab=#net31}
+lab=#net30}
 N 640 1500 850 1500 {
 lab=SEN}
 N 640 1580 850 1580 {
@@ -617,17 +603,17 @@ lab=STO+b_RCL-b}
 N 1000 1580 1140 1580 {
 lab=STO+_RCL-}
 N -270 1370 -270 1380 {
-lab=#net32}
+lab=#net31}
 N 50 1370 50 1380 {
-lab=#net33}
+lab=#net32}
 N -270 1440 -270 1620 {
 lab=D}
 N 50 1440 50 1620 {
 lab=Db}
 N 50 1680 50 1690 {
-lab=#net34}
+lab=#net33}
 N -270 1680 -270 1690 {
-lab=#net35}
+lab=#net34}
 N -240 1410 20 1410 {
 lab=ENADb}
 N -240 1650 20 1650 {
@@ -664,10 +650,6 @@ N -10 -400 100 -400 {
 lab=CompOut}
 N 100 -400 260 -400 {
 lab=CompOut}
-N -430 -550 -430 -290 {
-lab=AIn}
-N -570 -290 -430 -290 {
-lab=AIn}
 N -190 -670 -140 -670 {
 lab=#net1}
 N 0 -670 50 -670 {
@@ -689,25 +671,29 @@ lab=C+primedrive}
 N 1110 740 1290 740 {
 lab=C+primedrive}
 N -130 -270 100 -300 {
-lab=#net7}
+lab=#net8}
 N -240 -300 -10 -270 {
-lab=#net9}
+lab=#net10}
 N -1260 820 -980 820 {
-lab=#net36}
+lab=#net35}
 N -950 850 -950 890 {
-lab=#net37}
+lab=#net36}
 N -1020 860 -950 860 {
-lab=#net37}
+lab=#net36}
 N -1290 850 -1290 890 {
-lab=#net38}
+lab=#net37}
 N -1290 860 -1220 860 {
-lab=#net38}
+lab=#net37}
 N -1190 790 -1190 990 {
 lab=Db}
 N -1050 790 -1050 990 {
 lab=D}
 N -1260 920 -980 920 {
-lab=#net39}
+lab=#net38}
+N -30 230 -30 590 {
+lab=C+}
+N -30 230 -0 230 {
+lab=C+}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=\{L\}
 W=\{W\}
@@ -1827,70 +1813,9 @@ C {devices/lab_pin.sym} -90 820 0 0 {name=p58 sig_type=std_logic lab=SHb}
 C {devices/lab_pin.sym} -300 510 0 0 {name=p61 sig_type=std_logic lab=Vref-}
 C {devices/lab_pin.sym} -400 480 0 0 {name=p62 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} -200 480 0 0 {name=p63 sig_type=std_logic lab=PRE}
-C {madvlsi/pmos3.sym} -180 190 2 0 {name=M21
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} -180 280 2 0 {name=M22
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 0 190 0 0 {name=M23
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 0 280 0 0 {name=M24
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 120 510 0 0 {name=p64 sig_type=std_logic lab=Vref+}
 C {devices/lab_pin.sym} 220 480 0 0 {name=p65 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} 20 480 0 0 {name=p66 sig_type=std_logic lab=PRE}
-C {devices/lab_pin.sym} -90 190 1 0 {name=p77 sig_type=std_logic lab=Vf}
 C {devices/lab_pin.sym} -1320 550 0 0 {name=p78 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} 740 550 0 0 {name=p79 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} -1180 90 2 0 {name=p82 sig_type=std_logic lab=SHb}
@@ -1937,9 +1862,9 @@ C {devices/lab_pin.sym} -1050 100 2 1 {name=p94 sig_type=std_logic lab=D}
 C {./inverter.sym} -1480 90 0 0 {name=x10}
 C {./inverter.sym} -940 100 0 0 {name=x4}
 C {./inverter.sym} -1220 90 0 0 {name=x8}
-C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W = 12
-.param L = .5
-.tran 10n 50u
+C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W = 1
+.param L = .15
+.tran 10n 90u
 .save v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AOut) i(VCompOut) v(STO+_RCL-) v(STO-_RCL+) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)"
 }
 C {madvlsi/tt_models.sym} 1980 1420 0 0 {
@@ -2014,10 +1939,6 @@ C {madvlsi/vsource.sym} 2040 1080 0 0 {name=VDD
 value=1.8}
 C {madvlsi/vdd.sym} 2040 1050 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 2040 1110 0 0 {name=l2 lab=GND}
-C {madvlsi/vsource.sym} 2120 1080 0 0 {name=Vf
-value=1}
-C {madvlsi/gnd.sym} 2120 1110 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 2120 1050 1 0 {name=p97 sig_type=std_logic lab=Vf}
 C {madvlsi/vsource.sym} 2190 1080 0 0 {name=Vb
 value=0.7}
 C {madvlsi/gnd.sym} 2190 1110 0 0 {name=l6 lab=GND}
@@ -2039,11 +1960,11 @@ value=1.8}
 C {madvlsi/gnd.sym} 2180 1290 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 2180 1230 1 0 {name=p102 sig_type=std_logic lab=Vref+}
 C {madvlsi/vsource.sym} 2250 1260 0 0 {name=Vrefn
-value=0}
+value=0.5}
 C {madvlsi/gnd.sym} 2250 1290 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 2250 1230 1 0 {name=p103 sig_type=std_logic lab=Vref-}
 C {madvlsi/vsource.sym} 2410 180 0 0 {name=VENAD
-value=0}
+value=1.8}
 C {madvlsi/gnd.sym} 2410 210 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 2410 150 1 0 {name=p157 sig_type=std_logic lab=ENAD}
 C {devices/lab_pin.sym} -100 1390 1 0 {name=p33 sig_type=std_logic lab=ENADb}
@@ -2072,19 +1993,19 @@ C {devices/lab_pin.sym} 2050 680 1 0 {name=p105 sig_type=std_logic lab=SH}
 C {madvlsi/gnd.sym} 2050 590 0 0 {name=l14 lab=GND}
 C {devices/lab_pin.sym} 2050 530 1 0 {name=p106 sig_type=std_logic lab=SEN}
 C {madvlsi/vsource.sym} 2050 710 0 0 {name=VSH
-value="pulse(0 1.8 1.1u 1n 1n 1.5u 5u 9)"}
+value="pulse(0 1.8 1.1u 1n 1n 2u 10u 9)"}
 C {madvlsi/vsource.sym} 2050 560 0 0 {name=VSEN
-value="pulse(0 1.8 2.7u 1n 1n 3.3u 5u 8)"}
+value="pulse(0 1.8 6.3u 1n 1n 5u 10u 8)"}
 C {madvlsi/vsource.sym} 2050 850 0 0 {name=VPRE
 value="pwl(0 0 100n 0 101n 1.8 1000n 1.8 1000n 0)"}
 C {madvlsi/vsource.sym} 2360 820 0 0 {name=VRST
-value=0}
+value="pulse(0 1.8 3.2u 1n 1n 2u 10u 9)"}
 C {madvlsi/gnd.sym} 2360 850 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 2360 790 1 0 {name=p107 sig_type=std_logic lab=RST}
-C {madvlsi/vsource.sym} 2360 640 0 0 {name=Vd
-value="pulse(0 1.8 2u 1n 1n 5u 15u)"}
+C {madvlsi/vsource.sym} 2360 640 0 0 {name=VAin
+value=0.8}
 C {madvlsi/gnd.sym} 2360 670 0 0 {name=l23 lab=GND}
-C {devices/lab_pin.sym} 2360 610 1 0 {name=p69 sig_type=std_logic lab=D}
+C {devices/lab_pin.sym} 2360 610 1 0 {name=p69 sig_type=std_logic lab=AIn}
 C {devices/lab_pin.sym} -200 630 3 0 {name=p54 sig_type=std_logic lab=C-}
 C {devices/lab_pin.sym} 20 630 3 0 {name=p55 sig_type=std_logic lab=C+}
 C {devices/lab_pin.sym} -1320 630 3 0 {name=p59 sig_type=std_logic lab=C-prime}
@@ -2135,10 +2056,6 @@ C {madvlsi/vdd.sym} 1010 440 0 0 {name=l60 lab=VDD}
 C {madvlsi/vdd.sym} 1110 440 0 0 {name=l61 lab=VDD}
 C {devices/lab_pin.sym} -1410 720 3 0 {name=p2 sig_type=std_logic lab=C-primedrive}
 C {devices/lab_pin.sym} -820 730 3 0 {name=p11 sig_type=std_logic lab=C-drive}
-C {madvlsi/gnd.sym} -180 310 0 0 {name=l62 lab=GND}
-C {madvlsi/gnd.sym} 0 310 0 0 {name=l63 lab=GND}
-C {madvlsi/vdd.sym} -180 160 0 0 {name=l64 lab=VDD}
-C {madvlsi/vdd.sym} 0 160 0 0 {name=l65 lab=VDD}
 C {madvlsi/nmos3.sym} -1020 790 0 0 {name=M67
 L=\{L\}
 W=\{W\}

@@ -669,10 +669,9 @@ C {madvlsi/gnd.sym} 1170 -510 0 0 {name=l12 lab=GND}
 C {devices/lab_pin.sym} 1170 -570 1 0 {name=p10 sig_type=std_logic lab=STO}
 C {madvlsi/vsource.sym} 1170 -540 0 0 {name=VSTO
 value=0}
-C {devices/code_shown.sym} 1130 -20 0 0 {name=SPICE only_toplevel=false value=".ic v(cmain)=0 v(cprime)=0.9
-.param W = 1
+C {devices/code_shown.sym} 1130 -20 0 0 {name=SPICE only_toplevel=false value=".param W = 1
 .param L = .15
-.tran 10n 50u
+.dc Vcprime 0 1.8 0.01
 .save v(d) v(sto) v(rcl) v(cmain) v(cprime) v(cdrive) v(cprimedrive)"
 }
 C {madvlsi/tt_models.sym} 1110 -180 0 0 {
@@ -682,3 +681,7 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
+C {devices/lab_pin.sym} 1070 -410 1 0 {name=p12 sig_type=std_logic lab=Cprime}
+C {madvlsi/vsource.sym} 1070 -380 0 0 {name=Vcprime
+value=0.9}
+C {madvlsi/gnd.sym} 1070 -350 0 0 {name=l13 lab=GND}
