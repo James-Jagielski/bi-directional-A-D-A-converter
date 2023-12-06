@@ -1937,11 +1937,21 @@ C {devices/lab_pin.sym} -1050 100 2 1 {name=p94 sig_type=std_logic lab=D}
 C {./inverter.sym} -1480 90 0 0 {name=x10}
 C {./inverter.sym} -940 100 0 0 {name=x4}
 C {./inverter.sym} -1220 90 0 0 {name=x8}
-C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W = 1
-.param L = .15
-.tran 20n 100u
-.save v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AOut) v(STO+_RCL-) v(STO-_RCL+) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)"
-}
+C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W=1
+.param L=0.15
+.control
+  set wr_singlescale
+  set wr_vecnames
+  let runs = 2
+  let run = 1
+  while run <= runs
+    alter @Vd[pulse] [0 1.8 12u 1n 1n 10u 20u]
+    save all
+    tran 25n 100u
+    wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AOut) v(STO+_RCL-) v(STO-_RCL+) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)
+    let run = run + 1
+  end
+.endc"}
 C {madvlsi/tt_models.sym} 1980 1420 0 0 {
 name=TT_MODELS
 only_toplevel=false
