@@ -1942,15 +1942,57 @@ C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value="
 .control
   set wr_singlescale
   set wr_vecnames
-  let runs = 2
+  let runs = 256
   let run = 1
   while run <= runs
-    alter @Vd[pulse] [0 1.8 12u 1n 1n 10u 20u]
+    let code = run - 1
+    if code eq 0
+        let b0 = 0
+      else
+        let b0 = code % 2 * 1.8
+      end
+      if floor(code / 2) eq 0
+        let b1 = 0
+      else
+        let b1 = floor(code / 2) % 2 * 1.8
+      end
+      if floor(code / 4) eq 0
+        let b2 = 0
+      else
+        let b2 = floor(code / 4) % 2 * 1.8
+      end
+      if floor(code / 8) eq 0
+        let b3 = 0
+      else
+        let b3 = floor(code / 8) % 2 * 1.8
+      end
+      if floor(code / 16) eq 0
+        let b4 = 0
+      else 
+        let b4 = floor(code / 16) % 2 * 1.8
+      end
+      if floor(code / 32) eq 0
+        let b5 = 0
+      else
+        let b5 = floor(code / 32) % 2 * 1.8
+      end
+      if floor(code / 64) eq 0
+        let b6 = 0
+      else
+        let b6 = floor(code / 64) % 2 * 1.8
+      end
+     if floor(code / 128) eq 0
+        let b7 = 0
+      else
+        let b7 = floor(code / 128) % 2 * 1.8
+      end
+    alter @Vd[pwl] [ 0 0 2u 0 2u $&b7 7u $&b7 7u 0 12u 0 12u $&b6 17u $&b6 17u 0 22u 0 22u $&b5 27u $&b5 27u 0 32u 0 32u $&b4 37u $&b4 37u 0 42u 0 42u $&b3 47u $&b3 47u 0 52u 0 52u $&b2 57u $&b2 57u 0 62u 0 62u $&b1 67u $&b1 67u 0 72u 0 72u $&b0 77u $&b0 77u 0 ]
     save all
-    tran 25n 100u
+    tran 200n 80u
     wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AOut) v(STO+_RCL-) v(STO-_RCL+) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)
     let run = run + 1
   end
+  quit
 .endc"}
 C {madvlsi/tt_models.sym} 1980 1420 0 0 {
 name=TT_MODELS
@@ -2092,7 +2134,7 @@ value=0}
 C {madvlsi/gnd.sym} 2360 850 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 2360 790 1 0 {name=p107 sig_type=std_logic lab=RST}
 C {madvlsi/vsource.sym} 2360 640 0 0 {name=Vd
-value="pulse(0 1.8 2u 1n 1n 10u 20u)"}
+value=0}
 C {madvlsi/gnd.sym} 2360 670 0 0 {name=l23 lab=GND}
 C {devices/lab_pin.sym} 2360 610 1 0 {name=p69 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} -200 630 3 0 {name=p54 sig_type=std_logic lab=C-}
