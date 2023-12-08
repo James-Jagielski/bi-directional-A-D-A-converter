@@ -1,41 +1,41 @@
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-plt.close("all")
-
-plt.figure()
-
-final_values = []
+digital_output = []
+analog_input = []
 dnls = []
 inls = []
 
-for i in range(1, 257):
-    file_path = f"{i}.txt"
+for i in range(256):
+    file_path = f"A_in{i}.txt"
     df = pd.read_csv(file_path, delim_whitespace=True)
 
     time = df["time"].to_numpy()
     vd = df["v(d)"].to_numpy()
-    cplus = df["v(c+)"].to_numpy()
-    cminus = df["v(c-)"].to_numpy()
-    sh = df["v(sh)"].to_numpy()
-    sen = df["v(sen)"].to_numpy()
+    ain = df["v(ain)"][0]
 
-    final_values.append(cplus[-1])
-
-    plt.plot(time, cplus)
-    #plt.plot(time, vd)
-    #plt.plot(time, cminus)
-    #plt.plot(time, sh)
-    #plt.plot(time, sen)
+    samples = []
+    time_target = 1e-5
+    for j in range(8):
+        time_index = np.argmin(np.absolute(np.subtract(time, time_target)))
+        if abs(1.8 - vd[time_index]) <= 0.1:
+            samples.append("1")
+        elif abs(0 - vd[time_index]) <= 0.1:
+            samples.append("0")
+        time_target += 1e-5
+    bin_string = "0b" + "".join(samples)
+    digital_output.append(int(bin_string, 2))
+    analog_input.append(ain)
 
     n_bits = 8
     # Calculate the Full-Scale Range and Ideal Step Size
-    full_scale_range = 1
+    full_scale_range = 255
     ideal_step_size = full_scale_range / (2**n_bits - 1)
 
     # Calculate the actual step sizes between adjacent output levels
-    actual_step_sizes = np.diff(final_values)
+    actual_step_sizes = np.diff(digital_output)
 
     # Calculate DNL
     dnl = (actual_step_sizes - ideal_step_size) / ideal_step_size
@@ -43,28 +43,23 @@ for i in range(1, 257):
     dnls.append(dnl)
 
     # Calculate the INL using the digital input and the ideal step size
-    x_values = np.arange(len(final_values))
-    ideal_voltage = x_values * ideal_step_size + final_values[0]
-    inl = (final_values - ideal_voltage) / ideal_step_size
+    x_values = np.arange(len(digital_output))
+    ideal_voltage = x_values * ideal_step_size + digital_output[0]
+    inl = (digital_output - ideal_voltage) / ideal_step_size
 
     inls.append(inl)
 
-plt.title(f"Digital to Analog Conversion")
-plt.xlabel("Time (s)")
-plt.ylabel("Voltage (V)")
-
 plt.figure()
-plt.plot(range(1, 257), final_values, marker=".", linestyle="None")
-plt.xlabel("Digital Input (number)")
-plt.ylabel("Analog Output (V)")
-plt.title("Digital to Analog Conversion")
+plt.plot(analog_input, digital_output, marker=".", linestyle="None")
+plt.xlabel("Analog Input (V)")
+plt.ylabel("Digital Output (number)")
+plt.title("Analog to Digital Conversion")
 
 # Create a plot of DNL
 plt.figure(figsize=(12, 6))
 for idx, dnl in enumerate(dnls):
     plt.plot(dnl, marker='o', linestyle='-', label=f'Run {idx + 1}')
-
-plt.title("DNL of the DAC")
+plt.title("DNL of the ADC")
 plt.xlabel("Step Index")
 plt.ylabel("DNL (in LSBs)")
 plt.grid(True)
@@ -73,9 +68,10 @@ plt.grid(True)
 plt.figure(figsize=(12, 6))
 for idx, inl in enumerate(inls):
     plt.plot(inl, marker='o', linestyle='-', label=f'Run {idx + 1}')
-plt.title("INL of the DAC")
+plt.title("INL of the ADC")
 plt.xlabel("Step Index")
 plt.ylabel("INL (in LSBs)")
 plt.grid(True)
+
 
 plt.show()

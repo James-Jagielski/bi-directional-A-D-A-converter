@@ -442,16 +442,6 @@ N 210 -550 210 -540 {
 lab=#net24}
 N 30 -550 210 -550 {
 lab=#net24}
-N -150 280 -140 280 {
-lab=C-}
-N -140 280 -140 490 {
-lab=C-}
-N -140 490 -140 590 {
-lab=C-}
-N -300 630 -140 590 {
-lab=C-}
-N -150 190 -30 190 {
-lab=Vf}
 N -30 280 -30 590 {
 lab=C+}
 N -30 590 120 630 {
@@ -468,10 +458,6 @@ N 20 480 20 560 {
 lab=PRE}
 N 220 480 220 560 {
 lab=PREb}
-N -0 220 0 250 {
-lab=#net24}
-N -180 220 -180 250 {
-lab=#net25}
 N 210 -210 210 230 {
 lab=#net24}
 N 0 230 210 230 {
@@ -708,6 +694,8 @@ N -1050 790 -1050 990 {
 lab=D}
 N -1260 920 -980 920 {
 lab=#net39}
+N -30 230 -0 230 {}
+N -30 230 -30 280 {}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=\{L\}
 W=\{W\}
@@ -1827,70 +1815,9 @@ C {devices/lab_pin.sym} -90 820 0 0 {name=p58 sig_type=std_logic lab=SHb}
 C {devices/lab_pin.sym} -300 510 0 0 {name=p61 sig_type=std_logic lab=Vref-}
 C {devices/lab_pin.sym} -400 480 0 0 {name=p62 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} -200 480 0 0 {name=p63 sig_type=std_logic lab=PRE}
-C {madvlsi/pmos3.sym} -180 190 2 0 {name=M21
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} -180 280 2 0 {name=M22
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 0 190 0 0 {name=M23
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 0 280 0 0 {name=M24
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 120 510 0 0 {name=p64 sig_type=std_logic lab=Vref+}
 C {devices/lab_pin.sym} 220 480 0 0 {name=p65 sig_type=std_logic lab=PREb}
 C {devices/lab_pin.sym} 20 480 0 0 {name=p66 sig_type=std_logic lab=PRE}
-C {devices/lab_pin.sym} -90 190 1 0 {name=p77 sig_type=std_logic lab=Vf}
 C {devices/lab_pin.sym} -1320 550 0 0 {name=p78 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} 740 550 0 0 {name=p79 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} -1180 90 2 0 {name=p82 sig_type=std_logic lab=SHb}
@@ -1986,10 +1913,10 @@ C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value="
       else
         let b7 = floor(code / 128) % 2 * 1.8
       end
-    alter @Vd[pwl] [ 0 0 2u 0 2u $&b7 7u $&b7 7u 0 12u 0 12u $&b6 17u $&b6 17u 0 22u 0 22u $&b5 27u $&b5 27u 0 32u 0 32u $&b4 37u $&b4 37u 0 42u 0 42u $&b3 47u $&b3 47u 0 52u 0 52u $&b2 57u $&b2 57u 0 62u 0 62u $&b1 67u $&b1 67u 0 72u 0 72u $&b0 77u $&b0 77u 0 ]
+    alter @Vd[pwl] [ 0 0 2u 0 2u $&b7 11u $&b7 11u 0 12u 0 12u $&b6 21u $&b6 21u 0 22u 0 22u $&b5 31u $&b5 31u 0 32u 0 32u $&b4 41u $&b4 41u 0 42u 0 42u $&b3 51u $&b3 51u 0 52u 0 52u $&b2 61u $&b2 61u 0 62u 0 62u $&b1 71u $&b1 71u 0 72u 0 72u $&b0 81u $&b0 81u 0 ]
     save all
-    tran 200n 80u
-    wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AOut) v(STO+_RCL-) v(STO-_RCL+) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)
+    tran 500n 80u
+    wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(AOut) v(C+) v(C-)
     let run = run + 1
   end
   quit
@@ -2066,10 +1993,6 @@ C {madvlsi/vsource.sym} 2040 1080 0 0 {name=VDD
 value=1.8}
 C {madvlsi/vdd.sym} 2040 1050 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 2040 1110 0 0 {name=l2 lab=GND}
-C {madvlsi/vsource.sym} 2120 1080 0 0 {name=Vf
-value=1}
-C {madvlsi/gnd.sym} 2120 1110 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 2120 1050 1 0 {name=p97 sig_type=std_logic lab=Vf}
 C {madvlsi/vsource.sym} 2190 1080 0 0 {name=Vb
 value=0.7}
 C {madvlsi/gnd.sym} 2190 1110 0 0 {name=l6 lab=GND}
@@ -2126,7 +2049,7 @@ C {devices/lab_pin.sym} 2050 530 1 0 {name=p106 sig_type=std_logic lab=SEN}
 C {madvlsi/vsource.sym} 2050 710 0 0 {name=VSH
 value="pulse(0 1.8 1.1u 1n 1n 1.5u 10u 9)"}
 C {madvlsi/vsource.sym} 2050 560 0 0 {name=VSEN
-value="pulse(0 1.8 2.7u 1n 1n 8.3u 10u 8)"}
+value="pulse(0 1.8 2.7u 1n 1n 8u 10u 8)"}
 C {madvlsi/vsource.sym} 2050 850 0 0 {name=VPRE
 value="pwl(0 0 100n 0 101n 1.8 1000n 1.8 1001n 0)"}
 C {madvlsi/vsource.sym} 2360 820 0 0 {name=VRST
@@ -2187,10 +2110,6 @@ C {madvlsi/vdd.sym} 1010 440 0 0 {name=l60 lab=VDD}
 C {madvlsi/vdd.sym} 1110 440 0 0 {name=l61 lab=VDD}
 C {devices/lab_pin.sym} -1410 720 3 0 {name=p2 sig_type=std_logic lab=C-primedrive}
 C {devices/lab_pin.sym} -820 730 3 0 {name=p11 sig_type=std_logic lab=C-drive}
-C {madvlsi/gnd.sym} -180 310 0 0 {name=l62 lab=GND}
-C {madvlsi/gnd.sym} 0 310 0 0 {name=l63 lab=GND}
-C {madvlsi/vdd.sym} -180 160 0 0 {name=l64 lab=VDD}
-C {madvlsi/vdd.sym} 0 160 0 0 {name=l65 lab=VDD}
 C {madvlsi/nmos3.sym} -1020 790 0 0 {name=M67
 L=\{L\}
 W=\{W\}
