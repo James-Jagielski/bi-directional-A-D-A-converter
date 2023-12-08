@@ -442,8 +442,6 @@ N 210 -550 210 -540 {
 lab=C+}
 N 30 -550 210 -550 {
 lab=C+}
-N -300 630 -140 590 {
-lab=C-}
 N -30 590 120 630 {
 lab=C+}
 N 50 530 190 530 {
@@ -1864,8 +1862,21 @@ C {./inverter.sym} -940 100 0 0 {name=x4}
 C {./inverter.sym} -1220 90 0 0 {name=x8}
 C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W = 1
 .param L = .15
-.tran 10n 90u
-.save v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AOut) i(VCompOut) v(STO+_RCL-) v(STO-_RCL+) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)"
+.control
+  set wr_singlescale
+  set wr_vecnames
+  let min_input = 0.5
+  let run = 0
+  while run < 256
+    let analog_input = min_input + run/255
+    alter VAin $&analog_input
+    save all
+    tran 900n 90u
+    wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/A_in\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AIn) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)
+    let run = run + 1
+  end
+  quit
+.endc"
 }
 C {madvlsi/tt_models.sym} 1980 1420 0 0 {
 name=TT_MODELS
@@ -1956,7 +1967,7 @@ value=1}
 C {madvlsi/gnd.sym} 2400 1110 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 2400 1050 1 0 {name=p101 sig_type=std_logic lab=SRp}
 C {madvlsi/vsource.sym} 2180 1260 0 0 {name=Vrefp
-value=1.8}
+value=1.5}
 C {madvlsi/gnd.sym} 2180 1290 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 2180 1230 1 0 {name=p102 sig_type=std_logic lab=Vref+}
 C {madvlsi/vsource.sym} 2250 1260 0 0 {name=Vrefn
@@ -1995,7 +2006,7 @@ C {devices/lab_pin.sym} 2050 530 1 0 {name=p106 sig_type=std_logic lab=SEN}
 C {madvlsi/vsource.sym} 2050 710 0 0 {name=VSH
 value="pulse(0 1.8 1.1u 1n 1n 2u 10u 9)"}
 C {madvlsi/vsource.sym} 2050 560 0 0 {name=VSEN
-value="pulse(0 1.8 6.3u 1n 1n 5u 10u 8)"}
+value="pulse(0 1.8 5.5u 1n 1n 5u 10u 8)"}
 C {madvlsi/vsource.sym} 2050 850 0 0 {name=VPRE
 value="pwl(0 0 100n 0 101n 1.8 1000n 1.8 1000n 0)"}
 C {madvlsi/vsource.sym} 2360 820 0 0 {name=VRST
@@ -2003,7 +2014,7 @@ value="pulse(0 1.8 3.2u 1n 1n 2u 10u 9)"}
 C {madvlsi/gnd.sym} 2360 850 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 2360 790 1 0 {name=p107 sig_type=std_logic lab=RST}
 C {madvlsi/vsource.sym} 2360 640 0 0 {name=VAin
-value=0.8}
+value=1.6}
 C {madvlsi/gnd.sym} 2360 670 0 0 {name=l23 lab=GND}
 C {devices/lab_pin.sym} 2360 610 1 0 {name=p69 sig_type=std_logic lab=AIn}
 C {devices/lab_pin.sym} -200 630 3 0 {name=p54 sig_type=std_logic lab=C-}

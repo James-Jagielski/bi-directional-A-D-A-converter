@@ -8,16 +8,16 @@ analog_input = []
 dnls = []
 inls = []
 
-for i in range(1, 257):
-    file_path = f"{i}.txt"
+for i in range(256):
+    file_path = f"A_in{i}.txt"
     df = pd.read_csv(file_path, delim_whitespace=True)
 
     time = df["time"].to_numpy()
     vd = df["v(d)"].to_numpy()
-    ain = 0.5 + i/256
+    ain = df["v(ain)"][0]
 
     samples = []
-    time_target = 7e-6
+    time_target = 1e-5
     for j in range(8):
         time_index = np.argmin(np.absolute(np.subtract(time, time_target)))
         if abs(1.8 - vd[time_index]) <= 0.1:
@@ -53,7 +53,7 @@ plt.figure()
 plt.plot(analog_input, digital_output, marker=".", linestyle="None")
 plt.xlabel("Analog Input (V)")
 plt.ylabel("Digital Output (number)")
-plt.title("Digital to Analog Conversion")
+plt.title("Analog to Digital Conversion")
 
 # Create a plot of DNL
 plt.figure(figsize=(12, 6))

@@ -1986,9 +1986,9 @@ C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value="
       else
         let b7 = floor(code / 128) % 2 * 1.8
       end
-    alter @Vd[pwl] [ 0 0 2u 0 2u $&b7 7u $&b7 7u 0 12u 0 12u $&b6 17u $&b6 17u 0 22u 0 22u $&b5 27u $&b5 27u 0 32u 0 32u $&b4 37u $&b4 37u 0 42u 0 42u $&b3 47u $&b3 47u 0 52u 0 52u $&b2 57u $&b2 57u 0 62u 0 62u $&b1 67u $&b1 67u 0 72u 0 72u $&b0 77u $&b0 77u 0 ]
+    alter @Vd[pwl] [ 0 0 2u 0 2u $&b7 11u $&b7 11u 0 12u 0 12u $&b6 21u $&b6 21u 0 22u 0 22u $&b5 31u $&b5 31u 0 32u 0 32u $&b4 41u $&b4 41u 0 42u 0 42u $&b3 51u $&b3 51u 0 52u 0 52u $&b2 61u $&b2 61u 0 62u 0 62u $&b1 71u $&b1 71u 0 72u 0 72u $&b0 81u $&b0 81u 0 ]
     save all
-    tran 200n 80u
+    tran 500n 80u
     wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AOut) v(STO+_RCL-) v(STO-_RCL+) v(C+) v(C-) v(C+prime) v(C-prime) v(C-primedrive) v(C-drive) v(C+primedrive) v(C+drive)
     let run = run + 1
   end
@@ -2126,7 +2126,7 @@ C {devices/lab_pin.sym} 2050 530 1 0 {name=p106 sig_type=std_logic lab=SEN}
 C {madvlsi/vsource.sym} 2050 710 0 0 {name=VSH
 value="pulse(0 1.8 1.1u 1n 1n 1.5u 10u 9)"}
 C {madvlsi/vsource.sym} 2050 560 0 0 {name=VSEN
-value="pulse(0 1.8 2.7u 1n 1n 8.3u 10u 8)"}
+value="pulse(0 1.8 2.7u 1n 1n 8u 10u 8)"}
 C {madvlsi/vsource.sym} 2050 850 0 0 {name=VPRE
 value="pwl(0 0 100n 0 101n 1.8 1000n 1.8 1001n 0)"}
 C {madvlsi/vsource.sym} 2360 820 0 0 {name=VRST
