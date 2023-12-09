@@ -1,0 +1,183 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path:
+
+Warning : voltage source vpre has non-increasing PWL time points.
+binary raw file "/home/madvlsi/Documents/Final/bi-directional-A-D-A-converter/schematics/simulation/A_D_A_analog_circuitry_jiayuan.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Note: include: has no value, DC 0 assumed
+No. of Data Columns : 12  
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Warning: Further gmin increment
+Trying gmin =   5.6234E-08 Note: One successful gmin step
+Trying gmin =   2.3714E-08 Warning: Further gmin increment
+Trying gmin =   4.5316E-08 Note: One successful gmin step
+Trying gmin =   3.2781E-08 Note: One successful gmin step
+Trying gmin =   2.0169E-08 Warning: Further gmin increment
+Trying gmin =   2.9033E-08 Note: One successful gmin step
+Trying gmin =   2.4199E-08 Note: One successful gmin step
+Trying gmin =   1.8414E-08 Note: One successful gmin step
+Trying gmin =   1.2222E-08 Note: One successful gmin step
+Trying gmin =   6.6098E-09 Note: One successful gmin step
+Trying gmin =   2.6287E-09 Note: One successful gmin step
+Trying gmin =   6.5927E-10 Note: One successful gmin step
+Trying gmin =   8.2803E-11 Note: One successful gmin step
+Trying gmin =   8.2803E-12 Warning: Further gmin increment
+Trying gmin =   4.6563E-11 Note: One successful gmin step
+Trying gmin =   1.9636E-11 Warning: Further gmin increment
+Trying gmin =   3.7523E-11 Note: One successful gmin step
+Trying gmin =   2.7144E-11 Note: One successful gmin step
+Trying gmin =   1.6701E-11 Note: One successful gmin step
+Trying gmin =   8.0598E-12 Note: One successful gmin step
+Trying gmin =   2.7022E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   3.1623E-06 Note: One successful gmin step
+Trying gmin =   5.6234E-07 Note: One successful gmin step
+Trying gmin =   5.6234E-08 Warning: Further gmin increment
+Trying gmin =   3.1623E-07 Note: One successful gmin step
+Trying gmin =   1.3335E-07 Note: One successful gmin step
+Trying gmin =   3.6517E-08 Warning: Further gmin increment
+Trying gmin =   9.6466E-08 Note: One successful gmin step
+Trying gmin =   5.9352E-08 Note: One successful gmin step
+Trying gmin =   4.6555E-08 Note: One successful gmin step
+Trying gmin =   3.2342E-08 Note: One successful gmin step
+Trying gmin =   1.8727E-08 Note: One successful gmin step
+Trying gmin =   8.2509E-09 Warning: Further gmin increment
+Trying gmin =   1.5257E-08 Note: One successful gmin step
+Trying gmin =   1.1220E-08 Note: One successful gmin step
+Trying gmin =   7.0756E-09 Note: One successful gmin step
+Trying gmin =   3.5434E-09 Note: One successful gmin step
+Trying gmin =   1.2558E-09 Note: One successful gmin step
+Trying gmin =   2.6494E-10 Note: One successful gmin step
+Trying gmin =   2.6494E-11 Note: One successful gmin step
+Trying gmin =   2.6494E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: True gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+net4                                   1.38938
+net1                                    1.1293
+vdd                                        1.8
+net2                                   1.16119
+net3                                   1.36988
+net6                                  0.608843
+vcp                                   0.678895
+compout                               0.630276
+net5                                  0.748944
+vb                                    0.604483
+c+                                     1.48161
+ain                                        0.8
+net7                                       1.8
+net10                                 0.607891
+enadb                              2.13105e-07
+net8                                  0.629617
+enad                                       1.8
+net9                                  0.607891
+rst                                          0
+shb                                        1.8
+c-                                    0.900841
+sh                                           0
+net11                                 0.900562
+preb                                       1.8
+vref-                                      0.5
+pre                                          0
+sto+b_rcl-b                                1.8
+sto+_rcl-                          7.76411e-07
+net12                                   1.2055
+sto-b_rcl+b                                1.8
+sto-_rcl+                          7.76411e-07
+net16                                  1.35988
+net13                                  1.25571
+net14                                  1.25609
+net15                                  1.35744
+net20                                  1.18394
+net17                                 0.306863
+net18                                  0.55161
+db                                   0.0251282
+net19                                 0.550679
+net21                                 0.550679
+d                                      1.79469
+net22                                  1.52051
+vref+                                      1.8
+net23                                   1.1907
+net27                                  1.36217
+net24                                  1.24994
+net25                                  1.19991
+net26                                  1.70972
+net29                                  1.70856
+net28                                 0.798078
+net30                                 0.553952
+net32                                 0.553952
+net31                                 0.573034
+aout                                  0.608843
+srp                                          1
+net33                                      1.8
+sen                                          0
+net35                              1.57784e-10
+net34                              1.57784e-10
+srn                                          1
+net36                                      1.8
+net38                                0.0303019
+net37                                0.0303019
+net39                                  1.79633
+compoutb                              0.608843
+net40                                  1.17916
+net42                                  1.04809
+net41                                0.0250416
+net43                                   1.1839
+net44                                  1.19066
+x2.net1                                1.70209
+vib                                   0.603083
+net45                                 0.617339
+net48                                0.0839275
+net46                                  1.14533
+net47                                  1.26493
+sky130_fd_pr__esd_nfet_05v0_nvt.pm3               0
+                                             0
+vrst#branch                                  0
+vpre#branch                                  0
+vsen#branch                                  0
+vsh#branch                                   0
+vain#branch                                  0
+vcompout#branch                              0
+venad#branch                                 0
+vrefn#branch                       1.63292e-12
+vrefp#branch                      -1.41922e-11
+vsrp#branch                                  0
+vsrn#branch                                  0
+vdd#branch                        -4.46275e-05
+
+
+No. of Data Rows : 1299
+
+Total analysis time (seconds) = 4.844
+
+Total elapsed time (seconds) = 28.021 
+
+Total DRAM available = 15586.703 MB.
+DRAM currently available = 8284.375 MB.
+Maximum ngspice program size =  349.074 MB.
+Current ngspice program size =  331.168 MB.
+
+Shared ngspice pages =   10.250 MB.
+Text (code) pages =    5.449 MB.
+Stack = 0 bytes.
+Library pages =  329.137 MB.
+

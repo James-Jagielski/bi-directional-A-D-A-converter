@@ -789,11 +789,11 @@ lab=#net45}
 N 650 -190 700 -190 {
 lab=#net45}
 N 930 -160 980 -160 {
-lab=#net46}
+lab=Vib}
 N 960 -190 960 -160 {
-lab=#net46}
+lab=Vib}
 N 960 -190 1010 -190 {
-lab=#net46}
+lab=Vib}
 N 760 -130 900 -130 {
 lab=GND}
 N 650 -70 820 -70 {
@@ -801,25 +801,25 @@ lab=GND}
 N 650 -280 650 -190 {
 lab=#net45}
 N 790 -310 870 -310 {
-lab=#net47}
-N 820 -310 820 -280 {
-lab=#net47}
-N 760 -280 820 -280 {
-lab=#net47}
-N 760 -280 760 -190 {
-lab=#net47}
-N 900 -280 900 -190 {
-lab=Vib}
-N 1010 -280 1010 -190 {
 lab=#net46}
+N 820 -310 820 -280 {
+lab=#net46}
+N 760 -280 820 -280 {
+lab=#net46}
+N 760 -280 760 -190 {
+lab=#net46}
+N 900 -280 900 -190 {
+lab=#net47}
+N 1010 -280 1010 -190 {
+lab=Vib}
 N 980 -310 980 -240 {
-lab=Vib}
+lab=#net47}
 N 900 -240 980 -240 {
-lab=Vib}
+lab=#net47}
 N 680 -240 900 -240 {
-lab=Vib}
+lab=#net47}
 N 680 -310 680 -240 {
-lab=Vib}
+lab=#net47}
 N 650 -340 760 -340 {
 lab=VDD}
 N 760 -340 820 -340 {
@@ -834,8 +834,6 @@ N 1010 -130 1010 -70 {
 lab=GND}
 N 830 -130 830 -70 {
 lab=GND}
-N 980 -310 1170 -310 {
-lab=Vib}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=\{L\}
 W=\{W\}
@@ -2026,11 +2024,6 @@ C {devices/lab_pin.sym} 1030 1100 2 0 {name=p94 sig_type=std_logic lab=D}
 C {./inverter.sym} -1080 1150 0 0 {name=x10}
 C {./inverter.sym} 920 1100 0 1 {name=x4}
 C {./inverter.sym} -70 970 0 0 {name=x8}
-C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W = 1
-.param L = .15
-.tran 100n 200u
-.save v(C-) v(C+) v(Vcp) v(Vb) v(Vib) v(sh) v(db) v(pre) v(preb) v(shb) v(rst) V(sen) V(d) v(CompOut) v(AOut) i(VCompOut)"
-}
 C {madvlsi/tt_models.sym} 1980 1420 0 0 {
 name=TT_MODELS
 only_toplevel=false
@@ -2530,26 +2523,10 @@ C {devices/lab_pin.sym} -730 530 1 0 {name=p53 sig_type=std_logic lab=STO+_RCL-}
 C {devices/lab_pin.sym} 320 560 1 0 {name=p56 sig_type=std_logic lab=STO+_RCL-}
 C {devices/lab_pin.sym} 1380 560 1 0 {name=p52 sig_type=std_logic lab=STO+_RCL-}
 C {madvlsi/ammeter1.sym} -630 -410 1 0 {name=VCompOut}
-C {madvlsi/gnd.sym} 2040 860 0 0 {name=l16 lab=GND}
-C {devices/lab_pin.sym} 2040 800 1 0 {name=p54 sig_type=std_logic lab=PRE}
-C {madvlsi/gnd.sym} 2040 720 0 0 {name=l17 lab=GND}
-C {devices/lab_pin.sym} 2040 660 1 0 {name=p55 sig_type=std_logic lab=SH}
-C {madvlsi/gnd.sym} 2040 580 0 0 {name=l21 lab=GND}
-C {devices/lab_pin.sym} 2040 520 1 0 {name=p59 sig_type=std_logic lab=RST}
-C {madvlsi/gnd.sym} 2040 440 0 0 {name=l22 lab=GND}
-C {devices/lab_pin.sym} 2040 380 1 0 {name=p60 sig_type=std_logic lab=SEN}
-C {madvlsi/vsource.sym} 2040 690 0 0 {name=VSH
-value="pulse(0 1.8 2u 1n 1n 1998n 20u 8)"}
-C {madvlsi/vsource.sym} 2040 550 0 0 {name=VRST
-value="pulse(0 1.8 4u 1n 1n 1998n 20u 8)"}
-C {madvlsi/vsource.sym} 2040 410 0 0 {name=VSEN
-value="pulse(0 1.8 6u 1n 1n 9998n 20u 8)"}
-C {madvlsi/vsource.sym} 2040 830 0 0 {name=VPRE
-value="pwl(0 0 1n 1.8 400n 1.8 401n 0)"}
-C {madvlsi/vsource.sym} 2370 840 0 0 {name=VAIN
+C {madvlsi/vsource.sym} 2400 1060 0 0 {name=VAIN
 value=0.8}
-C {madvlsi/gnd.sym} 2370 870 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} 2370 810 1 0 {name=p69 sig_type=std_logic lab=AIn}
+C {madvlsi/gnd.sym} 2400 1090 0 0 {name=l12 lab=GND}
+C {devices/lab_pin.sym} 2400 1030 1 0 {name=p69 sig_type=std_logic lab=AIn}
 C {devices/lab_pin.sym} -300 630 0 0 {name=p71 sig_type=std_logic lab=C-}
 C {devices/lab_pin.sym} 120 630 0 0 {name=p73 sig_type=std_logic lab=C+}
 C {madvlsi/nmos3.sym} -1290 800 0 1 {name=M67
@@ -2672,20 +2649,16 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/gnd.sym} 2290 1110 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 2290 1050 1 0 {name=p67 sig_type=std_logic lab=Vib}
 C {/home/madvlsi/Documents/Final/bi-directional-A-D-A-converter/new_cascode.sym} 880 100 0 0 {name=x2}
 C {devices/lab_pin.sym} 1030 80 2 0 {name=p75 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} 1030 100 2 0 {name=p76 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} 1030 120 2 0 {name=p77 sig_type=std_logic lab=Vib}
-C {madvlsi/vsource.sym} 2290 1080 0 0 {name=Vib
-value=0.6}
 C {madvlsi/nmos3.sym} 650 -160 0 1 {name=M21
 L=0.15
 W=1
 body=GND
 nf=1
-mult=2
+mult=8
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -2741,7 +2714,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/resistor.sym} 650 -100 0 0 {name=R1
-value=2k
+value=400k
 m=1}
 C {madvlsi/pmos3.sym} 900 -310 0 0 {name=M113
 L=0.15
@@ -2805,4 +2778,43 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 820 -340 1 0 {name=p39 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 760 -70 3 0 {name=p40 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 1170 -310 2 0 {name=p44 sig_type=std_logic lab=Vib}
+C {devices/lab_pin.sym} 1010 -190 2 0 {name=p44 sig_type=std_logic lab=Vib}
+C {madvlsi/gnd.sym} 2010 770 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 2010 710 1 0 {name=p104 sig_type=std_logic lab=PRE}
+C {madvlsi/gnd.sym} 2010 630 0 0 {name=l13 lab=GND}
+C {devices/lab_pin.sym} 2010 570 1 0 {name=p105 sig_type=std_logic lab=SH}
+C {madvlsi/gnd.sym} 2010 480 0 0 {name=l14 lab=GND}
+C {devices/lab_pin.sym} 2010 420 1 0 {name=p106 sig_type=std_logic lab=SEN}
+C {madvlsi/vsource.sym} 2010 600 0 0 {name=VSH
+value="pulse(0 1.8 1.1u 1n 1n 2u 10u 9)"}
+C {madvlsi/vsource.sym} 2010 450 0 0 {name=VSEN
+value="pulse(0 1.8 5.5u 1n 1n 5u 10u 8)"}
+C {madvlsi/vsource.sym} 2010 740 0 0 {name=VPRE
+value="pwl(0 0 100n 0 101n 1.8 1000n 1.8 1000n 0)"}
+C {madvlsi/vsource.sym} 2320 710 0 0 {name=VRST
+value="pulse(0 1.8 3.2u 1n 1n 2u 10u 9)"}
+C {madvlsi/gnd.sym} 2320 740 0 0 {name=l15 lab=GND}
+C {devices/lab_pin.sym} 2320 680 1 0 {name=p107 sig_type=std_logic lab=RST}
+C {devices/code_shown.sym} 1980 1620 0 0 {name=SPICE only_toplevel=false value=".param W = 1
+.param L = .15
+.control
+  set wr_singlescale
+  set wr_vecnames
+  let min_input = 0.5
+  let run = 0
+  while run < 256
+    let analog_input = min_input + run/255
+    alter VAin $&analog_input
+    save all
+    tran 900n 90u
+    wrdata ~/Documents/Final/bi-directional-A-D-A-converter/simulations/A_in\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AIn) v(C+) v(C-) v(vb) v(vcp)
+    let run = run + 1
+  end
+  quit
+.endc"
+}
+C {devices/code_shown.sym} 2230 1470 0 0 {name=SPICE1 only_toplevel=false value=".param W = 1
+.param L = .15
+.tran 900n 90u
+.save v(sh) v(pre) v(rst) V(sen) V(d) v(AIn) v(C+) v(C-) v(vb) v(vcp)"
+}
