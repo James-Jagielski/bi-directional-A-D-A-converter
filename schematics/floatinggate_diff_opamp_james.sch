@@ -682,8 +682,8 @@ C {madvlsi/vsource.sym} 1170 -540 0 0 {name=VSTO
 value=0}
 C {devices/code_shown.sym} 1130 -20 0 0 {name=SPICE only_toplevel=false value=".param W = 1
 .param L = .15
-.tran 10n 500n
-.dc Vcprime 0 1.8 0.01
+.tran 0.05u 5u
+.ic v(V1)=0 v(V2)=0 v(cmain)=0 v(cprime)=0
 .save v(d) v(sto) v(rcl) v(cmain) v(cprime) v(cdrive) v(cprimedrive)"
 }
 C {madvlsi/tt_models.sym} 1110 -180 0 0 {
@@ -695,7 +695,7 @@ value=".option wnflag=1
 }
 C {devices/lab_pin.sym} 1070 -410 1 0 {name=p12 sig_type=std_logic lab=Cprime}
 C {madvlsi/vsource.sym} 1070 -380 0 0 {name=Vcprime
-value=0.9}
+value="pwl(0 0 5u 1.8)"}
 C {madvlsi/gnd.sym} 1070 -350 0 0 {name=l13 lab=GND}
 C {madvlsi/nmos3.sym} -160 330 0 0 {name=M1
 L=\{L\}
@@ -728,10 +728,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/capacitor.sym} -70 370 0 0 {name=C2
-value=1p
+value=100u
 m=1}
 C {madvlsi/capacitor.sym} -70 450 0 0 {name=C3
-value=1p
+value=100u
 m=1}
 C {madvlsi/nmos3.sym} 20 410 0 0 {name=M3
 L=\{L\}
@@ -779,10 +779,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/capacitor.sym} 270 370 0 1 {name=C4
-value=1p
+value=100u
 m=1}
 C {madvlsi/capacitor.sym} 270 450 0 1 {name=C6
-value=1p
+value=100u
 m=1}
 C {madvlsi/nmos3.sym} 180 410 0 1 {name=M6
 L=\{L\}
@@ -819,8 +819,6 @@ C {madvlsi/vdd.sym} 100 260 0 0 {name=l15 lab=VDD}
 C {devices/lab_pin.sym} 70 290 0 0 {name=p13 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -190 330 0 0 {name=p14 sig_type=std_logic lab=Vc}
 C {devices/lab_pin.sym} 390 330 0 1 {name=p15 sig_type=std_logic lab=Vc}
-C {devices/lab_pin.sym} -130 380 0 0 {name=p16 sig_type=std_logic lab=Vr}
-C {devices/lab_pin.sym} 330 380 0 1 {name=p17 sig_type=std_logic lab=Vr}
 C {madvlsi/vsource.sym} 1240 -710 0 0 {name=Vc
 value=1}
 C {madvlsi/gnd.sym} 1240 -680 0 0 {name=l16 lab=GND}
@@ -829,33 +827,3 @@ C {madvlsi/vsource.sym} 1300 -710 0 0 {name=Vr
 value="pwl(0 0 50n 1.8 400n 1.8 500n 0)"}
 C {madvlsi/gnd.sym} 1300 -680 0 0 {name=l17 lab=GND}
 C {devices/lab_pin.sym} 1300 -740 1 0 {name=p19 sig_type=std_logic lab=Vr}
-C {madvlsi/nmos3.sym} -100 380 0 0 {name=M8
-L=\{L\}
-W=\{W\}
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/nmos3.sym} 300 380 0 1 {name=M9
-L=\{L\}
-W=\{W\}
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
