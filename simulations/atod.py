@@ -9,7 +9,7 @@ dnls = []
 inls = []
 
 for i in range(256):
-    file_path = f"A_in{i}.txt"
+    file_path = f"A_in{i}_mc2.txt"
     df = pd.read_csv(file_path, delim_whitespace=True)
 
     time = df["time"].to_numpy()
@@ -17,14 +17,14 @@ for i in range(256):
     ain = df["v(ain)"][0]
 
     samples = []
-    time_target = 1e-5
+    time_target = 3e-5
     for j in range(8):
         time_index = np.argmin(np.absolute(np.subtract(time, time_target)))
         if abs(1.8 - vd[time_index]) <= 0.1:
             samples.append("1")
         elif abs(0 - vd[time_index]) <= 0.1:
             samples.append("0")
-        time_target += 1e-5
+        time_target += 5e-5
     bin_string = "0b" + "".join(samples)
     digital_output.append(int(bin_string, 2))
     analog_input.append(ain)
@@ -73,5 +73,52 @@ plt.xlabel("Step Index")
 plt.ylabel("INL (in LSBs)")
 plt.grid(True)
 
+# Create a timing plot
+df = pd.read_csv("A_in150_mc.txt", delim_whitespace=True)
+
+time = df["time"].to_numpy()
+vd = df["v(d)"].to_numpy()
+cplus = df["v(c+)"].to_numpy()
+cminus = df["v(c-)"].to_numpy()
+pre = df["v(pre)"].to_numpy()
+sh = df["v(sh)"].to_numpy()
+rst = df["v(rst)"].to_numpy()
+sen = df["v(sen)"].to_numpy()
+compout = df["v(compout)"].to_numpy()
+plt.figure()
+plt.plot(time, vd)
+plt.plot(time, cplus)
+plt.plot(time, cminus)
+plt.plot(time, compout)
+#plt.plot(time, pre)
+#plt.plot(time, sh)
+#plt.plot(time, rst)
+#plt.plot(time, sen)
+plt.legend(("vd", "cplus", "cminus", "compout"))
+#plt.xlim(0, 1e-4)
+
+# Create a timing plot
+df = pd.read_csv("A_in150_temp.txt", delim_whitespace=True)
+
+time = df["time"].to_numpy()
+vd = df["v(d)"].to_numpy()
+cplus = df["v(c+)"].to_numpy()
+cminus = df["v(c-)"].to_numpy()
+pre = df["v(pre)"].to_numpy()
+sh = df["v(sh)"].to_numpy()
+rst = df["v(rst)"].to_numpy()
+sen = df["v(sen)"].to_numpy()
+compout = df["v(compout)"].to_numpy()
+plt.figure()
+plt.plot(time, vd)
+plt.plot(time, cplus)
+plt.plot(time, cminus)
+plt.plot(time, compout)
+#plt.plot(time, pre)
+#plt.plot(time, sh)
+#plt.plot(time, rst)
+#plt.plot(time, sen)
+plt.legend(("vd", "cplus", "cminus", "compout"))
+#plt.xlim(0, 1e-4)
 
 plt.show()

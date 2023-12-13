@@ -692,52 +692,38 @@ N -30 230 -30 590 {
 lab=C+}
 N -30 230 -0 230 {
 lab=C+}
-N 1020 90 1020 130 {
-lab=#net39}
-N 1160 90 1160 130 {
-lab=Vcp}
-N 1020 -10 1020 30 {
-lab=#net40}
-N 990 160 1130 160 {
-lab=Vb}
-N 980 160 990 160 {
-lab=Vb}
-N 980 -40 990 -40 {
-lab=#net39}
-N 980 -40 980 60 {
-lab=#net39}
-N 980 60 990 60 {
-lab=#net39}
-N 980 60 980 110 {
-lab=#net39}
-N 980 110 1020 110 {
-lab=#net39}
-N 1160 10 1160 30 {
-lab=#net40}
-N 1020 10 1160 10 {
-lab=#net40}
-N 1190 60 1210 60 {
-lab=Vcp}
-N 1200 60 1200 110 {
-lab=Vcp}
-N 1160 110 1200 110 {
-lab=Vcp}
 N 670 170 730 170 {
 lab=Vb}
 N 670 30 730 30 {
-lab=#net41}
+lab=#net39}
 N 640 60 640 140 {
-lab=#net41}
+lab=#net39}
 N 760 60 760 140 {
 lab=Vb}
 N 640 80 690 80 {
-lab=#net41}
+lab=#net39}
 N 690 30 690 80 {
-lab=#net41}
+lab=#net39}
 N 720 120 760 120 {
 lab=Vb}
 N 720 120 720 170 {
 lab=Vb}
+N 1040 170 1100 170 {
+lab=Vcp}
+N 1040 30 1100 30 {
+lab=#net40}
+N 1010 60 1010 140 {
+lab=#net40}
+N 1130 60 1130 140 {
+lab=Vcp}
+N 1010 80 1060 80 {
+lab=#net40}
+N 1060 30 1060 80 {
+lab=#net40}
+N 1090 120 1130 120 {
+lab=Vcp}
+N 1090 120 1090 170 {
+lab=Vcp}
 C {madvlsi/pmos3.sym} -240 -710 0 1 {name=M1
 L=\{L\}
 W=\{W\}
@@ -1908,28 +1894,22 @@ C {./inverter.sym} -940 100 0 0 {name=x4}
 C {./inverter.sym} -1220 90 0 0 {name=x8}
 C {devices/code_shown.sym} 2000 1580 0 0 {name=SPICE only_toplevel=false value=".param W = 1
 .param L = .15
+.ic v(CompOut) = 1.8
 .control
   set wr_singlescale
   set wr_vecnames
   let min_input = 0.5
-  let run = 250
+  let run = 0
   while run < 256
     let analog_input = min_input + run/255
     alter VAin $&analog_input
     save all
-    tran 900n 90u
-    wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/A_in\{$&run\\\}.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AIn) v(C+) v(C-) v(vb) v(vcp)
+    tran 50n 410u
+    wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/A_in\{$&run\\\}_mc.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AIn) v(C+) v(C-) v(vb) v(vcp)
     let run = run + 1
   end
   quit
 .endc"
-}
-C {madvlsi/tt_models.sym} 1980 1420 0 0 {
-name=TT_MODELS
-only_toplevel=false
-value=".option wnflag=1
-.param MC_SWITCH=0.0
-.lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/pmos3.sym} -1240 1430 0 0 {name=M29
 L=\{L\}
@@ -2042,13 +2022,13 @@ C {devices/lab_pin.sym} 2050 680 1 0 {name=p105 sig_type=std_logic lab=SH}
 C {madvlsi/gnd.sym} 2050 590 0 0 {name=l14 lab=GND}
 C {devices/lab_pin.sym} 2050 530 1 0 {name=p106 sig_type=std_logic lab=SEN}
 C {madvlsi/vsource.sym} 2050 710 0 0 {name=VSH
-value="pulse(0 1.8 1.1u 1n 1n 2u 10u 9)"}
+value="pulse(0 1.8 6u 1n 1n 5u 50u 9)"}
 C {madvlsi/vsource.sym} 2050 560 0 0 {name=VSEN
-value="pulse(0 1.8 5.5u 1n 1n 5u 10u 8)"}
+value="pulse(0 1.8 18u 1n 1n 31u 50u 8)"}
 C {madvlsi/vsource.sym} 2050 850 0 0 {name=VPRE
-value="pwl(0 0 100n 0 101n 1.8 1000n 1.8 1000n 0)"}
+value="pwl(0 0 1u 0 1u 1.8 5u 1.8 5u 0)"}
 C {madvlsi/vsource.sym} 2360 820 0 0 {name=VRST
-value="pulse(0 1.8 3.2u 1n 1n 2u 10u 9)"}
+value="pulse(0 1.8 12u 1n 1n 5u 50u 9)"}
 C {madvlsi/gnd.sym} 2360 850 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 2360 790 1 0 {name=p107 sig_type=std_logic lab=RST}
 C {madvlsi/vsource.sym} 2360 640 0 0 {name=VAin
@@ -2609,89 +2589,9 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1230 740 3 0 {name=p3 sig_type=std_logic lab=C+primedrive}
 C {devices/lab_pin.sym} 640 740 3 0 {name=p4 sig_type=std_logic lab=C+drive}
-C {madvlsi/nmos3.sym} 1020 160 0 0 {name=M73
-L=\{L\}
-W=\{W\}
-body=GND
-nf=1
-mult=1/6
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/nmos3.sym} 1160 160 0 0 {name=M74
-L=\{L\}
-W=\{W\}
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 1020 60 0 0 {name=M110
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=4
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 1160 60 2 0 {name=M111
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/pmos3.sym} 1020 -40 0 0 {name=M112
-L=\{L\}
-W=\{W\}
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {madvlsi/gnd.sym} 1020 190 0 0 {name=l5 lab=GND}
-C {madvlsi/gnd.sym} 1160 190 0 0 {name=l25 lab=GND}
-C {madvlsi/vdd.sym} 1020 -70 0 0 {name=l26 lab=VDD}
-C {devices/lab_pin.sym} 1210 60 2 0 {name=p5 sig_type=std_logic lab=Vcp}
-C {devices/lab_pin.sym} 980 160 3 0 {name=p9 sig_type=std_logic lab=Vb}
 C {madvlsi/nmos3.sym} 640 170 2 0 {name=M126
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=8
@@ -2705,8 +2605,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 760 170 0 0 {name=M127
-L=0.15
-W=1
+L=0.5
+W=12
 body=GND
 nf=1
 mult=1
@@ -2720,8 +2620,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 640 30 2 0 {name=M128
-L=0.15
-W=1
+L=0.5
+W=12
 body=VDD
 nf=1
 mult=1
@@ -2735,8 +2635,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {madvlsi/pmos3.sym} 760 30 0 0 {name=M129
-L=0.15
-W=1
+L=0.5
+W=12
 body=VDD
 nf=1
 mult=1
@@ -2753,7 +2653,82 @@ C {madvlsi/gnd.sym} 760 200 0 0 {name=l88 lab=GND}
 C {madvlsi/vdd.sym} 640 0 0 0 {name=l87 lab=VDD}
 C {madvlsi/vdd.sym} 760 0 0 0 {name=l89 lab=VDD}
 C {madvlsi/resistor.sym} 640 230 0 0 {name=R2
-value=100k
+value=2.2k
 m=1}
 C {madvlsi/gnd.sym} 640 260 0 0 {name=l90 lab=GND}
 C {devices/lab_pin.sym} 760 90 2 0 {name=p10 sig_type=std_logic lab=Vb}
+C {madvlsi/nmos3.sym} 1010 170 2 0 {name=M21
+L=0.5
+W=12
+body=GND
+nf=1
+mult=8
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/nmos3.sym} 1130 170 0 0 {name=M22
+L=0.5
+W=12
+body=GND
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} 1010 30 2 0 {name=M23
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/pmos3.sym} 1130 30 0 0 {name=M24
+L=0.5
+W=12
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {madvlsi/gnd.sym} 1130 200 0 0 {name=l5 lab=GND}
+C {madvlsi/vdd.sym} 1010 0 0 0 {name=l6 lab=VDD}
+C {madvlsi/vdd.sym} 1130 0 0 0 {name=l7 lab=VDD}
+C {madvlsi/resistor.sym} 1010 230 0 0 {name=R1
+value=800
+m=1}
+C {madvlsi/gnd.sym} 1010 260 0 0 {name=l25 lab=GND}
+C {devices/lab_pin.sym} 1130 90 2 0 {name=p5 sig_type=std_logic lab=Vcp}
+C {madvlsi/tt_models.sym} 2000 1410 0 0 {
+name=TT_MODELS
+only_toplevel=false
+value=".option wnflag=1
+.param MC_SWITCH=1.0
+.lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
+}
