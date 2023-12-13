@@ -11,23 +11,16 @@ dnls = []
 inls = []
 
 for i in range(1, 257):
-    file_path = f"{i}.txt"
+    file_path = f"{i}_mc.txt"
     df = pd.read_csv(file_path, delim_whitespace=True)
 
     time = df["time"].to_numpy()
     vd = df["v(d)"].to_numpy()
     cplus = df["v(c+)"].to_numpy()
-    cminus = df["v(c-)"].to_numpy()
-    sh = df["v(sh)"].to_numpy()
-    sen = df["v(sen)"].to_numpy()
 
     final_values.append(cplus[-1])
 
     plt.plot(time, cplus)
-    #plt.plot(time, vd)
-    #plt.plot(time, cminus)
-    #plt.plot(time, sh)
-    #plt.plot(time, sen)
 
     n_bits = 8
     # Calculate the Full-Scale Range and Ideal Step Size
@@ -78,4 +71,27 @@ plt.xlabel("Step Index")
 plt.ylabel("INL (in LSBs)")
 plt.grid(True)
 
+# Create a timing plot
+df = pd.read_csv("1.txt", delim_whitespace=True)
+
+time = df["time"].to_numpy()
+vd = df["v(d)"].to_numpy()
+cplus = df["v(c+)"].to_numpy()
+cminus = df["v(c-)"].to_numpy()
+pre = df["v(pre)"].to_numpy()
+sh = df["v(sh)"].to_numpy()
+sen = df["v(sen)"].to_numpy()
+plt.figure()
+plt.plot(time, vd)
+plt.plot(time, cplus)
+plt.plot(time, cminus)
+plt.plot(time, pre)
+plt.plot(time, sh)
+plt.plot(time, sen)
+plt.legend(("vd", "cplus", "cminus", "pre", "sh", "sen"))
+#plt.xlim(0, 1e-5)
+
 plt.show()
+
+
+# Reconfigure analog output location before starting LDS?
