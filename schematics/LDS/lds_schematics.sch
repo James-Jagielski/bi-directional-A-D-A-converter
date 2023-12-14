@@ -5,18 +5,6 @@ K {}
 V {}
 S {}
 E {}
-T {n1} -1860 420 0 0 0.4 0.4 {}
-T {n4} -1040 410 0 0 0.4 0.4 {}
-T {A} -1630 380 0 0 0.4 0.4 {}
-T {B} -1250 380 0 0 0.4 0.4 {}
-T {C} -1720 480 0 0 0.4 0.4 {}
-T {D} -1160 480 0 0 0.4 0.4 {}
-T {n1} -300 410 0 0 0.4 0.4 {}
-T {n4} 520 400 0 0 0.4 0.4 {}
-T {A} -70 370 0 0 0.4 0.4 {}
-T {B} 310 370 0 0 0.4 0.4 {}
-T {C} -160 470 0 0 0.4 0.4 {}
-T {D} 400 470 0 0 0.4 0.4 {}
 N 0 -340 20 -340 {
 lab=#net1}
 N 80 -340 100 -340 {
@@ -337,14 +325,6 @@ N -1470 410 -1050 410 {
 lab=#net21}
 N -1050 410 -1050 490 {
 lab=#net21}
-N -1630 730 -1260 730 {
-lab=GND}
-N -1410 490 -1410 700 {
-lab=GND}
-N -1260 650 -1260 730 {
-lab=GND}
-N -1630 650 -1630 730 {
-lab=GND}
 N -1570 570 -1570 650 {
 lab=#net14}
 N -1320 570 -1320 650 {
@@ -357,14 +337,10 @@ N -1440 520 -1440 680 {
 lab=Vb}
 N -1900 650 -1900 780 {
 lab=#net18}
-N -1410 700 -1410 730 {
-lab=GND}
 N -1160 340 -1140 340 {
 lab=#net19}
 N -1870 340 -1870 350 {
 lab=#net18}
-N -970 650 -970 780 {
-lab=C-}
 N -1900 340 -1870 340 {
 lab=#net18}
 N -1900 650 -1870 650 {
@@ -515,14 +491,6 @@ N 90 400 510 400 {
 lab=#net33}
 N 510 400 510 480 {
 lab=#net33}
-N -70 720 300 720 {
-lab=GND}
-N 150 480 150 690 {
-lab=GND}
-N 300 640 300 720 {
-lab=GND}
-N -70 640 -70 720 {
-lab=GND}
 N -10 560 -10 640 {
 lab=#net26}
 N 240 560 240 640 {
@@ -533,10 +501,6 @@ N 210 640 210 670 {
 lab=D}
 N 120 510 120 670 {
 lab=Vb}
-N -340 640 -340 770 {
-lab=C+}
-N 150 690 150 720 {
-lab=GND}
 N 400 330 420 330 {
 lab=#net31}
 N -310 330 -310 340 {
@@ -805,18 +769,6 @@ N -60 1260 230 1260 {
 lab=#net36}
 N 40 990 40 1060 {
 lab=Vb}
-N -720 430 -720 570 {
-lab=C-}
-N -740 500 -720 500 {
-lab=C-}
-N -660 430 -660 570 {
-lab=C+}
-N -690 600 -690 690 {
-lab=SHb}
-N -970 500 -740 500 {
-lab=C-}
-N -660 500 -340 500 {
-lab=C+}
 N -1590 -420 -1570 -420 {
 lab=#net38}
 N -1510 -420 -1490 -420 {
@@ -879,8 +831,6 @@ N -1250 -270 -1250 -170 {
 lab=#net44}
 N -1650 -90 -1650 -60 {
 lab=#net45}
-N -1180 -90 -1180 -20 {
-lab=CompOut}
 N -1650 -60 -1650 -40 {
 lab=#net45}
 N -1650 -40 -1500 -40 {
@@ -943,37 +893,29 @@ N -1540 -140 -1140 -140 {
 lab=ENADb}
 N -1650 340 -1620 340 {
 lab=#net47}
-N -2500 -260 -2500 -220 {
+N -2700 80 -2700 120 {
 lab=PREb}
-N -2530 -290 -2530 -190 {
+N -2730 50 -2730 150 {
 lab=PRE}
-N -2550 -240 -2530 -240 {
+N -2750 100 -2730 100 {
 lab=PRE}
-N -2500 -240 -2480 -240 {
+N -2700 100 -2680 100 {
 lab=PREb}
-N -2300 -260 -2300 -220 {
-lab=SHb}
-N -2330 -290 -2330 -190 {
-lab=SH}
-N -2350 -240 -2330 -240 {
-lab=SH}
-N -2300 -240 -2280 -240 {
-lab=SHb}
-N -2140 -260 -2140 -220 {
+N -2340 80 -2340 120 {
 lab=Db}
-N -2170 -290 -2170 -190 {
+N -2370 50 -2370 150 {
 lab=D}
-N -2190 -240 -2170 -240 {
+N -2390 100 -2370 100 {
 lab=D}
-N -2140 -240 -2120 -240 {
+N -2340 100 -2320 100 {
 lab=Db}
-N -1950 -260 -1950 -220 {
+N -2150 80 -2150 120 {
 lab=ENADb}
-N -1980 -290 -1980 -190 {
+N -2180 50 -2180 150 {
 lab=ENAD}
-N -2000 -240 -1980 -240 {
+N -2200 100 -2180 100 {
 lab=ENAD}
-N -1950 -240 -1930 -240 {
+N -2150 100 -2130 100 {
 lab=ENADb}
 N -2010 -120 -1620 -120 {
 lab=RST}
@@ -987,12 +929,8 @@ N -1680 280 -1190 280 {
 lab=Vcp}
 N -1190 280 -1190 310 {
 lab=Vcp}
-N -1680 -390 -1680 280 {
-lab=Vcp}
 N -1680 -390 -1620 -390 {
 lab=Vcp}
-N -690 350 -690 400 {
-lab=SH}
 N -120 270 -120 300 {
 lab=Vcp}
 N -120 270 370 270 {
@@ -1037,6 +975,144 @@ N 20 350 150 350 {
 lab=#net27}
 N 150 330 150 350 {
 lab=#net27}
+N 580 -580 580 -320 {
+lab=SEN}
+N -690 500 -690 690 {
+lab=SH}
+N -740 570 -720 570 {
+lab=SHb}
+N -740 470 -740 570 {
+lab=SHb}
+N -740 470 -720 470 {
+lab=SHb}
+N -740 310 -740 470 {
+lab=SHb}
+N -740 310 -690 310 {
+lab=SHb}
+N -780 340 -780 410 {
+lab=C-}
+N -780 340 -720 340 {
+lab=C-}
+N -780 410 -780 660 {
+lab=C-}
+N -780 660 -720 660 {
+lab=C-}
+N -660 470 -640 470 {
+lab=VDD}
+N -660 570 -640 570 {
+lab=GND}
+N -660 660 -580 660 {
+lab=C+}
+N -580 340 -580 660 {
+lab=C+}
+N -970 430 -780 430 {
+lab=C-}
+N 150 480 150 510 {
+lab=GND}
+N 120 670 120 930 {
+lab=Vb}
+N 40 930 120 930 {
+lab=Vb}
+N 40 930 40 990 {
+lab=Vb}
+N -1410 490 -1410 520 {
+lab=GND}
+N -1430 680 -1430 1060 {
+lab=Vb}
+N -1440 680 -1430 680 {
+lab=Vb}
+N -1460 -240 -1460 -200 {
+lab=AIn}
+N -2010 -200 -1460 -200 {
+lab=AIn}
+N -1380 -240 -1380 -200 {
+lab=C+}
+N -1380 -200 -1020 -200 {
+lab=C+}
+N -1020 -200 -660 -200 {
+lab=C+}
+N 720 -80 760 -80 {
+lab=STO+_RCL-}
+N 720 -80 720 700 {
+lab=STO+_RCL-}
+N -660 340 -580 340 {
+lab=C+}
+N -580 430 -340 430 {
+lab=C+}
+N -660 -200 -660 340 {
+lab=C+}
+N 720 700 720 740 {
+lab=STO+_RCL-}
+N 450 740 720 740 {
+lab=STO+_RCL-}
+N 450 670 450 740 {
+lab=STO+_RCL-}
+N -280 740 450 740 {
+lab=STO+_RCL-}
+N -280 670 -280 740 {
+lab=STO+_RCL-}
+N -1110 740 -280 740 {
+lab=STO+_RCL-}
+N -1110 680 -1110 740 {
+lab=STO+_RCL-}
+N -1840 740 -1110 740 {
+lab=STO+_RCL-}
+N -1840 680 -1840 740 {
+lab=STO+_RCL-}
+N -1440 100 -1440 520 {
+lab=Vb}
+N -1660 100 -1440 100 {
+lab=Vb}
+N -1680 100 -1660 100 {
+lab=Vb}
+N -1680 -300 -1680 100 {
+lab=Vb}
+N -1680 -300 -1620 -300 {
+lab=Vb}
+N -1720 -390 -1680 -390 {
+lab=Vcp}
+N -1720 -390 -1720 280 {
+lab=Vcp}
+N -1720 280 -1680 280 {
+lab=Vcp}
+N -1760 680 -1760 780 {
+lab=STO-_RCL+}
+N -1760 780 -1030 780 {
+lab=STO-_RCL+}
+N -1030 680 -1030 780 {
+lab=STO-_RCL+}
+N -1030 780 -200 780 {
+lab=STO-_RCL+}
+N -200 670 -200 780 {
+lab=STO-_RCL+}
+N -200 780 530 780 {
+lab=STO-_RCL+}
+N 530 670 530 780 {
+lab=STO-_RCL+}
+N -470 -80 -470 780 {
+lab=STO-_RCL+}
+N -540 -80 -470 -80 {
+lab=STO-_RCL+}
+N -1650 -510 -1650 -420 {
+lab=CompOut}
+N -1650 -510 130 -510 {
+lab=CompOut}
+N 130 -510 130 -310 {
+lab=CompOut}
+N -1180 -60 -1070 -60 {
+lab=CompOut}
+N -1070 -510 -1070 -60 {
+lab=CompOut}
+N -1180 -90 -1180 -60 {
+lab=CompOut}
+N -2010 -420 -1650 -420 {
+lab=CompOut}
+N -1190 -430 -1190 -420 {
+lab=CompOutb}
+N -1190 -430 50 -430 {
+lab=CompOutb}
+N 50 -430 50 -310 {
+lab=CompOutb}
 C {madvlsi/pmos3.sym} -30 -340 1 0 {name=M1
 L=0.15
 W=1
@@ -1159,8 +1235,6 @@ spiceprefix=X
 }
 C {madvlsi/vdd.sym} 90 -360 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 90 -180 0 0 {name=l2 lab=GND}
-C {devices/lab_pin.sym} 50 -270 0 0 {name=p1 sig_type=std_logic lab=CompOutb}
-C {devices/lab_pin.sym} 130 -270 2 0 {name=p2 sig_type=std_logic lab=CompOut}
 C {devices/lab_pin.sym} 90 -130 3 0 {name=p3 sig_type=std_logic lab=ENAD}
 C {devices/lab_pin.sym} 90 -400 1 0 {name=p4 sig_type=std_logic lab=ENADb}
 C {devices/lab_pin.sym} -110 -270 1 0 {name=p5 sig_type=std_logic lab=D}
@@ -1314,7 +1388,7 @@ m=1}
 C {madvlsi/gnd.sym} -210 -20 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -540 -90 0 0 {name=p10 sig_type=std_logic lab=STO-_RCL+}
 C {devices/lab_pin.sym} -210 -90 2 0 {name=p11 sig_type=std_logic lab=STO-b_RCL+b}
-C {devices/lab_pin.sym} -480 -120 3 0 {name=p13 sig_type=std_logic lab=SEN}
+C {devices/lab_pin.sym} 580 -580 1 0 {name=p13 sig_type=std_logic lab=SEN}
 C {madvlsi/pmos3.sym} 420 -350 1 0 {name=M18
 L=0.15
 W=1
@@ -1458,12 +1532,12 @@ C {madvlsi/capacitor.sym} 390 -50 0 0 {name=C5
 value=0.1p
 m=1}
 C {madvlsi/gnd.sym} 390 -20 0 0 {name=l15 lab=GND}
-C {madvlsi/capacitor.sym} 720 -50 0 0 {name=C6
+C {madvlsi/capacitor.sym} 760 -50 0 0 {name=C6
 value=0.1p
 m=1}
-C {madvlsi/gnd.sym} 720 -20 0 0 {name=l18 lab=GND}
+C {madvlsi/gnd.sym} 760 -20 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 390 -90 0 0 {name=p16 sig_type=std_logic lab=STO+b_RCL-b}
-C {devices/lab_pin.sym} 720 -90 2 0 {name=p17 sig_type=std_logic lab=STO+_RCL-}
+C {devices/lab_pin.sym} 760 -80 2 0 {name=p17 sig_type=std_logic lab=STO+_RCL-}
 C {madvlsi/pmos3.sym} -1590 340 3 1 {name=M27
 L=0.15
 W=1
@@ -1539,7 +1613,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -1440 680 3 0 {name=p9 sig_type=std_logic lab=Vb}
 C {madvlsi/nmos3.sym} -1540 490 1 1 {name=M32
 L=0.15
 W=1
@@ -1861,10 +1934,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -1110 680 3 0 {name=p22 sig_type=std_logic lab=STO+_RCL-}
-C {devices/lab_pin.sym} -1030 680 3 0 {name=p23 sig_type=std_logic lab=STO-_RCL+}
-C {devices/lab_pin.sym} -1840 680 3 0 {name=p24 sig_type=std_logic lab=STO+_RCL-}
-C {devices/lab_pin.sym} -1760 680 3 0 {name=p25 sig_type=std_logic lab=STO-_RCL+}
 C {madvlsi/pmos3.sym} -940 340 1 0 {name=M53
 L=0.15
 W=1
@@ -1918,7 +1987,7 @@ C {devices/lab_pin.sym} -940 680 3 0 {name=p33 sig_type=std_logic lab=PRE}
 C {madvlsi/capacitor.sym} -1900 810 0 0 {name=C3
 value=1p
 m=1}
-C {madvlsi/capacitor.sym} -970 810 0 0 {name=C4
+C {madvlsi/capacitor.sym} -830 460 0 0 {name=C4
 value=1p
 m=1}
 C {devices/lab_pin.sym} -910 610 2 0 {name=p34 sig_type=std_logic lab=Vref-}
@@ -1997,7 +2066,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 120 670 3 0 {name=p36 sig_type=std_logic lab=Vb}
 C {madvlsi/nmos3.sym} 20 480 1 1 {name=M61
 L=0.15
 W=1
@@ -2319,10 +2387,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 450 670 3 0 {name=p43 sig_type=std_logic lab=STO+_RCL-}
 C {devices/lab_pin.sym} 530 670 3 0 {name=p44 sig_type=std_logic lab=STO-_RCL+}
-C {devices/lab_pin.sym} -280 670 3 0 {name=p45 sig_type=std_logic lab=STO+_RCL-}
-C {devices/lab_pin.sym} -200 670 3 0 {name=p46 sig_type=std_logic lab=STO-_RCL+}
 C {madvlsi/pmos3.sym} 620 330 1 0 {name=M82
 L=0.15
 W=1
@@ -2373,7 +2438,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} -400 610 0 0 {name=p51 sig_type=std_logic lab=Vref+}
 C {devices/lab_pin.sym} -370 670 3 0 {name=p53 sig_type=std_logic lab=PRE}
 C {devices/lab_pin.sym} 620 670 3 0 {name=p54 sig_type=std_logic lab=PRE}
-C {madvlsi/capacitor.sym} -340 800 0 0 {name=C7
+C {madvlsi/capacitor.sym} -530 460 0 0 {name=C7
 value=1p
 m=1}
 C {madvlsi/capacitor.sym} 590 800 0 0 {name=C8
@@ -3057,15 +3122,14 @@ C {madvlsi/resistor.sym} 230 1350 0 0 {name=R4
 value=800
 m=1}
 C {madvlsi/vdd.sym} -1540 340 0 0 {name=l25 lab=VDD}
-C {madvlsi/gnd.sym} 90 720 0 0 {name=l28 lab=GND}
-C {madvlsi/gnd.sym} -340 830 0 0 {name=l29 lab=GND}
+C {madvlsi/gnd.sym} 150 510 0 0 {name=l28 lab=GND}
+C {madvlsi/gnd.sym} -530 490 0 0 {name=l29 lab=GND}
 C {madvlsi/gnd.sym} 590 830 0 0 {name=l30 lab=GND}
-C {madvlsi/gnd.sym} -970 840 0 0 {name=l31 lab=GND}
+C {madvlsi/gnd.sym} -830 490 0 0 {name=l31 lab=GND}
 C {madvlsi/gnd.sym} -1900 840 0 0 {name=l32 lab=GND}
-C {madvlsi/gnd.sym} -1440 730 0 0 {name=l33 lab=GND}
-C {devices/lab_pin.sym} 40 990 2 0 {name=p7 sig_type=std_logic lab=Vb}
+C {devices/lab_pin.sym} -1430 910 0 0 {name=p7 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -1680 1100 0 0 {name=p31 sig_type=std_logic lab=Vcp}
-C {madvlsi/pmos3.sym} -690 570 3 0 {name=M149
+C {madvlsi/pmos3.sym} -690 340 1 0 {name=M149
 L=0.15
 W=1
 body=VDD
@@ -3080,7 +3144,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} -690 430 1 0 {name=M150
+C {madvlsi/nmos3.sym} -690 660 3 0 {name=M150
 L=0.15
 W=1
 body=GND
@@ -3095,10 +3159,10 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -690 350 0 0 {name=p35 sig_type=std_logic lab=SH}
-C {devices/lab_pin.sym} -690 690 0 0 {name=p58 sig_type=std_logic lab=SHb}
-C {devices/lab_pin.sym} -810 500 3 0 {name=p52 sig_type=std_logic lab=C-}
-C {devices/lab_pin.sym} -530 500 3 0 {name=p55 sig_type=std_logic lab=C+}
+C {devices/lab_pin.sym} -690 690 3 0 {name=p35 sig_type=std_logic lab=SH}
+C {devices/lab_pin.sym} -690 310 1 0 {name=p58 sig_type=std_logic lab=SHb}
+C {devices/lab_pin.sym} -830 430 1 0 {name=p52 sig_type=std_logic lab=C-}
+C {devices/lab_pin.sym} -530 430 1 0 {name=p55 sig_type=std_logic lab=C+}
 C {madvlsi/pmos3.sym} -1620 -420 1 1 {name=M129
 L=0.15
 W=1
@@ -3402,7 +3466,6 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/vdd.sym} -1170 -470 0 0 {name=l35 lab=VDD}
-C {devices/lab_pin.sym} -1180 -20 3 0 {name=p56 sig_type=std_logic lab=CompOut}
 C {devices/lab_pin.sym} -1460 -120 1 0 {name=p59 sig_type=std_logic lab=ENAD}
 C {devices/lab_pin.sym} -2010 -120 0 0 {name=p60 sig_type=std_logic lab=RST}
 C {devices/lab_pin.sym} -1540 -140 1 0 {name=p61 sig_type=std_logic lab=ENADb}
@@ -3415,14 +3478,13 @@ value=0.1p
 m=1}
 C {madvlsi/gnd.sym} -1500 40 0 0 {name=l37 lab=GND}
 C {madvlsi/gnd.sym} -1340 -80 0 0 {name=l38 lab=GND}
-C {devices/lab_pin.sym} -1650 -420 0 0 {name=p62 sig_type=std_logic lab=CompOut}
+C {devices/lab_pin.sym} -2010 -420 0 0 {name=p62 sig_type=std_logic lab=CompOut}
 C {madvlsi/gnd.sym} -1580 -260 0 0 {name=l39 lab=GND}
 C {madvlsi/gnd.sym} -1270 -260 0 0 {name=l40 lab=GND}
-C {devices/lab_pin.sym} -1460 -240 3 0 {name=p63 sig_type=std_logic lab=AIn}
+C {devices/lab_pin.sym} -2010 -200 0 0 {name=p63 sig_type=std_logic lab=AIn}
 C {devices/lab_pin.sym} -1380 -240 3 0 {name=p66 sig_type=std_logic lab=C+}
-C {devices/lab_pin.sym} -1620 -300 0 0 {name=p67 sig_type=std_logic lab=Vb}
 C {devices/lab_pin.sym} -1190 -350 0 0 {name=p69 sig_type=std_logic lab=CompOutb}
-C {madvlsi/pmos3.sym} -2500 -290 2 1 {name=M151
+C {madvlsi/pmos3.sym} -2700 50 2 1 {name=M151
 L=0.15
 W=1
 body=VDD
@@ -3437,7 +3499,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} -2500 -190 0 0 {name=M152
+C {madvlsi/nmos3.sym} -2700 150 0 0 {name=M152
 L=0.15
 W=1
 body=GND
@@ -3452,11 +3514,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vdd.sym} -2500 -320 0 0 {name=l43 lab=VDD}
-C {madvlsi/gnd.sym} -2500 -160 0 0 {name=l44 lab=GND}
-C {devices/lab_pin.sym} -2550 -240 0 0 {name=p18 sig_type=std_logic lab=PRE}
-C {devices/lab_pin.sym} -2480 -240 2 0 {name=p64 sig_type=std_logic lab=PREb}
-C {madvlsi/pmos3.sym} -2300 -290 2 1 {name=M153
+C {madvlsi/vdd.sym} -2700 20 0 0 {name=l43 lab=VDD}
+C {madvlsi/gnd.sym} -2700 180 0 0 {name=l44 lab=GND}
+C {devices/lab_pin.sym} -2750 100 0 0 {name=p18 sig_type=std_logic lab=PRE}
+C {devices/lab_pin.sym} -2680 100 2 0 {name=p64 sig_type=std_logic lab=PREb}
+C {madvlsi/pmos3.sym} -690 470 1 1 {name=M153
 L=0.15
 W=1
 body=VDD
@@ -3471,7 +3533,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} -2300 -190 0 0 {name=M154
+C {madvlsi/nmos3.sym} -690 570 3 0 {name=M154
 L=0.15
 W=1
 body=GND
@@ -3486,11 +3548,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vdd.sym} -2300 -320 0 0 {name=l45 lab=VDD}
-C {madvlsi/gnd.sym} -2300 -160 0 0 {name=l46 lab=GND}
-C {devices/lab_pin.sym} -2280 -240 2 0 {name=p82 sig_type=std_logic lab=SHb}
-C {devices/lab_pin.sym} -2350 -240 0 0 {name=p83 sig_type=std_logic lab=SH}
-C {madvlsi/pmos3.sym} -2140 -290 2 1 {name=M155
+C {madvlsi/vdd.sym} -640 470 0 0 {name=l45 lab=VDD}
+C {madvlsi/gnd.sym} -640 570 0 0 {name=l46 lab=GND}
+C {madvlsi/pmos3.sym} -2340 50 2 1 {name=M155
 L=0.15
 W=1
 body=VDD
@@ -3505,7 +3565,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} -2140 -190 0 0 {name=M156
+C {madvlsi/nmos3.sym} -2340 150 0 0 {name=M156
 L=0.15
 W=1
 body=GND
@@ -3520,11 +3580,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vdd.sym} -2140 -320 0 0 {name=l47 lab=VDD}
-C {madvlsi/gnd.sym} -2140 -160 0 0 {name=l48 lab=GND}
-C {devices/lab_pin.sym} -2120 -240 0 1 {name=p93 sig_type=std_logic lab=Db}
-C {devices/lab_pin.sym} -2190 -240 2 1 {name=p94 sig_type=std_logic lab=D}
-C {madvlsi/pmos3.sym} -1950 -290 2 1 {name=M157
+C {madvlsi/vdd.sym} -2340 20 0 0 {name=l47 lab=VDD}
+C {madvlsi/gnd.sym} -2340 180 0 0 {name=l48 lab=GND}
+C {devices/lab_pin.sym} -2320 100 0 1 {name=p93 sig_type=std_logic lab=Db}
+C {devices/lab_pin.sym} -2390 100 2 1 {name=p94 sig_type=std_logic lab=D}
+C {madvlsi/pmos3.sym} -2150 50 2 1 {name=M157
 L=0.15
 W=1
 body=VDD
@@ -3539,7 +3599,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/nmos3.sym} -1950 -190 0 0 {name=M158
+C {madvlsi/nmos3.sym} -2150 150 0 0 {name=M158
 L=0.15
 W=1
 body=GND
@@ -3554,10 +3614,15 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {madvlsi/vdd.sym} -1950 -320 0 0 {name=l49 lab=VDD}
-C {madvlsi/gnd.sym} -1950 -160 0 0 {name=l50 lab=GND}
-C {devices/lab_pin.sym} -1930 -240 2 0 {name=p65 sig_type=std_logic lab=ENADb}
-C {devices/lab_pin.sym} -2000 -240 0 0 {name=p70 sig_type=std_logic lab=ENAD}
+C {madvlsi/vdd.sym} -2150 20 0 0 {name=l49 lab=VDD}
+C {madvlsi/gnd.sym} -2150 180 0 0 {name=l50 lab=GND}
+C {devices/lab_pin.sym} -2130 100 2 0 {name=p65 sig_type=std_logic lab=ENADb}
+C {devices/lab_pin.sym} -2200 100 0 0 {name=p70 sig_type=std_logic lab=ENAD}
 C {madvlsi/vdd.sym} -1330 340 0 0 {name=l41 lab=VDD}
 C {madvlsi/vdd.sym} 20 330 0 0 {name=l27 lab=VDD}
 C {madvlsi/vdd.sym} 230 330 0 0 {name=l42 lab=VDD}
+C {madvlsi/gnd.sym} -70 640 0 0 {name=l51 lab=GND}
+C {madvlsi/gnd.sym} 300 640 0 0 {name=l52 lab=GND}
+C {madvlsi/gnd.sym} -1630 650 0 0 {name=l33 lab=GND}
+C {madvlsi/gnd.sym} -1260 650 0 0 {name=l53 lab=GND}
+C {madvlsi/gnd.sym} -1410 520 0 0 {name=l54 lab=GND}
