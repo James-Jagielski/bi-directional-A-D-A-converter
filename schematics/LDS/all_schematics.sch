@@ -707,6 +707,10 @@ N 1120 -420 1120 -370 {
 lab=Vcp}
 N -330 -890 -210 -890 {
 lab=CompOutb}
+N -1780 -800 -1780 -750 {
+lab=PRE}
+N -1630 -800 -1630 -750 {
+lab=PREb}
 C {madvlsi/pmos3.sym} -210 -1220 0 1 {name=M1
 L=\{L\}
 W=\{W\}
@@ -2593,3 +2597,21 @@ C {devices/lab_pin.sym} 880 850 0 0 {name=p9 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} 1000 1130 0 0 {name=p12 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} -840 1130 0 0 {name=p19 sig_type=std_logic lab=Vcp}
 C {devices/lab_pin.sym} -330 -890 0 0 {name=p87 sig_type=std_logic lab=CompOutb}
+C {devices/lab_pin.sym} -1630 -800 2 0 {name=p49 sig_type=std_logic lab=PREb}
+C {devices/lab_pin.sym} -1780 -800 0 0 {name=p50 sig_type=std_logic lab=PRE}
+C {devices/lab_pin.sym} -1370 -750 2 0 {name=p82 sig_type=std_logic lab=SHb}
+C {devices/lab_pin.sym} -1520 -750 0 0 {name=p83 sig_type=std_logic lab=SH}
+C {devices/lab_pin.sym} -1090 -740 0 1 {name=p93 sig_type=std_logic lab=Db}
+C {devices/lab_pin.sym} -1240 -740 2 1 {name=p94 sig_type=std_logic lab=D}
+C {madvlsi/vdd.sym} -1700 -830 0 0 {name=l42 lab=VDD}
+C {madvlsi/gnd.sym} -1700 -680 0 0 {name=l44 lab=GND}
+C {madvlsi/gnd.sym} -1440 -680 0 0 {name=l43 lab=GND}
+C {madvlsi/gnd.sym} -1160 -670 0 0 {name=l45 lab=GND}
+C {madvlsi/vdd.sym} -1440 -830 0 0 {name=l46 lab=VDD}
+C {madvlsi/vdd.sym} -1160 -820 0 0 {name=l47 lab=VDD}
+C {/home/madvlsi/Documents/bi-directional-A-D-A-converter/schematics/inverter.sym} -1670 -750 0 0 {name=x1}
+C {/home/madvlsi/Documents/bi-directional-A-D-A-converter/schematics/inverter.sym} -1410 -750 0 0 {name=x2}
+C {/home/madvlsi/Documents/bi-directional-A-D-A-converter/schematics/inverter.sym} -1130 -740 0 0 {name=x3}
+C {/home/madvlsi/Documents/bi-directional-A-D-A-converter/schematics/inverter.sym} -70 990 3 0 {name=x4}
+C {madvlsi/vdd.sym} -150 1020 0 0 {name=l1 lab=VDD}
+C {madvlsi/gnd.sym} 0 1020 0 0 {name=l2 lab=GND}
