@@ -1233,6 +1233,28 @@ N 1330 -1370 2170 -1370 {
 lab=D}
 N 2170 -1680 2170 -1370 {
 lab=D}
+N 2800 -210 2800 -150 {
+lab=#net3}
+N 2780 -400 2780 -370 {
+lab=GND}
+N 2780 -370 2780 -320 {
+lab=GND}
+N 2780 -90 2780 -40 {
+lab=GND}
+N 2780 -120 2780 -90 {
+lab=GND}
+N 2910 -90 2910 -40 {
+lab=GND}
+N 2910 -120 2910 -90 {
+lab=GND}
+N 3070 -90 3070 -40 {
+lab=GND}
+N 3070 -120 3070 -90 {
+lab=GND}
+N 2800 -150 2930 -150 {
+lab=#net3}
+N 2930 -150 3090 -150 {
+lab=#net3}
 C {madvlsi/pmos3.sym} 2540 -1810 1 0 {name=M1
 L=0.15
 W=1
@@ -2878,10 +2900,6 @@ spiceprefix=X
 C {madvlsi/vdd.sym} 1070 -440 0 0 {name=l4 lab=VDD}
 C {madvlsi/vdd.sym} 2680 -440 0 0 {name=l16 lab=VDD}
 C {madvlsi/gnd.sym} 1940 -300 0 0 {name=l17 lab=GND}
-C {madvlsi/resistor.sym} 2800 -400 0 0 {name=R3
-value=2.2k
-m=1}
-C {madvlsi/gnd.sym} 2800 -370 0 0 {name=l19 lab=GND}
 C {madvlsi/nmos3.sym} 1910 -160 1 0 {name=M107
 L=0.5
 W=6
@@ -3216,10 +3234,6 @@ spiceprefix=X
 C {madvlsi/vdd.sym} 1070 -220 0 0 {name=l21 lab=VDD}
 C {madvlsi/vdd.sym} 2680 -220 0 0 {name=l22 lab=VDD}
 C {madvlsi/gnd.sym} 1940 -80 0 0 {name=l23 lab=GND}
-C {madvlsi/gnd.sym} 2800 -90 0 0 {name=l24 lab=GND}
-C {madvlsi/resistor.sym} 2800 -120 0 0 {name=R4
-value=800
-m=1}
 C {madvlsi/vdd.sym} 1030 -1130 0 0 {name=l25 lab=VDD}
 C {madvlsi/gnd.sym} 2720 -960 0 0 {name=l28 lab=GND}
 C {madvlsi/gnd.sym} 2040 -980 0 0 {name=l29 lab=GND}
@@ -3720,3 +3734,31 @@ C {madvlsi/gnd.sym} 2870 -830 0 0 {name=l52 lab=GND}
 C {madvlsi/gnd.sym} 940 -820 0 0 {name=l33 lab=GND}
 C {madvlsi/gnd.sym} 1310 -820 0 0 {name=l53 lab=GND}
 C {madvlsi/gnd.sym} 1100 -950 0 0 {name=l54 lab=GND}
+C {madvlsi/gnd.sym} 2800 -370 0 0 {name=l19 lab=GND}
+C {madvlsi/gnd.sym} 2780 -320 0 0 {name=l24 lab=GND}
+C {madvlsi/gnd.sym} 2800 -90 0 0 {name=l55 lab=GND}
+C {madvlsi/gnd.sym} 2780 -40 0 0 {name=l56 lab=GND}
+C {madvlsi/gnd.sym} 2930 -90 0 0 {name=l57 lab=GND}
+C {madvlsi/gnd.sym} 2910 -40 0 0 {name=l58 lab=GND}
+C {madvlsi/gnd.sym} 3090 -90 0 0 {name=l59 lab=GND}
+C {madvlsi/gnd.sym} 3070 -40 0 0 {name=l60 lab=GND}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2800 -400 0 0 {name=R5
+L=0.385
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2800 -120 0 0 {name=R1
+L=0.42
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2930 -120 0 0 {name=R2
+L=0.42
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 3090 -120 0 0 {name=R3
+L=0.42
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
