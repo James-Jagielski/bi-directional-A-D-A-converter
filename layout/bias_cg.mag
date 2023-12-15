@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1702645106
+timestamp 1702648396
 << nwell >>
 rect -760 90 -180 1260
 rect -761 -469 -177 90
@@ -1100,7 +1100,7 @@ rect 2690 -1921 3130 -1851
 rect 4300 -1815 4380 -1795
 rect 4300 -1855 4380 -1815
 << metal2 >>
-rect -760 1270 4380 1320
+rect -520 1270 4380 1320
 rect -520 1180 -420 1270
 rect -520 20 -500 1180
 rect -440 20 -420 1180
@@ -1179,8 +1179,8 @@ rlabel locali -760 1260 -760 1260 7 Vb
 port 1 w
 rlabel locali -770 -420 -770 -420 7 Vcp
 port 2 w
-rlabel metal2 -760 1300 -760 1300 7 VDD
-port 3 w
 rlabel metal2 -770 -1910 -770 -1910 7 GND
 port 4 w
+rlabel metal2 -520 1290 -520 1290 7 VDD
+port 5 w
 << end >>
