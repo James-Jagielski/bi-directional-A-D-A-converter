@@ -1379,8 +1379,6 @@ spiceprefix=X
 }
 C {madvlsi/vdd.sym} 2780 -2200 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 2780 -2020 0 0 {name=l2 lab=GND}
-C {devices/lab_pin.sym} 2580 -2130 1 0 {name=p5 sig_type=std_logic lab=D}
-C {devices/lab_pin.sym} 3030 -2110 1 0 {name=p6 sig_type=std_logic lab=Db}
 C {madvlsi/pmos3.sym} 2210 -2190 3 0 {name=M9
 L=0.15
 W=1
@@ -2639,7 +2637,6 @@ C {madvlsi/gnd.sym} 1190 -1800 0 0 {name=l37 lab=GND}
 C {madvlsi/gnd.sym} 1350 -1920 0 0 {name=l38 lab=GND}
 C {madvlsi/gnd.sym} 1110 -2100 0 0 {name=l39 lab=GND}
 C {madvlsi/gnd.sym} 1420 -2100 0 0 {name=l40 lab=GND}
-C {devices/lab_pin.sym} 1500 -2190 0 0 {name=p69 sig_type=std_logic lab=CompOutb}
 C {madvlsi/pmos3.sym} 610 -1400 2 1 {name=M151
 L=0.15
 W=1
@@ -2854,7 +2851,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 1320 -1320 0 0 {name=p12 sig_type=std_logic lab=Db}
 C {madvlsi/nmos3.sym} 1320 -1200 3 1 {name=M33
 L=0.15
 W=1
@@ -2975,7 +2971,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 1400 -1320 0 1 {name=p14 sig_type=std_logic lab=D}
 C {madvlsi/nmos3.sym} 1400 -1200 1 0 {name=M41
 L=0.15
 W=1
@@ -3358,7 +3353,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 2770 -1320 0 0 {name=p2 sig_type=std_logic lab=Db}
 C {madvlsi/nmos3.sym} 2770 -1200 3 1 {name=M62
 L=0.15
 W=1
@@ -3479,7 +3473,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 2850 -1320 0 1 {name=p3 sig_type=std_logic lab=D}
 C {madvlsi/nmos3.sym} 2850 -1200 1 0 {name=M70
 L=0.15
 W=1
@@ -3732,3 +3725,6 @@ C {devices/ipin.sym} 1750 -2040 0 0 {name=p18 lab=ENAD}
 C {devices/ipin.sym} 3270 -2420 1 0 {name=p13 lab=SEN}
 C {devices/ipin.sym} 3810 -1510 2 0 {name=p19 lab=Vref+}
 C {devices/ipin.sym} 2080 -1160 3 0 {name=p7 lab=SH}
+C {devices/opin.sym} 1960 -1420 3 0 {name=p11 lab=C-}
+C {devices/opin.sym} 2240 -1420 3 0 {name=p4 lab=C+}
+C {devices/opin.sym} 2540 -2130 3 0 {name=p6 lab=D}

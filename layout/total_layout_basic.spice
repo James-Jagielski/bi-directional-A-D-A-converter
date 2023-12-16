@@ -1,4 +1,4 @@
-* NGSPICE file created from total_layout_DA.ext - technology: sky130A
+* NGSPICE file created from total_layout.ext - technology: sky130A
 
 .subckt inverter VP A VN Y
 X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
@@ -61,7 +61,7 @@ X18 a_n140_300# AIn a_40_740# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 
 X19 a_n10_n330# a_n140_n330# a_n10_300# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
 .ends
 
-.subckt com_di comparator_0/a_n140_n330# digital_0/a_1050_0# li_n200_840# comparator_0/a_350_110#
+.subckt com_di comparator_0/a_n140_n330# digital_0/a_1050_0# comparator_0/a_350_110#
 + digital_0/a_1480_0# comparator_0/AIn comparator_0/a_n10_n330# inverter_0/A digital_0/a_130_n110#
 + inverter_0/VP comparator_0/Vb digital_0/a_n210_0# comparator_0/RST a_n210_890# digital_0/a_2000_420#
 + VSUBS digital_0/a_420_0#
@@ -75,8 +75,8 @@ Xcomparator_0 comparator_0/AIn comparator_0/RST inverter_0/A comparator_0/CompOu
 .ends
 
 .subckt middle a_1070_70# a_3280_70# a_270_n270# a_430_n160# a_3120_70# a_530_n740#
-+ a_400_n190# a_270_n820# SH a_270_230# a_3790_70# w_130_220# C- C+ a_170_n550# a_660_230#
-+ a_910_70# a_530_230# a_400_230# a_2380_n550# a_400_n660# a_3740_n550#
++ a_400_n190# a_270_n820# a_270_230# a_3790_70# w_130_220# C- C+ a_170_n550# a_660_230#
++ a_910_70# a_530_230# a_400_230# a_400_n660# a_3740_n550#
 X0 a_270_n270# a_400_230# a_270_n270# w_130_220# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=1 ps=6 w=1 l=0.15
 X1 C+ Shb C- w_130_220# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 X2 C+ a_400_230# C+ w_130_220# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=1.5 ps=9 w=1 l=0.15
@@ -192,25 +192,23 @@ X46 GND a_100_n1665# GND sky130_fd_pr__res_xhigh_po_0p35 l=0.42
 X47 a_n720_0# Vb a_100_0# GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
 .ends
 
-.subckt total_layout_DA RST SEN PRE ENAD SH Vref- Vref+ D
-Xcom_di_0 li_1230_5160# a_1430_4900# com_di_0/comparator_0/AIn middle_0/C+ li_4020_5600#
-+ com_di_0/comparator_0/AIn li_1100_5500# ENAD D bias_cg_0/VDD bias_cg_0/Vb li_2120_3400#
-+ RST bias_cg_0/Vcp li_4620_6230# VSUBS a_2820_5590# com_di
-Xmiddle_0 D D a_590_3380# VSUBS a_1430_4900# li_2120_3400# bias_cg_0/Vb PRE VSUBS
-+ a_510_4070# bias_cg_0/Vb bias_cg_0/VDD middle_0/C- middle_0/C+ Vref- bias_cg_0/Vcp
-+ a_1430_4900# a_2820_5590# li_4020_5600# Vref+ li_4620_6230# a_4530_3850# middle
-Xbias_cg_0 bias_cg_0/Vb bias_cg_0/Vcp VSUBS bias_cg_0/VDD bias_cg
-X0 a_590_3380# VSUBS sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
-X1 a_4530_3850# VSUBS sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
-X2 a_2820_5590# VSUBS sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
-X3 middle_0/C- VSUBS sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
-X4 li_1230_5160# VSUBS sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
-X5 li_4020_5600# VSUBS sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
-X6 a_510_4070# PRE bias_cg_0/VDD bias_cg_0/VDD sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
-X7 middle_0/C+ VSUBS sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
-X8 li_2120_3400# VSUBS sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
-X9 li_4620_6230# VSUBS sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
-X10 li_1100_5500# VSUBS sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
-X11 a_510_4070# PRE VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
-.ends
+Xcom_di_0 li_1230_5160# a_1430_4900# middle_0/C+ li_4020_5600# AIn li_1100_5500# ENAD
++ li_2640_5830# Vdd bias_cg_0/Vb li_2120_3400# RST bias_cg_0/Vcp li_4620_6230# GND
++ a_2820_5590# com_di
+Xmiddle_0 li_2640_5830# li_2640_5830# a_590_3380# GND a_1430_4900# li_2120_3400# bias_cg_0/Vb
++ PRE a_510_4070# bias_cg_0/Vb Vdd middle_0/C- middle_0/C+ li_640_3730# bias_cg_0/Vcp
++ a_1430_4900# a_2820_5590# li_4020_5600# li_4620_6230# a_4530_3850# middle
+Xbias_cg_0 bias_cg_0/Vb bias_cg_0/Vcp GND Vdd bias_cg
+X0 a_590_3380# GND sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
+X1 a_4530_3850# GND sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
+X2 a_2820_5590# GND sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
+X3 middle_0/C- GND sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
+X4 li_1230_5160# GND sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
+X5 li_4020_5600# GND sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
+X6 a_510_4070# PRE Vdd Vdd sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X7 middle_0/C+ GND sky130_fd_pr__cap_mim_m3_1 l=22.2 w=22.2
+X8 li_2120_3400# GND sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
+X9 li_4620_6230# GND sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
+X10 li_1100_5500# GND sky130_fd_pr__cap_mim_m3_1 l=6.9 w=6.9
+X11 a_510_4070# PRE GND GND sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 

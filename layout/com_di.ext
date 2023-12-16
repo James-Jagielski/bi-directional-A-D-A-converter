@@ -1,0 +1,362 @@
+timestamp 1702662166
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inverter inverter_0 1 0 250 0 1 -620
+use digital digital_0 1 0 320 0 1 180
+use comparator comparator_0 1 0 -1440 0 1 -160
+node "m2_n270_190#" 0 179.106 -270 190 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76000 1180 0 0 0 0 0 0 0 0
+node "m2_n590_620#" 1 426.621 -590 620 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 193800 2420 0 0 0 0 0 0 0 0
+node "m1_n470_n610#" 1 320.149 -470 -610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 99100 1620 0 0 0 0 0 0 0 0 0 0
+node "m1_360_n130#" 1 74.4402 360 -130 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5700 480 0 0 0 0 0 0 0 0 0 0
+node "m1_630_600#" 0 69.4699 630 600 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10800 480 0 0 0 0 0 0 0 0 0 0
+node "m1_360_610#" 0 43.9887 360 610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9600 440 0 0 0 0 0 0 0 0 0 0
+node "m1_n600_610#" 3 553.799 -600 610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 122700 3600 0 0 0 0 0 0 0 0 0 0
+node "li_240_n790#" 490 588.243 240 -790 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76000 3500 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_1230_850#" 18 522.486 1230 850 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 69600 3480 0 0 0 0 0 0 0 0 0 0
+node "li_n160_n140#" 453 985.62 -160 -140 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 66700 3140 104200 4580 0 0 0 0 0 0 0 0 0 0
+node "li_n200_840#" 451 610.456 -200 840 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63700 3080 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n290_n680#" 868 354.468 -290 -680 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16200 1140 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n210_890#" 540 228.274 -210 890 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10300 740 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_360_610#" "li_n160_n140#" 37.8403
+cap "li_n200_840#" "li_240_n790#" 13.8852
+cap "a_n210_890#" "m2_n590_620#" 7.18149
+cap "m1_n600_610#" "li_n160_n140#" 253.773
+cap "li_n160_n140#" "m1_n470_n610#" 4.69246
+cap "m1_360_n130#" "li_240_n790#" 6.64176
+cap "m1_630_600#" "m1_360_610#" 27.0769
+cap "a_n290_n680#" "m2_n590_620#" 0.796791
+cap "a_n210_890#" "a_n290_n680#" 3.43129
+cap "li_n160_n140#" "m2_n590_620#" 253.254
+cap "li_n200_840#" "m2_n270_190#" 2.72754
+cap "a_n210_890#" "li_n160_n140#" 8.94402
+cap "m1_630_600#" "m2_n590_620#" 3.40801
+cap "li_1230_850#" "m2_n270_190#" 0.433196
+cap "li_n200_840#" "m1_360_610#" 3.52984
+cap "a_n290_n680#" "li_n160_n140#" 2.17425
+cap "m1_360_n130#" "m1_360_610#" 3.38462
+cap "li_n200_840#" "m1_n470_n610#" 0.037657
+cap "m1_n600_610#" "li_n200_840#" 0.0337686
+cap "m1_n600_610#" "m1_360_n130#" 12.5788
+cap "m1_n600_610#" "li_1230_850#" 2.14634
+cap "m1_630_600#" "li_n160_n140#" 27.5139
+cap "li_n200_840#" "m2_n590_620#" 22.8809
+cap "m1_360_n130#" "m2_n590_620#" 0.13395
+cap "li_240_n790#" "m1_n470_n610#" 0.667909
+cap "m1_n600_610#" "li_240_n790#" 0.0208319
+cap "li_n200_840#" "a_n210_890#" 23.8752
+cap "li_1230_850#" "m2_n590_620#" 15.8986
+cap "li_n200_840#" "a_n290_n680#" 0.0760116
+cap "li_1230_850#" "a_n210_890#" 9.46545
+cap "li_240_n790#" "m2_n590_620#" 0.235471
+cap "m2_n270_190#" "m1_n470_n610#" 1.71606
+cap "m1_n600_610#" "m2_n270_190#" 36.5693
+cap "li_n200_840#" "li_n160_n140#" 200.954
+cap "m1_360_n130#" "li_n160_n140#" 32.0387
+cap "m1_630_600#" "li_n200_840#" 4.11023
+cap "a_n290_n680#" "li_240_n790#" 8.93812
+cap "li_1230_850#" "li_n160_n140#" 428.136
+cap "m2_n270_190#" "m2_n590_620#" 66.6667
+cap "m1_n600_610#" "m1_n470_n610#" 93.2267
+cap "li_n160_n140#" "li_240_n790#" 273.918
+cap "a_n210_890#" "m2_n270_190#" 1.52095
+cap "m1_360_610#" "m2_n590_620#" 71.9231
+cap "m1_630_600#" "li_240_n790#" 0.330931
+cap "a_n290_n680#" "m2_n270_190#" 1.67628
+cap "m1_n600_610#" "m2_n590_620#" 236.887
+cap "m2_n590_620#" "m1_n470_n610#" 0.591816
+cap "m2_n270_190#" "li_n160_n140#" 126.775
+cap "m1_n600_610#" "a_n210_890#" 0.212129
+cap "a_n210_890#" "m1_n470_n610#" 0.252285
+cap "a_n290_n680#" "m1_n470_n610#" 16.2394
+cap "m1_n600_610#" "a_n290_n680#" 1.94506
+cap "li_n200_840#" "li_1230_850#" 89.8692
+cap "comparator_0/a_n140_n330#" "comparator_0/a_n10_300#" 6.83542
+cap "comparator_0/a_360_770#" "comparator_0/w_n180_660#" 0.578015
+cap "comparator_0/RST" "comparator_0/w_n180_660#" 0.190482
+cap "comparator_0/a_90_n360#" "comparator_0/a_n10_300#" -0.836543
+cap "comparator_0/w_n180_660#" "comparator_0/AIn" 0.522163
+cap "comparator_0/a_n270_660#" "comparator_0/a_n10_300#" -0.154616
+cap "comparator_0/a_n140_n330#" "comparator_0/a_90_n360#" 0.463524
+cap "comparator_0/a_n10_n330#" "comparator_0/a_n10_300#" 0.610656
+cap "comparator_0/CompOut" "comparator_0/w_n180_660#" 1.30646
+cap "comparator_0/a_40_740#" "comparator_0/w_n180_660#" 0.362969
+cap "comparator_0/a_n10_300#" "comparator_0/a_600_n100#" -3.33761
+cap "comparator_0/a_n270_660#" "comparator_0/a_90_n360#" 2.41509
+cap "comparator_0/a_700_770#" "comparator_0/w_n180_660#" 8.64851
+cap "comparator_0/a_350_110#" "comparator_0/a_n10_300#" -1.94873
+cap "comparator_0/a_n10_300#" "comparator_0/w_n180_660#" 267.805
+cap "comparator_0/a_n140_n330#" "comparator_0/w_n180_660#" 0.0739969
+cap "comparator_0/a_90_n360#" "comparator_0/w_n180_660#" 33.0455
+cap "comparator_0/ENAD" "comparator_0/a_n10_300#" 5.54054
+cap "comparator_0/a_n270_660#" "comparator_0/w_n180_660#" 1.85615
+cap "comparator_0/a_n10_n330#" "comparator_0/w_n180_660#" 0.571269
+cap "comparator_0/a_n140_n330#" "comparator_0/ENAD" 1.0127
+cap "comparator_0/ENAD" "comparator_0/a_90_n360#" 0.0525306
+cap "comparator_0/a_600_n100#" "comparator_0/w_n180_660#" 118.954
+cap "comparator_0/a_350_110#" "comparator_0/w_n180_660#" 8.83621
+cap "comparator_0/ENAD" "comparator_0/w_n180_660#" 0.356016
+cap "comparator_0/Vb" "comparator_0/w_n180_660#" 1.21384
+cap "comparator_0/a_n140_300#" "comparator_0/w_n180_660#" 0.31985
+cap "comparator_0/a_n10_300#" "comparator_0/CompOut" 37.5269
+cap "comparator_0/w_n180_660#" "comparator_0/a_250_n330#" 4.71684
+cap "comparator_0/a_n140_n330#" "comparator_0/CompOut" -0.221677
+cap "comparator_0/a_n10_300#" "comparator_0/a_700_770#" -0.181543
+cap "comparator_0/a_90_n360#" "digital_0/a_970_0#" 0.0192718
+cap "comparator_0/CompOut" "digital_0/a_n80_220#" 0.0740483
+cap "comparator_0/CompOut" "comparator_0/a_90_n360#" 64.2243
+cap "comparator_0/CompOut" "digital_0/a_970_0#" 0.00520002
+cap "comparator_0/w_n180_660#" "digital_0/a_80_0#" 0.670855
+cap "digital_0/a_970_420#" "comparator_0/w_n180_660#" 0.0426435
+cap "comparator_0/a_350_110#" "digital_0/a_n210_0#" 1.20443
+cap "comparator_0/ENAD" "comparator_0/a_350_110#" 0.0990219
+cap "comparator_0/w_n180_660#" "digital_0/a_420_0#" 1.09063
+cap "comparator_0/a_n10_300#" "comparator_0/AIn" 0.0308764
+cap "comparator_0/a_n10_300#" "digital_0/a_1050_0#" 0.034928
+cap "comparator_0/ENAD" "digital_0/a_130_n110#" 15.0847
+cap "digital_0/a_50_n190#" "digital_0/a_420_0#" -0.592761
+cap "comparator_0/a_n10_300#" "digital_0/a_710_0#" 0.0858616
+cap "digital_0/a_n210_0#" "comparator_0/a_n270_660#" -0.0733646
+cap "comparator_0/ENAD" "comparator_0/a_n270_660#" 0.797012
+cap "digital_0/a_1050_0#" "comparator_0/a_90_n360#" 0.057008
+cap "comparator_0/a_n10_300#" "digital_0/a_n210_0#" -3.12098
+cap "comparator_0/w_n180_660#" "comparator_0/a_350_110#" 5.76398
+cap "comparator_0/a_90_n360#" "digital_0/a_710_0#" 0.0543534
+cap "comparator_0/ENAD" "comparator_0/a_n10_300#" 52.7586
+cap "digital_0/a_50_n190#" "comparator_0/a_350_110#" 4.19672
+cap "comparator_0/a_600_n100#" "comparator_0/a_n270_660#" 0.244441
+cap "comparator_0/w_n180_660#" "digital_0/a_130_n110#" 1.59108
+cap "comparator_0/ENAD" "digital_0/a_n80_220#" 1.27004
+cap "comparator_0/CompOut" "digital_0/a_710_0#" 0.0143746
+cap "comparator_0/a_90_n360#" "digital_0/a_n210_0#" 15.3381
+cap "comparator_0/a_n10_300#" "digital_0/a_290_0#" 0.18084
+cap "comparator_0/ENAD" "comparator_0/a_90_n360#" 19.1893
+cap "comparator_0/a_600_n100#" "comparator_0/a_n10_300#" 0.668843
+cap "digital_0/a_50_n190#" "digital_0/a_130_n110#" -1.00961
+cap "comparator_0/w_n180_660#" "comparator_0/a_n270_660#" 7.03992
+cap "comparator_0/a_700_770#" "comparator_0/a_350_110#" 0.0189894
+cap "comparator_0/CompOut" "digital_0/a_n210_0#" 14.5063
+cap "comparator_0/CompOut" "comparator_0/ENAD" 1.73365
+cap "comparator_0/w_n180_660#" "comparator_0/a_n10_300#" 133.406
+cap "comparator_0/a_90_n360#" "digital_0/a_290_0#" 0.120191
+cap "comparator_0/a_700_770#" "digital_0/a_130_n110#" 3.6128
+cap "digital_0/a_50_n190#" "comparator_0/a_n10_300#" -1.65835
+cap "comparator_0/w_n180_660#" "digital_0/a_n80_220#" 7.13052
+cap "comparator_0/ENAD" "comparator_0/a_250_n330#" 0.0385137
+cap "comparator_0/CompOut" "digital_0/a_290_0#" 0.0303229
+cap "comparator_0/a_n10_300#" "comparator_0/a_n140_n330#" 0.653348
+cap "comparator_0/w_n180_660#" "comparator_0/a_90_n360#" 126.995
+cap "digital_0/a_50_n190#" "digital_0/a_n80_220#" -0.136942
+cap "digital_0/a_50_n190#" "comparator_0/a_90_n360#" 25.1472
+cap "comparator_0/CompOut" "comparator_0/w_n180_660#" 91.0081
+cap "comparator_0/a_n10_300#" "comparator_0/a_700_770#" 2.01472
+cap "comparator_0/a_90_n360#" "comparator_0/a_n140_n330#" 0.399061
+cap "comparator_0/CompOut" "digital_0/a_50_n190#" 0.411561
+cap "comparator_0/a_700_770#" "digital_0/a_n80_220#" 3.50966
+cap "comparator_0/a_n10_300#" "comparator_0/a_40_740#" 0.0456521
+cap "comparator_0/a_90_n360#" "comparator_0/a_700_770#" -6.22713
+cap "digital_0/a_1740_420#" "comparator_0/w_n180_660#" 0.0150516
+cap "comparator_0/w_n180_660#" "digital_0/a_1480_0#" 0.0222235
+cap "digital_0/a_420_0#" "comparator_0/a_350_110#" 0.117603
+cap "comparator_0/CompOut" "comparator_0/a_700_770#" 0.010902
+cap "comparator_0/ENAD" "digital_0/a_n210_0#" 0.226677
+cap "comparator_0/w_n180_660#" "digital_0/a_1050_0#" 0.0770581
+cap "comparator_0/a_n10_300#" "digital_0/a_80_0#" 0.143777
+cap "comparator_0/ENAD" "comparator_0/a_n10_n330#" 0.0659501
+cap "comparator_0/w_n180_660#" "digital_0/a_710_420#" 0.170541
+cap "comparator_0/ENAD" "digital_0/a_290_0#" 5.09632
+cap "comparator_0/ENAD" "comparator_0/a_600_n100#" 0.0975536
+cap "comparator_0/a_n10_300#" "digital_0/a_420_0#" 0.135853
+cap "digital_0/a_80_0#" "comparator_0/a_90_n360#" 2.65722
+cap "comparator_0/a_350_110#" "digital_0/a_130_n110#" 0.088135
+cap "comparator_0/w_n180_660#" "digital_0/a_n210_0#" 5.22771
+cap "comparator_0/w_n180_660#" "comparator_0/ENAD" 9.03983
+cap "comparator_0/CompOut" "digital_0/a_80_0#" 0.0268587
+cap "comparator_0/a_350_110#" "comparator_0/a_n270_660#" 5.96443
+cap "digital_0/a_50_n190#" "comparator_0/ENAD" 59.7328
+cap "comparator_0/a_90_n360#" "digital_0/a_420_0#" 0.26735
+cap "comparator_0/w_n180_660#" "comparator_0/a_n10_n330#" 0.0365935
+cap "comparator_0/ENAD" "comparator_0/a_n140_n330#" 0.995388
+cap "comparator_0/w_n180_660#" "digital_0/a_290_0#" 2.61554
+cap "comparator_0/a_n10_300#" "comparator_0/a_350_110#" 6.92734
+cap "comparator_0/w_n180_660#" "comparator_0/a_600_n100#" 0.0815247
+cap "digital_0/a_130_n110#" "comparator_0/a_n270_660#" -0.46786
+cap "comparator_0/CompOut" "digital_0/a_420_0#" 0.0233516
+cap "comparator_0/a_700_770#" "digital_0/a_n210_0#" 1.0241
+cap "comparator_0/ENAD" "comparator_0/a_700_770#" -4.87722
+cap "comparator_0/a_350_110#" "digital_0/a_n80_220#" 0.389698
+cap "comparator_0/a_n10_300#" "digital_0/a_130_n110#" 0.967641
+cap "comparator_0/a_90_n360#" "comparator_0/a_350_110#" 8.90244
+cap "digital_0/a_50_n190#" "comparator_0/w_n180_660#" 11.0958
+cap "comparator_0/a_n10_300#" "comparator_0/a_n270_660#" -2.32685
+cap "comparator_0/w_n180_660#" "comparator_0/a_n140_n330#" 0.0103534
+cap "comparator_0/a_90_n360#" "digital_0/a_130_n110#" 8.52306
+cap "digital_0/a_n80_220#" "comparator_0/a_n270_660#" -0.286869
+cap "comparator_0/w_n180_660#" "comparator_0/a_700_770#" 0.0557466
+cap "comparator_0/a_90_n360#" "comparator_0/a_n270_660#" 10.0813
+cap "comparator_0/CompOut" "digital_0/a_130_n110#" 2.92994
+cap "comparator_0/a_n10_300#" "comparator_0/Vb" 0.246385
+cap "comparator_0/a_n10_300#" "digital_0/a_n80_220#" -0.703828
+cap "digital_0/a_50_n190#" "comparator_0/a_700_770#" 0.203822
+cap "comparator_0/CompOut" "comparator_0/a_n270_660#" 1.62389
+cap "comparator_0/a_n10_300#" "comparator_0/a_90_n360#" 178.118
+cap "comparator_0/a_n10_300#" "digital_0/a_970_0#" 0.0304833
+cap "comparator_0/a_n10_300#" "comparator_0/a_360_770#" 0.0726131
+cap "comparator_0/a_90_n360#" "digital_0/a_n80_220#" 21.7212
+cap "comparator_0/CompOut" "comparator_0/a_n10_300#" 78.5678
+cap "comparator_0/ENAD" "digital_0/a_420_0#" 11.3529
+cap "comparator_0/CompOut" "digital_0/a_130_n110#" 0.0184409
+cap "comparator_0/ENAD" "digital_0/a_50_n190#" 0.0831102
+cap "comparator_0/a_360_770#" "comparator_0/w_n180_660#" 0.761702
+cap "comparator_0/a_700_770#" "digital_0/w_n140_380#" 0.669313
+cap "comparator_0/a_700_770#" "digital_0/a_130_n110#" 0.010105
+cap "comparator_0/a_620_770#" "comparator_0/w_n180_660#" 0.584495
+cap "digital_0/a_n80_220#" "comparator_0/a_700_770#" 0.0160756
+cap "comparator_0/w_n180_660#" "comparator_0/a_350_110#" -0.124806
+cap "comparator_0/a_n270_660#" "comparator_0/w_n180_660#" 11.2653
+cap "comparator_0/a_n270_660#" "comparator_0/a_600_n100#" 0.028535
+cap "comparator_0/a_n270_660#" "comparator_0/a_n10_300#" -0.320852
+cap "comparator_0/a_n270_660#" "comparator_0/a_90_n360#" 0.45283
+cap "comparator_0/w_n180_660#" "comparator_0/a_600_n100#" 36.0138
+cap "digital_0/a_420_0#" "comparator_0/a_600_n100#" 0.0188362
+cap "comparator_0/w_n180_660#" "comparator_0/a_n10_300#" -0.443477
+cap "comparator_0/a_600_n100#" "digital_0/a_710_420#" 0.0121117
+cap "comparator_0/a_n270_660#" "comparator_0/a_700_770#" 0.215628
+cap "comparator_0/w_n180_660#" "comparator_0/a_90_n360#" 3.4839
+cap "comparator_0/w_n180_660#" "digital_0/a_50_n190#" 0.0394512
+cap "comparator_0/a_600_n100#" "comparator_0/a_90_n360#" 0.0669904
+cap "comparator_0/w_n180_660#" "comparator_0/CompOut" -9.74578
+cap "comparator_0/a_600_n100#" "digital_0/a_50_n190#" 0.00760208
+cap "comparator_0/w_n180_660#" "comparator_0/a_n10_770#" 0.0531169
+cap "comparator_0/a_700_770#" "comparator_0/w_n180_660#" 36.5772
+cap "comparator_0/a_700_770#" "comparator_0/a_600_n100#" 0.00231022
+cap "digital_0/a_n210_0#" "comparator_0/a_600_n100#" 0.0596255
+cap "comparator_0/a_700_770#" "comparator_0/a_n10_300#" -0.73846
+cap "comparator_0/a_700_770#" "comparator_0/a_90_n360#" 0.172899
+cap "comparator_0/w_n180_660#" "digital_0/w_n140_380#" 1.01178
+cap "comparator_0/a_600_n100#" "digital_0/w_n140_380#" 0.049513
+cap "comparator_0/a_700_770#" "digital_0/a_50_n190#" 0.0125767
+cap "comparator_0/w_n180_660#" "digital_0/a_130_n110#" 0.0308764
+cap "comparator_0/a_600_n100#" "digital_0/a_130_n110#" 0.0202874
+cap "comparator_0/a_360_770#" "comparator_0/a_n270_660#" 0.315495
+cap "digital_0/a_n80_220#" "comparator_0/w_n180_660#" 0.0516518
+cap "comparator_0/w_n180_660#" "comparator_0/ENAD" -0.0468295
+cap "digital_0/a_n80_220#" "comparator_0/a_600_n100#" 0.0416252
+cap "comparator_0/w_n180_660#" "comparator_0/a_40_740#" 0.221746
+cap "digital_0/a_420_0#" "comparator_0/a_90_n360#" 17.2017
+cap "digital_0/a_130_n110#" "comparator_0/w_n180_660#" 0.311739
+cap "digital_0/a_130_n110#" "comparator_0/CompOut" 0.189723
+cap "digital_0/a_420_0#" "comparator_0/a_700_770#" 29.0363
+cap "comparator_0/CompOut" "digital_0/a_710_0#" 0.902056
+cap "comparator_0/w_n180_660#" "comparator_0/a_n270_660#" 25.208
+cap "digital_0/a_1480_0#" "comparator_0/w_n180_660#" 0.0269476
+cap "comparator_0/CompOut" "comparator_0/a_n270_660#" 33.8246
+cap "comparator_0/w_n180_660#" "digital_0/a_970_420#" 0.0298382
+cap "comparator_0/CompOut" "comparator_0/a_600_n100#" -6.72321
+cap "comparator_0/w_n180_660#" "comparator_0/a_700_770#" 83.5303
+cap "comparator_0/w_n180_660#" "comparator_0/a_90_n360#" 151.743
+cap "comparator_0/CompOut" "comparator_0/a_90_n360#" 70.2179
+cap "comparator_0/w_n180_660#" "comparator_0/a_350_110#" 0.950935
+cap "comparator_0/CompOut" "comparator_0/a_700_770#" 1.66366
+cap "comparator_0/CompOut" "comparator_0/a_350_110#" 0.200899
+cap "digital_0/a_130_n110#" "comparator_0/a_n270_660#" -0.258643
+cap "digital_0/a_130_n110#" "comparator_0/a_90_n360#" 27.2437
+cap "digital_0/a_130_n110#" "comparator_0/a_700_770#" 16.697
+cap "comparator_0/w_n180_660#" "digital_0/a_50_n190#" 0.259395
+cap "comparator_0/w_n180_660#" "digital_0/a_710_420#" 0.0927575
+cap "comparator_0/CompOut" "digital_0/a_50_n190#" 0.0621204
+cap "comparator_0/w_n180_660#" "digital_0/a_n210_0#" 31.1248
+cap "comparator_0/a_600_n100#" "comparator_0/a_n270_660#" 0.524799
+cap "comparator_0/a_90_n360#" "comparator_0/a_n270_660#" 32.3247
+cap "digital_0/a_1050_0#" "comparator_0/w_n180_660#" 0.0767598
+cap "comparator_0/a_90_n360#" "digital_0/a_80_0#" 0.212567
+cap "comparator_0/a_700_770#" "comparator_0/a_n270_660#" 125.309
+cap "digital_0/a_970_420#" "comparator_0/a_90_n360#" 0.00963592
+cap "comparator_0/CompOut" "digital_0/a_710_420#" 3.18303
+cap "comparator_0/CompOut" "digital_0/a_n210_0#" 10.0666
+cap "comparator_0/a_350_110#" "comparator_0/a_n270_660#" 0.181818
+cap "comparator_0/a_700_770#" "comparator_0/a_90_n360#" 42.5881
+cap "comparator_0/w_n180_660#" "digital_0/a_n80_220#" 7.68502
+cap "comparator_0/w_n180_660#" "comparator_0/a_n10_300#" 21.4902
+cap "comparator_0/a_350_110#" "comparator_0/a_700_770#" 0.0391648
+cap "comparator_0/w_n180_660#" "comparator_0/a_360_770#" 0.0431464
+cap "comparator_0/CompOut" "comparator_0/a_n10_300#" 0.123382
+cap "comparator_0/a_40_740#" "comparator_0/w_n180_660#" 0.0200885
+cap "comparator_0/ENAD" "comparator_0/w_n180_660#" -0.350376
+cap "comparator_0/CompOut" "comparator_0/a_360_770#" -0.0959231
+cap "comparator_0/a_40_740#" "comparator_0/CompOut" -0.0529071
+cap "comparator_0/w_n180_660#" "comparator_0/a_620_770#" 0.0193357
+cap "comparator_0/w_n180_660#" "digital_0/a_420_0#" 0.1679
+cap "comparator_0/ENAD" "comparator_0/CompOut" 0.0322247
+cap "digital_0/a_n210_0#" "comparator_0/a_n270_660#" -2.40969
+cap "comparator_0/CompOut" "comparator_0/a_620_770#" -0.0577691
+cap "digital_0/a_50_n190#" "comparator_0/a_90_n360#" 5.91882
+cap "digital_0/a_50_n190#" "comparator_0/a_700_770#" 7.36006
+cap "comparator_0/a_90_n360#" "digital_0/a_710_420#" 0.0271767
+cap "digital_0/a_n210_0#" "comparator_0/a_90_n360#" 21.6397
+cap "digital_0/a_n80_220#" "comparator_0/a_n270_660#" -1.89219
+cap "digital_0/a_1050_0#" "comparator_0/a_90_n360#" 0.0212764
+cap "digital_0/a_n210_0#" "comparator_0/a_700_770#" 37.9764
+cap "comparator_0/a_700_770#" "digital_0/a_710_420#" 2.82835
+cap "digital_0/a_n80_220#" "comparator_0/a_90_n360#" 23.6395
+cap "comparator_0/a_n10_300#" "comparator_0/a_n270_660#" -0.553725
+cap "comparator_0/CompOut" "comparator_0/a_n10_770#" -0.0145921
+cap "comparator_0/CompOut" "comparator_0/w_n180_660#" 116.899
+cap "comparator_0/a_700_770#" "digital_0/a_n80_220#" 38.5923
+cap "comparator_0/a_n270_660#" "comparator_0/a_360_770#" 0.104023
+cap "comparator_0/a_n10_300#" "comparator_0/a_90_n360#" 11.9585
+cap "comparator_0/a_n10_300#" "comparator_0/a_700_770#" 2.97106
+cap "comparator_0/a_40_740#" "comparator_0/a_n270_660#" 0.0796103
+cap "comparator_0/ENAD" "comparator_0/a_n270_660#" -0.10084
+cap "comparator_0/a_90_n360#" "digital_0/a_290_0#" 0.425135
+cap "digital_0/a_420_0#" "comparator_0/a_n270_660#" -1.89219
+cap "comparator_0/ENAD" "comparator_0/a_90_n360#" -0.136695
+cap "comparator_0/a_700_770#" "digital_0/a_290_0#" 0.301917
+cap "comparator_0/ENAD" "comparator_0/a_700_770#" -4.87141
+cap "digital_0/a_n240_n30#" "digital_0/a_760_650#" 1.64537
+cap "digital_0/a_50_n190#" "comparator_0/CompOut" 0.137364
+cap "digital_0/a_1050_0#" "comparator_0/CompOut" 3.12363
+cap "comparator_0/a_n10_300#" "comparator_0/CompOut" 0.996461
+cap "comparator_0/CompOut" "digital_0/a_130_n110#" 0.494833
+cap "comparator_0/a_90_n360#" "comparator_0/CompOut" 8.91093
+cap "digital_0/a_710_0#" "comparator_0/CompOut" 0.601371
+cap "digital_0/a_n240_n30#" "digital_0/w_n140_380#" -0.664139
+cap "digital_0/w_n140_380#" "comparator_0/CompOut" 45.6919
+cap "comparator_0/w_n180_660#" "comparator_0/CompOut" 0.03468
+cap "digital_0/a_710_420#" "comparator_0/CompOut" 2.12202
+cap "digital_0/a_n240_n30#" "comparator_0/CompOut" 9.77705
+cap "comparator_0/a_90_n360#" "digital_0/a_760_650#" 9.64046
+cap "comparator_0/a_90_n360#" "digital_0/a_1050_0#" 0.00642162
+cap "digital_0/w_n140_380#" "digital_0/a_760_650#" 0.853274
+cap "digital_0/a_1050_0#" "digital_0/w_n140_380#" 0.129426
+cap "comparator_0/a_90_n360#" "digital_0/w_n140_380#" -2.54822
+cap "comparator_0/ENAD" "comparator_0/CompOut" 0.163567
+cap "digital_0/a_760_650#" "comparator_0/CompOut" 15.9072
+merge "comparator_0/a_n10_300#" "digital_0/a_n340_0#" -713.47 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16200 -900 -36400 -1100 0 0 0 0 0 0 0 0
+merge "digital_0/a_n340_0#" "m2_n270_190#"
+merge "m2_n270_190#" "inverter_0/VN"
+merge "inverter_0/VN" "VSUBS"
+merge "VSUBS" "m1_n470_n610#"
+merge "comparator_0/w_n180_660#" "inverter_0/VP" -1079.65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -46200 -2340 -57600 -1360 0 0 0 0 0 0 0 0
+merge "inverter_0/VP" "m1_360_n130#"
+merge "m1_360_n130#" "m1_n600_610#"
+merge "m1_n600_610#" "digital_0/w_n140_380#"
+merge "digital_0/w_n140_380#" "m2_n590_620#"
+merge "m2_n590_620#" "m1_630_600#"
+merge "m1_630_600#" "m1_360_610#"
+merge "comparator_0/ENAD" "digital_0/a_630_n110#" -315.723 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5700 -500 0 0 -4400 -380 0 0 0 0 0 0 0 0 0 0 0 0
+merge "digital_0/a_630_n110#" "inverter_0/A"
+merge "inverter_0/A" "li_240_n790#"
+merge "li_240_n790#" "a_n290_n680#"
+merge "comparator_0/a_n270_660#" "digital_0/a_n240_n30#" -123.236 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2700 -300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "digital_0/a_n240_n30#" "a_n210_890#"
+merge "comparator_0/a_700_770#" "digital_0/a_760_650#" -243.183 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2000 -270 0 0 0 0 0 0 0 0 0 0 0 0
+merge "digital_0/a_760_650#" "li_n200_840#"
+merge "comparator_0/a_90_n360#" "digital_0/a_630_650#" -751.277 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6400 -580 0 0 0 0 0 0 0 0 0 0 0 0
+merge "digital_0/a_630_650#" "inverter_0/Y"
+merge "inverter_0/Y" "li_n160_n140#"
+merge "comparator_0/CompOut" "digital_0/a_890_650#" -288.224 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 -1200 -140 0 0 0 0 0 0 0 0 0 0
+merge "digital_0/a_890_650#" "li_1230_850#"

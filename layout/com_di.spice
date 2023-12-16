@@ -1,0 +1,73 @@
+* NGSPICE file created from com_di.ext - technology: sky130A
+
+.subckt inverter VP A VN Y
+X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X1 Y A VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+.ends
+
+.subckt digital w_n140_380# a_890_650# a_n340_0# a_760_650# a_630_650# a_n240_n30#
++ a_630_n110#
+X0 a_710_420# a_630_650# a_130_n110# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X1 a_1740_420# a_50_n190# a_1870_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.125 ps=1.25 w=1 l=0.15
+X2 a_n340_0# a_130_n110# a_80_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X3 a_1610_0# a_50_n190# a_1480_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X4 a_970_420# a_890_650# w_n140_380# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.125 pd=1.25 as=0.25 ps=1.5 w=1 l=0.15
+X5 a_290_0# a_130_n110# a_n340_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X6 w_n140_380# a_760_650# a_710_420# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X7 a_420_0# a_50_n190# a_290_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X8 a_80_0# a_50_n190# a_n80_220# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.125 pd=1.25 as=0.5 ps=3 w=1 l=0.15
+X9 w_n140_380# a_130_n110# a_1050_0# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X10 w_n140_380# a_n240_n30# a_1480_0# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X11 a_n340_0# a_760_650# a_710_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X12 a_1050_0# a_630_n110# a_970_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X13 a_1050_0# a_630_650# a_970_420# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X14 a_2000_420# a_1740_420# w_n140_380# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X15 a_970_0# a_890_650# a_n340_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.125 pd=1.25 as=0.25 ps=1.5 w=1 l=0.15
+X16 a_n340_0# a_130_n110# a_1050_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X17 w_n140_380# a_n80_220# a_n210_0# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X18 w_n140_380# a_50_n190# a_1740_420# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X19 a_n340_0# a_n240_n30# a_2000_420# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X20 a_1740_420# a_1050_0# w_n140_380# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X21 a_420_0# a_n240_n30# w_n140_380# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X22 a_n340_0# a_1050_0# a_1610_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X23 w_n140_380# a_130_n110# a_n80_220# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X24 a_1870_0# a_1050_0# a_n340_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.125 pd=1.25 as=0.25 ps=1.5 w=1 l=0.15
+X25 a_n80_220# a_50_n190# w_n140_380# w_n140_380# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X26 a_710_0# a_630_n110# a_130_n110# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X27 a_n210_0# a_n240_n30# a_n340_0# a_n340_0# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+.ends
+
+.subckt comparator AIn RST ENAD CompOut Vb w_n180_660# a_90_n360# a_n270_660# a_n10_300#
++ a_700_770#
+X0 a_40_740# Vb a_n10_300# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X1 a_n10_300# a_n10_n330# a_250_n330# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X2 a_700_770# a_600_n100# a_250_n330# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X3 a_n10_770# a_n270_660# CompOut w_n180_660# sky130_fd_pr__pfet_01v8 ad=0.125 pd=1.25 as=0.5 ps=3 w=1 l=0.15
+X4 a_600_n100# a_90_n360# w_n180_660# w_n180_660# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X5 a_250_n330# ENAD a_n140_n330# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X6 a_n140_n330# a_90_n360# a_n10_n330# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X7 a_40_740# a_40_740# w_n180_660# w_n180_660# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X8 a_600_n100# a_90_n360# CompOut a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X9 CompOut a_600_n100# a_n10_n330# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X10 a_620_770# a_360_770# w_n180_660# w_n180_660# sky130_fd_pr__pfet_01v8 ad=0.125 pd=1.25 as=0.25 ps=1.5 w=1 l=0.15
+X11 w_n180_660# a_360_770# a_360_770# w_n180_660# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X12 a_n10_300# Vb a_n140_300# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X13 w_n180_660# a_40_740# a_n10_770# w_n180_660# sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X14 a_n10_300# Vb a_360_770# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X15 a_360_770# a_n270_110# a_n140_300# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X16 a_n10_n330# RST a_n140_n330# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X17 a_700_770# a_n270_660# a_620_770# w_n180_660# sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.125 ps=1.25 w=1 l=0.15
+X18 a_n140_300# AIn a_40_740# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X19 a_n10_n330# a_n140_n330# a_n10_300# a_n10_300# sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+.ends
+
+
+* Top level circuit com_di
+
+Xinverter_0 inverter_0/VP inverter_0/A VSUBS inverter_0/Y inverter
+Xdigital_0 inverter_0/VP comparator_0/CompOut VSUBS li_n200_840# inverter_0/Y a_n210_890#
++ inverter_0/A digital
+Xcomparator_0 comparator_0/AIn comparator_0/RST inverter_0/A comparator_0/CompOut
++ comparator_0/Vb inverter_0/VP inverter_0/Y a_n210_890# VSUBS li_n200_840# comparator
+.end
+

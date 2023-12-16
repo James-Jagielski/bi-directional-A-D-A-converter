@@ -8,7 +8,6 @@ E {}
 T {A/D} 370 -660 0 0 1 1 {}
 T {ENAD = 1: A/D
 ENAD = 0: D/A} 360 -850 0 0 0.7 0.7 {}
-C {/home/madvlsi/Documents/Final/bi-directional-A-D-A-converter/schematics/LDS/all_post.sym} 110 10 0 0 {name=x1}
 C {madvlsi/tt_models.sym} 420 -30 0 0 {
 name=TT_MODELS
 only_toplevel=false
@@ -56,12 +55,29 @@ C {madvlsi/vsource.sym} 530 -630 0 0 {name=VPRE
 value="pwl(0 0 1u 0 1u 1.8 5u 1.8 5u 0)"}
 C {madvlsi/gnd.sym} 530 -440 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} 530 -500 1 0 {name=p5 sig_type=std_logic lab=SH}
-C {devices/code_shown.sym} 570 -10 0 0 {name=SPICE1 only_toplevel=false value="
-.include ~/Documents/Final/bi-directional-A-D-A-converter/layout/total_layout_AD.spice
-.tran 900n 200u
-.save v(sh) v(pre) v(rst) V(sen) V(d) v(AIn) v(C+) v(C-) v(vb) v(vcp)"
-}
 C {devices/lab_pin.sym} 70 -250 0 0 {name=p2 sig_type=std_logic lab=AIn}
 C {madvlsi/vsource.sym} 70 -220 0 0 {name=VAIn
 value=1}
 C {madvlsi/gnd.sym} 70 -190 0 0 {name=l3 lab=GND}
+C {/home/madvlsi/Documents/Final/bi-directional-A-D-A-converter/post_sim/AD/total_layout_AD.sym} 110 10 0 0 {name=x1}
+C {devices/lab_pin.sym} 260 -60 2 0 {name=p3 sig_type=std_logic lab=D}
+C {devices/lab_pin.sym} 260 -40 2 0 {name=p4 sig_type=std_logic lab=C+}
+C {devices/lab_pin.sym} 260 -20 2 0 {name=p6 sig_type=std_logic lab=C-}
+C {devices/code_shown.sym} 420 130 0 0 {name=SPICE only_toplevel=false value="
+.include ~/Documents/Final/bi-directional-A-D-A-converter/post_sim/AD/total_layout_AD.spice
+.control
+  set wr_singlescale
+  set wr_vecnames
+  let min_input = 0.5
+  let run = 0
+  while run < 256
+    let analog_input = min_input + run/255
+    alter VAin $&analog_input
+    save all
+    tran 50n 410u
+    wrdata ~/Documents/bi-directional-A-D-A-converter/simulations/post_AD/AD\{$&run\\\}_mc.txt v(sh) v(pre) v(rst) V(sen) V(d) v(CompOut) v(AIn) v(C+) v(C-)
+    let run = run + 1
+  end
+  quit
+.endc"
+}

@@ -1,0 +1,41 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+Flattening unmatched subcell com_di in circuit total_layout.spice (1)(1 instance)
+Flattening unmatched subcell inverter in circuit total_layout.spice (1)(1 instance)
+Flattening unmatched subcell digital in circuit total_layout.spice (1)(1 instance)
+Flattening unmatched subcell comparator in circuit total_layout.spice (1)(1 instance)
+Flattening unmatched subcell middle in circuit total_layout.spice (1)(1 instance)
+Flattening unmatched subcell bias_cg in circuit total_layout.spice (1)(1 instance)
+
+Class lds_schematics_FINAL.spice (0):  Merged 38 parallel devices.
+Class total_layout.spice (1):  Merged 38 parallel devices.
+Subcircuit summary:
+Circuit 1: lds_schematics_FINAL.spice      |Circuit 2: total_layout.spice              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (56->52)           |sky130_fd_pr__pfet_01v8 (56->52)           
+sky130_fd_pr__nfet_01v8 (102->70)          |sky130_fd_pr__nfet_01v8 (102->70)          
+sky130_fd_pr__res_xhigh_po_0p35 (4->2)     |sky130_fd_pr__res_xhigh_po_0p35 (4->2)     
+sky130_fd_pr__cap_mim_m3_1 (10)            |sky130_fd_pr__cap_mim_m3_1 (10)            
+Number of devices: 134                     |Number of devices: 134                     
+Number of nets: 72                         |Number of nets: 72                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes lds_schematics_FINAL.spice and total_layout.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.

@@ -1,0 +1,68 @@
+magic
+tech sky130A
+timestamp 1702662166
+<< poly >>
+rect -105 445 60 460
+rect 40 440 60 445
+rect -145 -340 125 -325
+<< locali >>
+rect 415 475 565 500
+rect 415 440 440 475
+rect 545 450 565 475
+rect -100 420 440 440
+rect 480 5 500 50
+rect -75 -15 235 5
+rect -75 -50 -50 -15
+rect -60 -55 -50 -50
+rect 210 -325 235 -15
+rect 120 -375 140 -325
+rect 185 -345 235 -325
+rect 260 -15 500 5
+rect 260 -375 285 -15
+rect 120 -395 285 -375
+<< viali >>
+rect 485 425 505 445
+rect 615 425 635 445
+rect -80 -70 -60 -50
+<< metal1 >>
+rect -120 480 645 500
+rect 625 455 645 480
+rect 475 445 515 455
+rect 475 440 485 445
+rect -75 425 485 440
+rect 505 425 515 445
+rect -75 415 515 425
+rect 605 445 645 455
+rect 605 425 615 445
+rect 635 425 645 445
+rect 605 415 645 425
+rect -300 305 -155 405
+rect -175 -110 -155 305
+rect -75 -40 -55 415
+rect 180 305 210 385
+rect 315 300 345 390
+rect -90 -50 -50 -40
+rect -90 -70 -80 -50
+rect -60 -70 -50 -50
+rect 180 -65 210 -60
+rect -90 -80 -50 -70
+rect -175 -145 50 -110
+rect 195 -150 210 -65
+rect -235 -215 -200 -150
+rect -235 -305 15 -215
+<< metal2 >>
+rect -295 310 215 405
+rect -135 95 65 190
+use comparator  comparator_0
+timestamp 1702662166
+transform 1 0 -720 0 1 -80
+box -135 -280 670 715
+use digital  digital_0
+timestamp 1702649047
+transform 1 0 160 0 1 90
+box -170 -95 1170 445
+use inverter  inverter_0
+timestamp 1694804252
+transform 1 0 125 0 1 -310
+box -120 -55 85 275
+<< end >>
