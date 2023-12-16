@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1702698514
+timestamp 1702702531
 << nwell >>
 rect 170 2170 345 2310
 << nmos >>
@@ -1122,15 +1122,15 @@ rect 3775 1920 3795 1955
 rect 3630 1890 3795 1920
 rect 3525 1870 3795 1890
 rect -1000 1830 -745 1850
-use bias_cg  bias_cg_0 ~/Documents/Final/bi-directional-A-D-A-converter/layout
+use bias_cg  bias_cg_0 ~/bi-directional-A-D-A-converter/layout
 timestamp 1702648396
 transform 1 0 385 0 1 970
 box -385 -970 2311 660
-use com_di  com_di_0 ~/Documents/Final/bi-directional-A-D-A-converter/layout
+use com_di  com_di_0 ~/bi-directional-A-D-A-converter/layout
 timestamp 1702662166
 transform 1 0 1085 0 1 2870
 box -855 -395 1330 635
-use middle  middle_0 ~/Documents/Final/bi-directional-A-D-A-converter/layout
+use middle  middle_0 ~/bi-directional-A-D-A-converter/layout
 timestamp 1702643716
 transform 1 0 270 0 1 2060
 box 50 -410 2085 405
@@ -1155,4 +1155,8 @@ rlabel metal2 -1000 2470 -1000 2470 1 C-
 port 12 n
 rlabel metal1 3723 2652 3723 2652 1 Vd
 port 13 n
+rlabel metal2 -1015 3450 -1015 3450 7 VDD
+port 14 w
+rlabel metal3 -1000 2820 -1000 2820 7 GND
+port 15 w
 << end >>
