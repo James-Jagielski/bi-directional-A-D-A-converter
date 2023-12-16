@@ -192,11 +192,11 @@ X46 GND a_100_n1665# GND sky130_fd_pr__res_xhigh_po_0p35 l=0.42
 X47 a_n720_0# Vb a_100_0# GND sky130_fd_pr__nfet_01v8 ad=1.5 pd=6.5 as=1.5 ps=6.5 w=6 l=0.5
 .ends
 
-.subckt total_layout_AD RST SEN PRE ENAD SH Vref- Vref+ C+ C- D
+.subckt total_layout_AD RST SEN PRE ENAD SH Vref- Vref+ C+ C- Vd
 Xcom_di_0 li_1230_5160# a_1430_4900# com_di_0/comparator_0/AIn C+ li_4020_5600# com_di_0/comparator_0/AIn
-+ li_1100_5500# ENAD D bias_cg_0/VDD bias_cg_0/Vb li_2120_3400# RST bias_cg_0/Vcp
++ li_1100_5500# ENAD Vd bias_cg_0/VDD bias_cg_0/Vb li_2120_3400# RST bias_cg_0/Vcp
 + li_4620_6230# VSUBS a_2820_5590# com_di
-Xmiddle_0 D D a_590_3380# VSUBS a_1430_4900# li_2120_3400# bias_cg_0/Vb PRE VSUBS
+Xmiddle_0 Vd Vd a_590_3380# VSUBS a_1430_4900# li_2120_3400# bias_cg_0/Vb PRE VSUBS
 + a_510_4070# bias_cg_0/Vb bias_cg_0/VDD C- C+ Vref- bias_cg_0/Vcp a_1430_4900# a_2820_5590#
 + li_4020_5600# Vref+ li_4620_6230# a_4530_3850# middle
 Xbias_cg_0 bias_cg_0/Vb bias_cg_0/Vcp VSUBS bias_cg_0/VDD bias_cg
